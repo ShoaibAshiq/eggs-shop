@@ -3655,6 +3655,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .et-home__distributor-title {
@@ -3717,11 +3718,14 @@
 .et-home__distributor-btn {
     display: inline-flex !important;
     align-items: center;
-    justify-content: space-between;
-    gap: 14px;
+    align-self: flex-start;
+    justify-content: center;
+    gap: 12px;
+    width: auto;
+    max-width: 100%;
     min-height: 52px;
-    min-width: 260px;
-    padding: 10px 10px 10px 28px !important;
+    min-width: 0;
+    padding: 10px 10px 10px 24px !important;
     border: 2px solid #27ae60 !important;
     border-radius: 50px !important;
     background: #27ae60 !important;
