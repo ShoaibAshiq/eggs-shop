@@ -491,7 +491,7 @@ if(jQuery(document).width() < 767)
 	});
 </script>
 <script type="text/javascript" src="path/to/jquery"></script>
-<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyACE70q8QLyJic_JvX8AehoS5_L-NMHWRw"></script> 
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=<?php echo defined('GOOGLE_MAPS_API_KEY') ? GOOGLE_MAPS_API_KEY : ''; ?>"></script>
 <script type="text/javascript">
  jQuery(document).ready(function() {
     jQuery(".billing_input #billing_address , .billing_input #city , .billing_input #zip_code , .billing_input #state ").change(function() {
