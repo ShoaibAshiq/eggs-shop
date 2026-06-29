@@ -31,7 +31,14 @@ if ( $et_home_hero_use_video ) :
                     decoding="async"
                 />
 
-                <p class="et-home__hero-badge">Welcome to the Eggs Universe</p>
+                <p class="et-home__hero-badge">
+                    <span class="et-home__hero-badge-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2l2.9 6.9 7.5.6-5.7 4.9 1.7 7.3L12 18.8 5.6 21.7l1.7-7.3L1.6 9.5l7.5-.6L12 2z"/>
+                        </svg>
+                    </span>
+                    Welcome to the Eggs Universe
+                </p>
 
                 <h1 class="et-home__hero-title">
                     <span class="et-home__hero-title-line">Play, Learn &amp; Grow with</span>
@@ -108,31 +115,42 @@ if ( $et_home_hero_use_video ) :
             </div>
 
             <div class="et-home__hero-media">
-                <div class="et-home__hero-video-wrap">
-                    <video
-                        class="et-home__hero-video"
-                        src="<?php echo esc_url( $et_home_hero_video_url ); ?>"
-                        muted
-                        loop
-                        playsinline
-                        autoplay
-                        preload="metadata"
-                        poster="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
-                    ></video>
-                    <img
-                        class="et-home__hero-video-fallback"
-                        src="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
-                        alt=""
-                        loading="eager"
-                        decoding="async"
-                    />
-                    <button
-                        type="button"
-                        class="et-home__hero-video-sound"
-                        id="et_home_hero_sound_toggle"
-                        aria-label="Turn sound on"
-                        aria-pressed="false"
-                    >
+                <div class="et-home__hero-video-frame">
+                    <div class="et-home__hero-video-wrap">
+                        <video
+                            class="et-home__hero-video"
+                            src="<?php echo esc_url( $et_home_hero_video_url ); ?>"
+                            muted
+                            loop
+                            playsinline
+                            autoplay
+                            preload="metadata"
+                            poster="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
+                        ></video>
+                        <img
+                            class="et-home__hero-video-fallback"
+                            src="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
+                            alt=""
+                            loading="eager"
+                            decoding="async"
+                        />
+                        <button
+                            type="button"
+                            class="et-home__hero-video-play"
+                            id="et_home_hero_play_toggle"
+                            aria-label="<?php esc_attr_e( 'Play video', 'eggs-shop' ); ?>"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </button>
+                        <button
+                            type="button"
+                            class="et-home__hero-video-sound"
+                            id="et_home_hero_sound_toggle"
+                            aria-label="Turn sound on"
+                            aria-pressed="false"
+                        >
                         <span class="et-home__hero-video-sound-icon et-home__hero-video-sound-icon--off" aria-hidden="true">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path d="M11 5 6 9H3v6h3l5 4V5z"/>
@@ -149,6 +167,7 @@ if ( $et_home_hero_use_video ) :
                         </span>
                         <span class="et-home__hero-video-sound-label">Sound On</span>
                     </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -164,7 +183,14 @@ else :
     <div class="et-home__hero-overlay" aria-hidden="true"></div>
     <div class="et-home__hero-inner center">
         <div class="et-home__hero-content">
-            <p class="et-home__hero-badge">Welcome to the Eggs Universe</p>
+            <p class="et-home__hero-badge">
+                <span class="et-home__hero-badge-icon" aria-hidden="true">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2l2.9 6.9 7.5.6-5.7 4.9 1.7 7.3L12 18.8 5.6 21.7l1.7-7.3L1.6 9.5l7.5-.6L12 2z"/>
+                    </svg>
+                </span>
+                Welcome to the Eggs Universe
+            </p>
 
             <h1 class="et-home__hero-title">
                 <span class="et-home__hero-title-line">Play, Learn &amp; Grow with</span>
