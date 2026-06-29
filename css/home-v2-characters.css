@@ -108,7 +108,7 @@
     height: 100%;
 }
 
-/* Pink arrow navigation (shared with best sellers) */
+/* Pink chevron navigation (shared with best sellers) */
 .et-home__egg-carousel-arrow {
     position: absolute;
     top: 50%;
@@ -116,18 +116,19 @@
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
+    width: 40px;
+    height: 40px;
     padding: 0;
     border: 0 !important;
-    border-radius: 0;
-    background: transparent !important;
+    border-radius: 50%;
+    background: #ff4d8d !important;
+    color: #ffffff;
     font-size: 0;
     line-height: 0;
     cursor: pointer;
     transform: translateY(-50%);
-    transition: transform 0.2s ease, opacity 0.2s ease;
-    box-shadow: none !important;
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 6px 16px rgba(255, 77, 141, 0.35) !important;
 }
 
 .et-home__egg-carousel-arrow::before,
@@ -136,32 +137,33 @@
     content: none !important;
 }
 
-.et-home__egg-carousel-arrow-img {
+.et-home__egg-carousel-chevron {
     display: block;
-    width: 44px;
-    height: 44px;
-    object-fit: contain;
+    width: 20px;
+    height: 20px;
     pointer-events: none;
 }
 
 .et-home__characters-slider-wrap .slick-prev,
 .et-home__best-sellers-slider-wrap .slick-prev {
-    left: 0;
+    left: -4px;
 }
 
 .et-home__characters-slider-wrap .slick-next,
 .et-home__best-sellers-slider-wrap .slick-next {
-    right: 0;
+    right: -4px;
 }
 
 .et-home__egg-carousel-arrow:hover,
 .et-home__egg-carousel-arrow:focus {
-    transform: translateY(-50%) scale(1.05);
+    background: #ff3380 !important;
+    transform: translateY(-50%) scale(1.06);
     outline: none;
+    box-shadow: 0 8px 20px rgba(255, 77, 141, 0.42) !important;
 }
 
 .et-home__egg-carousel-arrow.slick-disabled {
-    opacity: 0.35;
+    opacity: 0.45;
     cursor: not-allowed;
     transform: translateY(-50%);
 }
@@ -350,9 +352,9 @@
         height: 38px;
     }
 
-    .et-home__egg-carousel-arrow-img {
-        width: 38px;
-        height: 38px;
+    .et-home__egg-carousel-chevron {
+        width: 18px;
+        height: 18px;
     }
 }
 

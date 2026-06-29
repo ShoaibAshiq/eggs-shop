@@ -92,14 +92,41 @@
         });
     }
 
-    var CHARACTER_ARROW_LEFT = 'https://eggstime.com/wp-content/uploads/2026/06/left-arroww.png';
-    var CHARACTER_ARROW_RIGHT = 'https://eggstime.com/wp-content/uploads/2026/06/right-arroww.png';
+    function buildEggCarouselChevronSvg(direction) {
+        if (direction === 'prev') {
+            return '<svg class="et-home__egg-carousel-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>';
+        }
+
+        return '<svg class="et-home__egg-carousel-chevron" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>';
+    }
 
     function buildEggCarouselArrows(arrowClass, prevLabel, nextLabel) {
         return {
-            prevArrow: '<button class="slick-prev et-home__egg-carousel-arrow ' + arrowClass + ' ' + arrowClass + '--prev" aria-label="' + prevLabel + '" type="button"><img class="et-home__egg-carousel-arrow-img" src="' + CHARACTER_ARROW_LEFT + '" alt="" width="44" height="44" decoding="async" /></button>',
-            nextArrow: '<button class="slick-next et-home__egg-carousel-arrow ' + arrowClass + ' ' + arrowClass + '--next" aria-label="' + nextLabel + '" type="button"><img class="et-home__egg-carousel-arrow-img" src="' + CHARACTER_ARROW_RIGHT + '" alt="" width="44" height="44" decoding="async" /></button>'
+            prevArrow: '<button class="slick-prev et-home__egg-carousel-arrow ' + arrowClass + ' ' + arrowClass + '--prev" aria-label="' + prevLabel + '" type="button">' + buildEggCarouselChevronSvg('prev') + '</button>',
+            nextArrow: '<button class="slick-next et-home__egg-carousel-arrow ' + arrowClass + ' ' + arrowClass + '--next" aria-label="' + nextLabel + '" type="button">' + buildEggCarouselChevronSvg('next') + '</button>'
         };
+    }
+
+    function prepareEggWorldSliderForLoop($el) {
+        if ($el.data('et-loop-prepared')) {
+            return;
+        }
+
+        var $items = $el.children('li');
+        var count = $items.length;
+
+        if (count > 1) {
+            $items.clone().appendTo($el);
+        }
+
+        $el.data('et-loop-prepared', true);
+    }
+
+    function withInfiniteResponsiveSettings(responsive) {
+        return $.map(responsive || [], function (breakpoint) {
+            breakpoint.settings = $.extend({}, breakpoint.settings, { infinite: true });
+            return breakpoint;
+        });
     }
 
     function getEggWorldSliderConfig($wrap, prevLabel, nextLabel, arrowClass, options) {
@@ -141,7 +168,7 @@
             waitForAnimate: false,
             prevArrow: arrows.prevArrow,
             nextArrow: arrows.nextArrow,
-            responsive: settings.responsive
+            responsive: withInfiniteResponsiveSettings(settings.responsive)
         };
     }
 
@@ -212,6 +239,7 @@
                 return true;
             }
 
+            prepareEggWorldSliderForLoop($el);
             $wrap.addClass('is-slider-active');
             $el.slick(buildConfig($wrap, prevLabel, nextLabel, arrowClass));
             return true;
