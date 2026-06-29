@@ -1,0 +1,84 @@
+/**
+ * Toys category product cards — text + Buy button (desktop + mobile)
+ */
+
+.toycatitem.product-category-toys a,
+.toycatitem.product-category-toys a:hover,
+.toycatitem.product-category-toys a:focus {
+    text-decoration: none !important;
+    color: inherit !important;
+}
+
+.toycatitem.product-category-toys .toys-details span.toyname,
+span.toyname {
+    color: #204d88 !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+}
+
+.toycatitem.product-category-toys .toys-details span.toyprice,
+span.toyprice {
+    color: #1a9fe0 !important;
+    font-size: 18px !important;
+    font-weight: 800 !important;
+    text-decoration: none !important;
+}
+
+.toys-category-new .products-list.newproductlist .items .toycatitem.product-category-toys a .toys-details .et-toys-buy-btn,
+.toys-category-new .products-list.newproductlist .items .toycatitem.product-category-toys a .toys-details span.toybuybutton,
+.toycatitem.product-category-toys a .toys-details .et-toys-buy-btn,
+.toycatitem.product-category-toys a .toys-details span.toybuybutton,
+.toycatitem a .toys-details .et-toys-buy-btn,
+.toycatitem a .toys-details span.toybuybutton,
+span.et-toys-buy-btn,
+span.toybuybutton {
+    display: inline-block !important;
+    min-width: 140px !important;
+    width: auto !important;
+    margin-top: 14px !important;
+    padding: 12px 42px !important;
+    border: 1px solid #e91e8c !important;
+    background: #e91e8c !important;
+    background-color: #e91e8c !important;
+    color: #ffffff !important;
+    font-family: 'Ubuntu', sans-serif !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    text-transform: uppercase !important;
+    text-decoration: none !important;
+    border-radius: 6px !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: background-color 0.2s ease, border-color 0.2s ease !important;
+}
+
+@media screen and (min-width: 769px) {
+    .toys-category-new .products-list.newproductlist .items .toycatitem.product-category-toys a .toys-details .et-toys-buy-btn,
+    .toys-category-new .products-list.newproductlist .items .toycatitem.product-category-toys a .toys-details span.toybuybutton,
+    .toycatitem.product-category-toys a .toys-details .et-toys-buy-btn,
+    .toycatitem.product-category-toys a .toys-details span.toybuybutton,
+    span.et-toys-buy-btn,
+    span.toybuybutton {
+        display: inline-block !important;
+        min-width: 140px !important;
+        padding: 12px 42px !important;
+        background: #e91e8c !important;
+        background-color: #e91e8c !important;
+        border-color: #e91e8c !important;
+        color: #ffffff !important;
+        font-size: 18px !important;
+    }
+}
+
+.toys-category-new .products-list.newproductlist .items .toycatitem.product-category-toys a:hover .toys-details .et-toys-buy-btn,
+.toycatitem.product-category-toys a:hover .toys-details .et-toys-buy-btn,
+.toycatitem.product-category-toys a:hover .toys-details span.toybuybutton,
+.toycatitem a:hover .et-toys-buy-btn,
+.toycatitem a:hover span.toybuybutton {
+    background: #d4177d !important;
+    background-color: #d4177d !important;
+    border-color: #d4177d !important;
+    color: #ffffff !important;
+}

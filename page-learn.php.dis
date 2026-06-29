@@ -1,0 +1,50 @@
+<?php
+get_header(); ?>
+  <div class="main">
+
+    <div class="head head--learn">
+        <?php $bannerfield = get_field('add_new_banner_images');
+        if($bannerfield =='yes'){
+            $getbanner = get_field('banner_image');
+            echo '<img src="'.$getbanner.'" />';
+        }
+        else{
+?>
+            <img src="<?php echo IMGEDIR.image_name($name)?>" />
+            <?php } ?>
+        <div class="head__title"><?php the_title() ?></div>
+    </div>
+  <div class="learn">
+    <div class="learn__stories">
+      <div class="center center--type2">
+        <div class="title">Stories</div>
+        <div class="logo logo--king" style="background-image: url('http://eggstime.com/wp-content/uploads/2019/01/king.png')"></div>
+        <div class="items items-king">
+	        <?php  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(!dynamic_sidebar("stories-king-eggs")) ) : endif; ?>
+        </div>
+        <div class="logo logo--magik" style="background-image: url('http://eggstime.com/wp-content/uploads/2019/01/magik.png')"></div>
+        <div class="items items-magik">
+	        <?php  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('stories-magik-eggs') ) : endif; ?>
+        </div>
+        <div class="logo logo--lucky" style="background-image: url('http://eggstime.com/wp-content/uploads/2019/01/lucky-1.png')"></div>
+        <div class="items items-lucky">
+	        <?php  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('stories-lucky-eggs') ) : endif; ?>
+        </div>
+        <div class="logo logo--happy" style="background-image: url('http://eggstime.com/wp-content/uploads/2019/01/happy.png')"></div>
+        <div class="items items-happy">
+	        <?php  if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('stories-happy-eggs') ) : endif; ?>
+        </div>
+      </div>
+    </div>
+<!--    <div class="learn__games">-->
+<!--      <div class="center center--type2">-->
+<!--        <div class="title">Games</div>-->
+<!--        <div class="items">-->
+<!--	        --><?php // if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar('games') ) : endif; ?>
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+  </div>
+  </div>
+<?php get_footer();

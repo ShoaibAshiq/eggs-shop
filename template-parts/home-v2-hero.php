@@ -1,0 +1,248 @@
+<?php
+/**
+ * Home v2 — hero / banner section
+ *
+ * Set to false to revert to the static image banner.
+ */
+$et_home_hero_use_video    = true;
+$et_home_hero_video_url    = 'https://eggstime.com/wp-content/uploads/2026/06/WhatsApp-Video-2026-06-25-at-2.18.18-PM-online-video-cutter.com-1.mp4';
+$et_home_hero_video_poster = 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
+$et_home_hero_bg           = 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
+$et_home_hero_logo         = get_template_directory_uri() . '/images/eggs_time_logo.png';
+// Swap $et_home_hero_video_url when the new product-focused edit is ready.
+
+if ( $et_home_hero_use_video ) :
+    ?>
+<section
+    class="et-home__hero et-home__hero--split-video et-home__playful-section"
+    aria-label="<?php esc_attr_e( 'Play, Learn and Grow with Eggs Time', 'eggs-shop' ); ?>"
+    data-hero-video="<?php echo esc_url( $et_home_hero_video_url ); ?>"
+>
+    <div class="et-home__hero-inner center">
+        <div class="et-home__hero-grid">
+            <div class="et-home__hero-content">
+                <img
+                    src="<?php echo esc_url( $et_home_hero_logo ); ?>"
+                    alt="<?php esc_attr_e( 'Eggs Time', 'eggs-shop' ); ?>"
+                    class="et-home__hero-logo"
+                    width="160"
+                    height="48"
+                    loading="eager"
+                    decoding="async"
+                />
+
+                <p class="et-home__hero-badge">Welcome to the Eggs Universe</p>
+
+                <h1 class="et-home__hero-title">
+                    <span class="et-home__hero-title-line">Play, Learn &amp; Grow with</span>
+                    <span class="et-home__hero-title-line et-home__hero-title-line--accent">Eggs Time!</span>
+                </h1>
+
+                <p class="et-home__hero-text">
+                    Educational stories, surprise toys, games and videos that make learning fun for children everywhere.
+                </p>
+
+                <div class="et-home__hero-actions">
+                    <a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" class="et-home__hero-btn et-home__hero-btn--primary">
+                        <span class="et-home__hero-btn-label">Shop Surprise Eggs</span>
+                        <span class="et-home__hero-btn-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+                                <line x1="3" y1="6" x2="21" y2="6"></line>
+                                <path d="M16 10a4 4 0 01-8 0"></path>
+                            </svg>
+                        </span>
+                    </a>
+
+                    <a href="#et-home-characters" class="et-home__hero-btn et-home__hero-btn--secondary">
+                        <span class="et-home__hero-btn-label">Explore Characters</span>
+                        <span class="et-home__hero-btn-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h12M13 7l5 5-5 5"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="et-home__hero-trust">
+                    <li class="et-home__hero-trust-item">
+                        <span class="et-home__hero-trust-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                                <path d="M8 7h8"/>
+                                <path d="M8 11h6"/>
+                            </svg>
+                        </span>
+                        <span class="et-home__hero-trust-copy">
+                            <span class="et-home__hero-trust-label">Educational</span>
+                            <span class="et-home__hero-trust-desc">Learning made fun</span>
+                        </span>
+                    </li>
+                    <li class="et-home__hero-trust-item">
+                        <span class="et-home__hero-trust-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
+                        </span>
+                        <span class="et-home__hero-trust-copy">
+                            <span class="et-home__hero-trust-label">Safe &amp; Certified</span>
+                            <span class="et-home__hero-trust-desc">Trusted by parents</span>
+                        </span>
+                    </li>
+                    <li class="et-home__hero-trust-item">
+                        <span class="et-home__hero-trust-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/>
+                                <path d="M5 19l1 3 1-3 3-1-3-1-1-3-1 3-3 1 3 1z"/>
+                                <path d="M19 13l.8 2.4L22 16l-2.2.6L19 19l-.8-2.4L16 16l2.2-.6L19 13z"/>
+                            </svg>
+                        </span>
+                        <span class="et-home__hero-trust-copy">
+                            <span class="et-home__hero-trust-label">Fun &amp; Engaging</span>
+                            <span class="et-home__hero-trust-desc">Kids love it!</span>
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="et-home__hero-media">
+                <div class="et-home__hero-video-wrap">
+                    <video
+                        class="et-home__hero-video"
+                        src="<?php echo esc_url( $et_home_hero_video_url ); ?>"
+                        muted
+                        loop
+                        playsinline
+                        autoplay
+                        preload="metadata"
+                        poster="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
+                    ></video>
+                    <img
+                        class="et-home__hero-video-fallback"
+                        src="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
+                        alt=""
+                        loading="eager"
+                        decoding="async"
+                    />
+                    <button
+                        type="button"
+                        class="et-home__hero-video-sound"
+                        id="et_home_hero_sound_toggle"
+                        aria-label="Turn sound on"
+                        aria-pressed="false"
+                    >
+                        <span class="et-home__hero-video-sound-icon et-home__hero-video-sound-icon--off" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 5 6 9H3v6h3l5 4V5z"/>
+                                <line x1="23" y1="9" x2="17" y2="15"/>
+                                <line x1="17" y1="9" x2="23" y2="15"/>
+                            </svg>
+                        </span>
+                        <span class="et-home__hero-video-sound-icon et-home__hero-video-sound-icon--on" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M11 5 6 9H3v6h3l5 4V5z"/>
+                                <path d="M15.54 8.46a5 5 0 010 7.07"/>
+                                <path d="M19.07 4.93a10 10 0 010 14.14"/>
+                            </svg>
+                        </span>
+                        <span class="et-home__hero-video-sound-label">Sound On</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <?php
+else :
+    ?>
+<section
+    class="et-home__hero et-home__playful-section"
+    aria-label="<?php esc_attr_e( 'Play, Learn and Grow with Eggs Time', 'eggs-shop' ); ?>"
+>
+    <div class="et-home__hero-overlay" aria-hidden="true"></div>
+    <div class="et-home__hero-inner center">
+        <div class="et-home__hero-content">
+            <p class="et-home__hero-badge">Welcome to the Eggs Universe</p>
+
+            <h1 class="et-home__hero-title">
+                <span class="et-home__hero-title-line">Play, Learn &amp; Grow with</span>
+                <span class="et-home__hero-title-line et-home__hero-title-line--accent">Eggs Time!</span>
+            </h1>
+
+            <p class="et-home__hero-text">
+                Educational stories, surprise toys, games and videos that make learning fun for children everywhere.
+            </p>
+
+            <div class="et-home__hero-actions">
+                <a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" class="et-home__hero-btn et-home__hero-btn--primary">
+                    <span class="et-home__hero-btn-label">Shop Surprise Eggs</span>
+                    <span class="et-home__hero-btn-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+                            <line x1="3" y1="6" x2="21" y2="6"></line>
+                            <path d="M16 10a4 4 0 01-8 0"></path>
+                        </svg>
+                    </span>
+                </a>
+
+                <a href="#et-home-characters" class="et-home__hero-btn et-home__hero-btn--secondary">
+                    <span class="et-home__hero-btn-label">Explore Characters</span>
+                    <span class="et-home__hero-btn-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h12M13 7l5 5-5 5"/>
+                        </svg>
+                    </span>
+                </a>
+            </div>
+
+            <div class="et-home__hero-trust">
+                <div class="et-home__hero-trust-item">
+                    <span class="et-home__hero-trust-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 016.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>
+                            <path d="M8 7h8"/>
+                            <path d="M8 11h6"/>
+                        </svg>
+                    </span>
+                    <span class="et-home__hero-trust-label">Educational</span>
+                </div>
+                <span class="et-home__hero-trust-dot" aria-hidden="true">·</span>
+                <div class="et-home__hero-trust-item">
+                    <span class="et-home__hero-trust-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            <path d="M9 12l2 2 4-4"/>
+                        </svg>
+                    </span>
+                    <span class="et-home__hero-trust-label">Safe &amp; Certified</span>
+                </div>
+                <span class="et-home__hero-trust-dot" aria-hidden="true">·</span>
+                <div class="et-home__hero-trust-item">
+                    <span class="et-home__hero-trust-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z"/>
+                            <path d="M5 19l1 3 1-3 3-1-3-1-1-3-1 3-3 1 3 1z"/>
+                            <path d="M19 13l.8 2.4L22 16l-2.2.6L19 19l-.8-2.4L16 16l2.2-.6L19 13z"/>
+                        </svg>
+                    </span>
+                    <span class="et-home__hero-trust-label">Fun &amp; Engaging</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="et-home__hero-packaging">
+        <img
+            src="<?php echo esc_url( home_url( '/wp-content/uploads/eggs-time/product-box.png' ) ); ?>"
+            alt="<?php esc_attr_e( 'Eggs Time surprise egg product packaging', 'eggs-shop' ); ?>"
+            class="et-home__hero-packaging-img"
+            width="200"
+            height="auto"
+        />
+    </div>
+</section>
+    <?php
+endif;

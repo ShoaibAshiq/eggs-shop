@@ -1,0 +1,134 @@
+<!--<div class='singletopic' style='background-image:url(<?php //echo get_the_post_thumbnail_url();?>);background-size:cover;'>
+    			<div class="topic_wrapper_left" >
+    			    <div class="topic_title">
+    			        <?php //echo get_the_title(); ?>
+    			    </div>
+    			    <div class="topic_description">
+    			        <?php //echo get_field('text_on_banner'); ?>
+    			    </div>
+    			    <div class="topic_readmore">
+    			        <a class="button" href='<?php //echo get_the_term_list( $post->ID, 'question', '', ', ' );?>'>Back</a>
+    			    </div>
+    			</div>
+		    </div>-->
+<?php 
+
+    $txtalign = get_field('text_alignment');
+   // $terms = wp_get_post_tags( $post->ID,'question' );
+    //For custom taxonomy use this line below
+    $terms = wp_get_object_terms( $post->ID, 'question' );
+    
+    $backbtn = site_url().'/'.$terms[0]->taxonomy.'/'.$terms[0]->slug;
+   //foreach( $terms as $term )
+      //  $term_names[] = $term->name;
+    
+  //  echo implode( ', ', $term_names );
+
+?>
+			<?php 
+			
+				if(get_field('mobile_banner') != NULL){
+			    $mobilebanner = get_field('mobile_banner');
+			}else{
+			    $mobilebanner = get_the_post_thumbnail_url();
+			}
+			    if($txtalign=='left'){
+			?>
+		
+            <div class='mobile_banner right'><img src="<?php echo $mobilebanner; ?>" ></div>
+			<div class='center left' id='topicsactive' style='background-image:url(<?php echo get_the_post_thumbnail_url();?>);background-size:cover;'>
+    			<div class="topic_wrapper_left" >
+    			    <div class="topic_title" style="color:<?php if(get_field('color_of_title'))echo get_field('color_of_title');?>">
+    			        <?php echo get_the_title(); ?>
+    			    </div>
+    			    <div class="topic_description">
+    			        <?php echo get_field('text_on_banner'); ?>
+    			    </div>
+    			    <!--<div class="topic_readmore singlepage">
+    			        <a class="button" href='https://eggstime.com/topic/'><span>BACK</span></a>
+    			    </div>-->
+    			</div>
+		    </div>
+		    <div style="clear:both"></div>
+		    <?php 
+			    } 
+			    if($txtalign=='right'){
+			?>
+			<div class='mobile_banner left'><img src="<?php echo $mobilebanner; ?>" ></div>
+		    <div class='center right' id='topicsactive' style='background-image:url(<?php echo get_the_post_thumbnail_url();?>);background-size:cover;'>
+    			<div class="topic_wrapper_right" >
+    			    <div class="topic_title"  style="color:<?php if(get_field('color_of_title'))echo get_field('color_of_title');?>">
+    			        <?php echo get_the_title(); ?>
+    			    </div>
+    			    <div class="topic_description">
+    			        <?php echo get_field('text_on_banner'); ?>
+    			    </div>
+
+    			</div>
+		    </div><div style="clear:both"></div>
+		    <?php } ?>
+<div class="content-text">
+<?php 
+$content = the_content();
+//$content = strip_tags( $content, '<img><div><strong>' ) ?>
+	<?php echo $content ?>
+	    			    <div class="topic_readmore singlepage">
+    			        <a class="button" href='https://eggstime.com/topic/'>BACK</a>
+    			    </div>
+	<div class="header__social topics">
+                <a href="https://www.youtube.com/channel/UC__ZaY9WHmlVMAJiLjXOwRQ"
+                   target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                         viewBox="0 0 30 30">
+
+                        <path d="M28,12.82q0-.78-.12-2a18,18,0,0,0-.31-2.14,3.37,3.37,0,0,0-1-1.78,3.09,3.09,0,0,0-1.81-.84A95.19,95.19,0,0,0,15,5.71a95.18,95.18,0,0,0-9.74.36,3.06,3.06,0,0,0-1.8.84,3.39,3.39,0,0,0-1,1.78,16.06,16.06,0,0,0-.33,2.14Q2,12,2,12.82T2,15q0,1.39,0,2.18t.12,2a18,18,0,0,0,.31,2.14,3.37,3.37,0,0,0,1,1.78,3.09,3.09,0,0,0,1.81.84,95.09,95.09,0,0,0,9.74.36,95.09,95.09,0,0,0,9.74-.36,3.06,3.06,0,0,0,1.8-.84,3.39,3.39,0,0,0,1-1.78,16.07,16.07,0,0,0,.33-2.14q.11-1.2.12-2T28,15Q28,13.61,28,12.82Zm-7.85,3-7.43,4.64a.83.83,0,0,1-.49.15,1,1,0,0,1-.45-.12.86.86,0,0,1-.48-.81V10.36a.86.86,0,0,1,.48-.81.87.87,0,0,1,.94,0l7.43,4.64a.92.92,0,0,1,0,1.57Z"/>
+
+
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/eggstime" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                         viewBox="0 0 30 30">
+                        <path d="M21,3H17.89c-3.5,0-5.76,2.32-5.76,5.91v2.72H9a.49.49,0,0,0-.49.49v3.95a.49.49,0,0,0,.49.49h3.13v10a.49.49,0,0,0,.49.49H16.7a.49.49,0,0,0,.49-.49v-10h3.66a.49.49,0,0,0,.49-.49V12.12a.49.49,0,0,0-.49-.49H17.19V9.32c0-1.11.26-1.67,1.71-1.67H21a.49.49,0,0,0,.49-.49V3.49A.49.49,0,0,0,21,3Z"/>
+
+                    </svg>
+                </a>
+                <a href="https://www.pinterest.com/eggstime" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                         viewBox="0 0 30 30">
+                        <path d="M24.22,9.67c-.66-4.74-5.38-7.16-10.42-6.59-4,.45-8,3.67-8.13,8.28-.1,2.81.7,4.92,3.37,5.52,1.16-2.05-.37-2.5-.61-4-1-6.07,7-10.22,11.19-6,2.9,2.94,1,12-3.68,11-4.47-.9,2.19-8.09-1.38-9.5C11.67,7.3,10.13,12,11.5,14.27,10.7,18.26,9,22,9.66,27c2.28-1.66,3-4.82,3.68-8.13,1.15.7,1.76,1.42,3.22,1.53C22,20.82,25,15,24.22,9.67Z"/>
+
+                    </svg>
+                </a>
+                <a href="https://twitter.com/sweets_choice" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                         viewBox="0 0 30 30">
+                        <path d="M27,7.56a9.83,9.83,0,0,1-2.83.78,4.94,4.94,0,0,0,2.16-2.72,9.93,9.93,0,0,1-3.13,1.2,4.93,4.93,0,0,0-8.39,4.49A14,14,0,0,1,4.67,6.15,4.93,4.93,0,0,0,6.2,12.72,4.92,4.92,0,0,1,4,12.11v.06A4.93,4.93,0,0,0,7.91,17a5,5,0,0,1-1.3.17,4.73,4.73,0,0,1-.93-.09,4.93,4.93,0,0,0,4.6,3.42,9.88,9.88,0,0,1-6.11,2.1A10.46,10.46,0,0,1,3,22.53a13.92,13.92,0,0,0,7.55,2.22,13.91,13.91,0,0,0,14-14l0-.64A9.83,9.83,0,0,0,27,7.56Z"/>
+
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/eggs_time/" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                         viewBox="0 0 30 30">
+                        <path class="cls-1" d="M20.92,9.92a.85.85,0,0,1-.85-.85V7.38a.85.85,0,0,1,.85-.85h1.69a.85.85,0,0,1,.85.85V9.08a.85.85,0,0,1-.85.85Z"/><path class="cls-1" d="M15,11.77a3.2,3.2,0,0,0-1.67.48,1.6,1.6,0,0,1,.48-.08,1.64,1.64,0,1,1-1.64,1.64,1.62,1.62,0,0,1,.08-.48A3.19,3.19,0,0,0,11.77,15,3.23,3.23,0,1,0,15,11.77Z"/><path class="cls-1" d="M15,9.92A5.08,5.08,0,1,1,9.92,15,5.08,5.08,0,0,1,15,9.92m0-1.69A6.77,6.77,0,1,0,21.77,15,6.78,6.78,0,0,0,15,8.23Z"/><path class="cls-1" d="M21.88,4H8.13A4.12,4.12,0,0,0,4,8.13V21.88A4.12,4.12,0,0,0,8.13,26H21.88A4.12,4.12,0,0,0,26,21.88V8.13A4.12,4.12,0,0,0,21.88,4Zm2.43,7.62H18.78a5.08,5.08,0,1,1-7.55,0H5.69V8.13A2.44,2.44,0,0,1,8.13,5.69H21.88a2.44,2.44,0,0,1,2.43,2.43Z"/>
+
+                    </svg>
+                </a>
+               <!-- <a href="https://plus.google.com/u/2/108549065340904683135"
+                   target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                         viewBox="0 0 30 30">
+                        <path d="M10.82,16.85H15.2a5.56,5.56,0,1,1-1.51-6,.6.6,0,0,0,.82,0l1.61-1.51a.6.6,0,0,0,0-.87,8.93,8.93,0,0,0-6-2.45A9,9,0,1,0,18.9,15.5c0-.06,0-2.06,0-2.06H10.82a.6.6,0,0,0-.6.6v2.2A.6.6,0,0,0,10.82,16.85Z"/><path d="M26.32,13.65V11.5A.52.52,0,0,0,25.8,11H24a.53.53,0,0,0-.53.53v2.15H21.31a.53.53,0,0,0-.53.53V16a.53.53,0,0,0,.53.53h2.15v2.15a.53.53,0,0,0,.53.53H25.8a.52.52,0,0,0,.53-.53V16.51h2.15A.53.53,0,0,0,29,16V14.17a.53.53,0,0,0-.53-.53Z"/>
+
+                    </svg>
+                </a>-->
+                <a href="<?php echo get_permalink( 353 ) ?>">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon"
+                         viewBox="0 0 30 30">
+                        <path d="M26,20.5a2.73,2.73,0,0,1-.35,1.32L18.7,14.05l6.87-6A2.73,2.73,0,0,1,26,9.5v11Zm-11-5L24.56,7.1a2.72,2.72,0,0,0-1.31-.35H6.75a2.71,2.71,0,0,0-1.31.35ZM17.67,15l-2.21,1.94a.69.69,0,0,1-.9,0L12.33,15l-7,7.87a2.72,2.72,0,0,0,1.45.42h16.5a2.72,2.72,0,0,0,1.45-.42ZM4.43,8A2.73,2.73,0,0,0,4,9.5v11a2.72,2.72,0,0,0,.35,1.32L11.3,14Z"/>
+
+                    </svg>
+                </a>
+            </div>
+</div>

@@ -1,0 +1,363 @@
+/* Home v2 — Choose Your Egg World (character carousel) */
+
+.et-home__characters {
+    background: transparent;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.et-home__characters .et-home__section-inner {
+    padding-top: var(--et-home-section-gap);
+    padding-bottom: 24px;
+}
+
+.et-home__characters-intro {
+    margin: 0 0 28px;
+    text-align: center;
+}
+
+.et-home__characters-intro .et-home__section-title--stars {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px 14px;
+    width: 100%;
+}
+
+.et-home__characters-intro .et-home__section-title {
+    margin: 0;
+    font-family: 'Quicksand', 'Ubuntu', sans-serif;
+    font-size: clamp(30px, 3.8vw, 42px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--et-home-heading) !important;
+    -webkit-text-stroke: 0;
+    paint-order: initial;
+}
+
+.et-home__characters-lead {
+    margin: 10px auto 0;
+    max-width: 560px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--et-home-text) !important;
+}
+
+/* Slider wrap */
+.et-home__characters-slider-wrap {
+    position: relative;
+    padding: 0 52px;
+    overflow: visible;
+}
+
+.et-home__characters-slider {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.et-home__characters-slider:not(.slick-initialized) {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    gap: 14px;
+    overflow: hidden;
+}
+
+.et-home__characters-slider:not(.slick-initialized) .et-home__character-item {
+    display: block;
+    min-width: 0;
+}
+
+.et-home__characters-slider.slick-initialized {
+    display: block;
+    width: 100%;
+}
+
+.et-home__characters-slider.slick-initialized .slick-slide {
+    display: block !important;
+    height: auto;
+}
+
+.et-home__characters-slider.slick-initialized .slick-slide > div {
+    height: 100%;
+}
+
+.et-home__characters-slider .slick-list {
+    overflow: hidden;
+    margin: 0 -8px;
+    padding: 4px 0 8px;
+}
+
+.et-home__characters-slider .slick-track {
+    display: block;
+}
+
+.et-home__characters-slider .slick-slide {
+    height: auto;
+    padding: 0 8px;
+}
+
+.et-home__characters-slider .slick-slide > div,
+.et-home__characters-slider .et-home__character-item {
+    height: 100%;
+}
+
+/* Pink arrow navigation (shared with best sellers) */
+.et-home__egg-carousel-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: 0 !important;
+    border-radius: 0;
+    background: transparent !important;
+    font-size: 0;
+    line-height: 0;
+    cursor: pointer;
+    transform: translateY(-50%);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+    box-shadow: none !important;
+}
+
+.et-home__egg-carousel-arrow::before,
+.et-home__egg-carousel-arrow::after {
+    display: none !important;
+    content: none !important;
+}
+
+.et-home__egg-carousel-arrow-img {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.et-home__characters-slider-wrap .slick-prev,
+.et-home__best-sellers-slider-wrap .slick-prev {
+    left: 0;
+}
+
+.et-home__characters-slider-wrap .slick-next,
+.et-home__best-sellers-slider-wrap .slick-next {
+    right: 0;
+}
+
+.et-home__egg-carousel-arrow:hover,
+.et-home__egg-carousel-arrow:focus {
+    transform: translateY(-50%) scale(1.05);
+    outline: none;
+}
+
+.et-home__egg-carousel-arrow.slick-disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    transform: translateY(-50%);
+}
+
+.et-home__characters-slider-wrap.is-slider-active .slick-list,
+.et-home__best-sellers-slider-wrap.is-slider-active .slick-list {
+    cursor: grab;
+}
+
+.et-home__characters-slider-wrap.is-slider-active .slick-list.dragging,
+.et-home__best-sellers-slider-wrap.is-slider-active .slick-list.dragging {
+    cursor: grabbing;
+}
+
+/* Shared card action button (Learn More / Shop Now) */
+.et-home__card-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    width: 100%;
+    min-height: 40px;
+    padding: 5px 5px 5px 14px !important;
+    border: 0 !important;
+    border-radius: 50px !important;
+    background: var(--et-card-accent, var(--et-home-blue)) !important;
+    color: #ffffff !important;
+    font-family: 'Quicksand', 'Ubuntu', sans-serif !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    white-space: nowrap;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.et-home__card-btn-label {
+    flex: 1 1 auto;
+    min-width: 0;
+    text-align: left;
+}
+
+.et-home__card-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #ffffff;
+    color: var(--et-card-accent, var(--et-home-blue));
+}
+
+.et-home__best-sellers-btn .et-home__card-btn-icon i,
+.et-home__best-sellers-btn .et-home__card-btn-icon .fas,
+.et-home__best-sellers-btn .et-home__card-btn-icon .fa {
+    display: block;
+    font-size: 11px;
+    line-height: 1;
+    font-style: normal;
+    font-weight: 900;
+    color: inherit;
+}
+
+.et-home__character-btn .et-home__card-btn-icon svg {
+    display: block;
+    width: 13px;
+    height: 13px;
+}
+
+.et-home__card-btn:hover,
+.et-home__card-btn:focus {
+    background: var(--et-card-accent, var(--et-home-blue)) !important;
+    color: #ffffff !important;
+    filter: brightness(0.94);
+    transform: translateY(-1px);
+}
+
+/* Character cards */
+.et-home__character-item {
+    margin: 0;
+    padding: 0;
+    min-width: 0;
+}
+
+.et-home__character-card {
+    --et-card-accent: var(--et-character-accent, var(--et-home-blue));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 20px;
+    background: #ffffff;
+    border: 1px solid rgba(32, 77, 136, 0.06);
+    box-shadow: 0 6px 20px rgba(30, 58, 95, 0.09);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.et-home__character-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(30, 58, 95, 0.13);
+}
+
+.et-home__character-media {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 158px;
+    padding: 18px 12px 14px;
+    background: var(--et-character-panel, #f4f5f7);
+}
+
+.et-home__character-image {
+    display: block;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 148px;
+    object-fit: contain;
+}
+
+.et-home__character-body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    padding: 12px 14px 16px;
+    text-align: center;
+}
+
+.et-home__character-name {
+    margin: 0;
+    font-family: 'Quicksand', 'Ubuntu', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.3;
+    color: var(--et-home-heading) !important;
+}
+
+@media screen and (max-width: 1199px) {
+    .et-home__characters-slider-wrap,
+    .et-home__best-sellers-slider-wrap {
+        padding: 0 48px;
+    }
+
+    .et-home__characters-slider:not(.slick-initialized) {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .et-home__characters-slider-wrap,
+    .et-home__best-sellers-slider-wrap {
+        padding: 0 44px;
+    }
+
+    .et-home__characters-slider:not(.slick-initialized) {
+        grid-template-columns: 1fr;
+    }
+
+    .et-home__character-media {
+        min-height: 140px;
+        padding: 16px 14px 12px;
+    }
+
+    .et-home__character-image {
+        max-height: 128px;
+    }
+
+    .et-home__characters-intro .et-home__section-title {
+        font-size: clamp(26px, 7vw, 34px);
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .et-home__characters-slider-wrap,
+    .et-home__best-sellers-slider-wrap {
+        padding: 0 40px;
+    }
+
+    .et-home__egg-carousel-arrow {
+        width: 38px;
+        height: 38px;
+    }
+
+    .et-home__egg-carousel-arrow-img {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .et-home {
+        --et-home-section-gap: 64px;
+    }
+}

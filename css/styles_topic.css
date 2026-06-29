@@ -1,0 +1,361 @@
+nav.navigation.pagination {
+    font-size: 21px;
+    font-weight: 500;
+    margin: 20px auto;
+    display: table;
+}
+.page-numbers {
+    text-transform: capitalize;
+}
+.topic_description {
+    min-height: 120px;
+}
+ul.sidebar_topicslistdiv#sidebar_burger_menu .burgermenu {
+    background-color: #219FD1;
+}
+.topic_title {
+    line-height: 28px;
+	text-transform: uppercase;
+	min-height: 75px;
+}
+@media all and (max-width: 1025px) {
+	.topic_description {
+    min-height: unset !important;
+}
+	div#sidebar_burger_menu:before {
+    content: "Blogs Menu";
+    position: absolute;
+    font-size: 17px;
+    margin-left: 50px;
+    margin-top: 10px;
+    color: #219FD1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+    .site-main.topics a.button {
+    padding: 0px 20px;
+}
+/*.mobile_banner.right img {
+    width: 100%;
+    height: 140px;
+    background-size: 171% 100%;
+    background-repeat: no-repeat;
+    background-position: -226px 0;
+}
+.mobile_banner.left img {
+    width: 100%;
+    height: 140px;
+    background-size: 171% 100%;
+    background-repeat: no-repeat;
+    background-position: 0;
+}*/
+.site-main.topics .center {
+    margin: 0 auto;
+    padding: 0 25px;
+	display: inline-block !important;
+}
+    .header__social.topics .icon {
+        fill: #999;
+        width: 40px;
+    }
+    div#sidebar_burger_menu {
+        padding: 15px 10%; 
+    }
+    .blogtopic {
+        width: 100% !important;
+    }
+.burgermenu{
+         width: 35px;
+         height: 5px;
+         background-color: black;
+         margin: 6px 0;
+    }
+    .sidebar_burger_menu{
+        display:block;
+    }
+  .topic_wrapper_left {
+		width: 100% !important; 
+		padding: 0px !important; 
+	}
+	.topic_wrapper_right {
+		 width: 100% !important;
+		 float: none !important; 
+		 padding: 0px !important; 
+	}
+	.center.right, .center.left{
+		background-image:none !important;
+	}
+	.topics_content {
+       width: 100% !important;
+        float: none !important;
+    }
+    .topic_description,.topic_description span,.topic_title{
+        color:#000  !important;
+    }
+    .topic_title {
+        padding: 20px 0 !important;
+    }
+    .topic_readmore {
+      padding: 20px 0px 35px 0 !important;
+    }
+    div#topics_sidebar {
+     width: 100% !important;
+     float: none !important;
+     padding: 0 10% !important;
+    }
+}
+
+@media all and (min-width: 1026px) {
+	.mobile_banner{
+		display:none !important;
+	}
+	.sidebar_burger_menu{
+        display:none;
+    }
+}
+
+.topic_title {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+.topic_wrapper_left {
+    width: 50%;
+    padding: 20px 40px;
+}
+.topic_description {
+    padding: 0px 0;
+}
+.topic_readmore {
+    padding: 15px 0px 5px 0;
+}
+.center.right,.center.left{
+    display:flow-root;
+    width:100%;
+}
+.topic_wrapper_right {
+    width: 48%;
+    float: right;
+    padding: 20px 40px;
+}
+#A.active {
+    margin-left: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#A {
+    float: left;
+    margin-left: -360px;
+    padding: 15px;
+    height: 100%;
+    width: 320px;
+    background: #eff0f1;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    overflow: auto;
+}
+div#toggle {
+    cursor: pointer;
+    display: table;
+}
+.centertopic .content-text {
+     width: 100%;
+    margin: 0 auto;
+    padding: 5%;
+    box-shadow:inset 4px 0px 4px #eee;
+}
+.header__social.topics {
+    position: relative;
+    display: block;
+}
+div#toggle .active {
+    margin-left: 319px !important;
+    transition: all 0.3s ease;
+}
+#A.active {
+    position: absolute;
+    z-index: -1;
+}
+div#B,div#A {
+    position: absolute;
+}
+div#toggle{
+    transition: all 0.3s ease;
+}
+.topics .center.active {
+    margin-left: 319px;
+     transition: all 0.3s ease;
+}
+.topics .center {
+     transition: all 0.3s ease;
+}
+div#topics_sidebar {
+    width: 18%;
+    float: left;
+    display: block;
+    position: relative;
+    padding-left:3%;
+    background:white;
+}
+.topics_content {
+    width: 82%;
+    float: left;
+}
+.blogtopic{
+    width: 80%;
+    float: left;
+}
+#topics_sidebar h2.widgettitle {
+    color: #219FD1;
+    margin-top: 30px;
+    font-size: 17px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+#topics_sidebar li a.active {
+    font-weight: bold;
+}
+#topics_sidebar li a {
+    font-size: 13px;
+}
+ul.sidebar_questionlist {
+    margin-bottom: 30px;
+    /*height: 200px;
+    overflow-y: auto;*/
+}
+ul.sidebar_topicslist {
+   /* max-height: 400px;*/
+    overflow-y: auto;
+	margin-bottom: 20px;
+    padding-right: 35px;
+}
+#topics_sidebar li a:focus {
+    color: black !important;
+}
+.topic_readmore img {
+    margin: -5px 0px;
+}
+.topic_readmore.singlepage a.button{
+    background-image: url(https://eggstime.com/wp-content/uploads/2019/03/back_button.png);
+    background-repeat: no-repeat;
+    background-position: 18px 9px;
+    background-size: 14px;
+
+}
+.topic_readmore.singlepage a.button:hover {
+    background-image: url(http://eggstime.com/wp-content/uploads/2019/03/hover_back.png);
+}
+.sidebar_questionlist li {
+    padding-bottom: 15px;
+}
+.sidebar_topicslist li {
+    padding-bottom: 15px;
+}
+ul.sidebar_topicslist a {
+    line-height: 13px !important;
+    display: block;
+}
+.topic_description p {
+    margin-bottom: 10px;
+}
+/*.mobile_banner img{
+    padding: 70px;
+}*/
+.slider.slider--channel.customer {
+    background: #94bc3f;
+}
+.slider--channel.customer .title a{
+    color: #fff !important;
+}
+.slider--channel.customer .slick-arrow {
+    background: white;
+}
+.newlogoslider {
+    width: 100%;
+    padding: 0 5%;
+    background: #f1f1f1;
+}
+.mainsliderarea {
+    display: block;
+    clear: both;
+    margin-bottom: 50px;
+}
+
+.mainsliderareainner {
+    width: 50%;
+    display: block;
+	float: left;
+	padding: 0 75px 40px;
+}
+span.mainsliderareainnertitle {
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 20px;
+    display: block;
+}
+@media all and (max-width:700px){
+	.mainsliderareainner {
+    width: 100% !important;
+}
+}
+@media all and (min-width: 767px){
+	.head.head--skazka-egg .head__title{
+		display:none;
+	}
+}
+@media (max-width: 767px){
+.head.head--skazka-egg {
+    background-color: #FF5CBF;
+}
+}
+@media only screen and (min-width: 1024px)  {
+	.custom_icon_wrapper {
+    width: 35% !important;
+    margin: -7% auto !important;
+}
+}
+.newcatalogue a {
+    /*color: #ffffff;*/
+    font-size: 24px;
+    font-weight: 700;
+}
+/*.newcatalogue*/ div#custom_wrapper_div {
+    margin-top: 13% !important;
+}
+.digital-catalog-top-heading {
+    text-align: center;
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 50px 0 20px 0;
+    color: #0099D2;
+    font-weight: bold;
+}
+@media all and (max-width:767px){
+	.new-catalog-top-heading{
+		margin: 15px 0 100px 0 !important;
+	}
+	.ci_home, .ci_zoom1, .ci_zoom_out, .ci_search, .ci_print {
+    margin: 5px 20px !important;
+}
+	a.req-cata {
+    top: 70px !important;
+}
+	.new-catalog-bottom-heading {
+    margin: 125px 0 0 0 !important;
+}
+	.mobilecatalog .head.head--new-catalog {
+    background-image: url(https://eggstime.com/wp-content/themes/eggs-shop/images/head_9.jpg );
+    padding: 75px 15px;
+    margin-bottom: 20px;
+}
+}
+.prod-search input#prod-search {
+    padding: 14px 10px;
+}
+@media all and (max-width:650px){
+	.slidesjs-container, .slidesjs-control, .woo-lookbook .woo-lookbook-inner .wlb-image {
+    height: 450px !important;
+    width: 100% !important;
+}
+}

@@ -1,0 +1,41 @@
+<!--
+  LICENSE PAGE — USE THEME TEMPLATE (do NOT paste HTML in WP editor)
+  =================================================================
+
+  Problem with pasting in Code tab:
+  - Theme page.php adds OLD yellow banner + "License" title on top
+  - <style> tags get stripped / conflict with theme CSS
+  - Button disappears (theme .button / .entry-content overrides)
+
+  CORRECT WAY — upload these files to wp-content/themes/eggs-shop/:
+
+  1. page-license.php              (auto-used when page slug is "license")
+  2. template-parts/license-hero.php
+  3. template-parts/license-brands.php
+  4. template-parts/license-products.php
+  5. template-parts/license-categories.php
+  6. template-parts/license-info.php
+  7. template-parts/license-contact.php
+  8. template-parts/license-cta.php
+  9. css/license-page.css
+  9. inc/actions.php               (loads license-page.css + form handler)
+
+  WORDPRESS ADMIN:
+  - Pages → LICENSE
+  - Delete ALL content from editor (leave empty)
+  - Permalink must be: /license/
+  - Update page
+  - Clear WP Rocket cache
+
+  Banner image URL (in license-page.css):
+  https://eggstime.com/wp-content/uploads/2017/12/banner3-min.jpg
+
+  Sections (we add next in template-parts/):
+  [x] Hero banner
+  [x] Our Brands
+  [x] Dynamic products (WooCommerce)
+  [x] Licensing categories
+  [x] Why License / Partners / Process
+  [x] Licensee contact form
+  [x] Pre-footer pink CTA banner
+-->
