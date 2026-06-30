@@ -158,7 +158,9 @@ $et_home_social_cards = array(
 
                         <div class="et-home__social-foot">
                             <?php if ( ! empty( $card['description'] ) ) : ?>
-                                <p class="et-home__social-desc"><?php echo esc_html( $card['description'] ); ?></p>
+                                <div class="et-home__social-copy">
+                                    <span class="et-home__social-desc"><?php echo esc_html( $card['description'] ); ?></span>
+                                </div>
                             <?php endif; ?>
 
                             <a href="<?php echo esc_url( $card['url'] ); ?>" class="et-home__social-cta" target="_blank" rel="noopener noreferrer">
