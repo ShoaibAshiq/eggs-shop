@@ -569,7 +569,7 @@
 
 .et-home__hero--split-video .et-home__hero-inner {
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
     margin-bottom: 0;
 }
 
@@ -649,6 +649,7 @@
 
 .et-home__hero--split-video .et-home__hero-actions {
     gap: 12px;
+    margin-bottom: 50px;
 }
 
 .et-home__hero--split-video .et-home__hero-btn {
@@ -658,7 +659,7 @@
 }
 
 .et-home__hero--split-video .et-home__hero-trust {
-    margin-top: 14px;
+    margin-top: 0;
     margin-bottom: 0;
     gap: 10px;
 }
@@ -834,7 +835,7 @@
 @media screen and (min-width: 768px) {
     .et-home__hero--split-video .et-home__hero-inner {
         padding-top: 24px;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 }
 
@@ -874,7 +875,7 @@
 @media screen and (min-width: 1200px) {
     .et-home__hero--split-video .et-home__hero-inner {
         padding-top: 28px;
-        padding-bottom: 50px;
+        padding-bottom: 200px;
     }
 
     .et-home__hero-grid {
@@ -918,7 +919,7 @@
 
     .et-home__hero--split-video .et-home__hero-inner {
         padding-top: 20px;
-        padding-bottom: 50px;
+        padding-bottom: 100px;
     }
 }
 
@@ -947,7 +948,7 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding: 14px 18px 50px;
+        padding: 14px 18px 100px;
     }
 
     .et-home__hero--split-video .et-home__hero-title {
