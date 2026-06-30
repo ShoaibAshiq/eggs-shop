@@ -6,9 +6,8 @@
  */
 $et_home_hero_use_video    = true;
 $et_home_hero_video_url    = 'https://eggstime.com/wp-content/uploads/2026/06/WhatsApp-Video-2026-06-25-at-2.18.18-PM-online-video-cutter.com-1.mp4';
-$et_home_hero_video_poster = 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
-$et_home_hero_bg           = 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
-$et_home_hero_logo         = get_template_directory_uri() . '/images/eggs_time_logo.png';
+$et_home_hero_video_poster = 'https://eggstime.com/wp-content/uploads/2026/06/b629e4d0-2122-4ca9-a618-c1bff06faa12.png';
+$et_home_hero_bg           = 'https://eggstime.com/wp-content/uploads/2026/06/b629e4d0-2122-4ca9-a618-c1bff06faa12.png';
 // Swap $et_home_hero_video_url when the new product-focused edit is ready.
 
 if ( $et_home_hero_use_video ) :
@@ -21,16 +20,6 @@ if ( $et_home_hero_use_video ) :
     <div class="et-home__hero-inner center">
         <div class="et-home__hero-grid">
             <div class="et-home__hero-content">
-                <img
-                    src="<?php echo esc_url( $et_home_hero_logo ); ?>"
-                    alt="<?php esc_attr_e( 'Eggs Time', 'eggs-shop' ); ?>"
-                    class="et-home__hero-logo"
-                    width="160"
-                    height="48"
-                    loading="eager"
-                    decoding="async"
-                />
-
                 <p class="et-home__hero-badge">
                     <span class="et-home__hero-badge-icon" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
