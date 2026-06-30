@@ -3097,12 +3097,12 @@
 .et-home__social-desc {
     display: block;
     margin: 0;
-    padding: 0;
+    padding: 10px 14px;
     width: 100%;
     font-size: clamp(14px, 1.25vw, 16px);
     font-weight: 500;
     line-height: 1.55;
-    text-align: center !important;
+    text-align: center;
     color: var(--et-home-text) !important;
 }
 
@@ -3342,9 +3342,10 @@
     }
 
     .et-home__social-desc {
+        padding: 10px 14px;
         font-size: 13px;
         line-height: 1.45;
-        text-align: center !important;
+        text-align: center;
     }
 
     .et-home__social-media {
