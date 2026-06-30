@@ -6,9 +6,9 @@
  */
 $et_home_hero_use_video    = true;
 $et_home_hero_video_url    = 'https://eggstime.com/wp-content/uploads/2026/06/WhatsApp-Video-2026-06-25-at-2.18.18-PM-online-video-cutter.com-1.mp4';
-$et_home_hero_video_poster = 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
-$et_home_hero_bg           = 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
-$et_home_hero_logo         = get_template_directory_uri() . '/images/eggs_time_logo.png';
+$et_home_hero_video_poster = 'https://eggstime.com/wp-content/uploads/2026/06/b629e4d0-2122-4ca9-a618-c1bff06faa12.png';
+$et_home_hero_bg           = 'https://eggstime.com/wp-content/uploads/2026/06/b629e4d0-2122-4ca9-a618-c1bff06faa12.png';
+$et_home_hero_btn_arrow    = '<svg class="et-home__hero-btn-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5l8 7-8 7" stroke="#098BE5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 // Swap $et_home_hero_video_url when the new product-focused edit is ready.
 
 if ( $et_home_hero_use_video ) :
@@ -21,16 +21,6 @@ if ( $et_home_hero_use_video ) :
     <div class="et-home__hero-inner center">
         <div class="et-home__hero-grid">
             <div class="et-home__hero-content">
-                <img
-                    src="<?php echo esc_url( $et_home_hero_logo ); ?>"
-                    alt="<?php esc_attr_e( 'Eggs Time', 'eggs-shop' ); ?>"
-                    class="et-home__hero-logo"
-                    width="160"
-                    height="48"
-                    loading="eager"
-                    decoding="async"
-                />
-
                 <p class="et-home__hero-badge">
                     <span class="et-home__hero-badge-icon" aria-hidden="true">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
@@ -55,20 +45,14 @@ if ( $et_home_hero_use_video ) :
                     <a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" class="et-home__hero-btn et-home__hero-btn--primary">
                         <span class="et-home__hero-btn-label">Shop Surprise Eggs</span>
                         <span class="et-home__hero-btn-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
-                                <line x1="3" y1="6" x2="21" y2="6"></line>
-                                <path d="M16 10a4 4 0 01-8 0"></path>
-                            </svg>
+                            <?php echo $et_home_hero_btn_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                         </span>
                     </a>
 
                     <a href="#et-home-characters" class="et-home__hero-btn et-home__hero-btn--secondary">
                         <span class="et-home__hero-btn-label">Explore Characters</span>
                         <span class="et-home__hero-btn-icon" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M5 12h12M13 7l5 5-5 5"/>
-                            </svg>
+                            <?php echo $et_home_hero_btn_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                         </span>
                     </a>
                 </div>
@@ -208,20 +192,14 @@ else :
                 <a href="<?php echo esc_url( home_url( '/shop' ) ); ?>" class="et-home__hero-btn et-home__hero-btn--primary">
                     <span class="et-home__hero-btn-label">Shop Surprise Eggs</span>
                     <span class="et-home__hero-btn-icon" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
-                            <line x1="3" y1="6" x2="21" y2="6"></line>
-                            <path d="M16 10a4 4 0 01-8 0"></path>
-                        </svg>
+                        <?php echo $et_home_hero_btn_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     </span>
                 </a>
 
                 <a href="#et-home-characters" class="et-home__hero-btn et-home__hero-btn--secondary">
                     <span class="et-home__hero-btn-label">Explore Characters</span>
                     <span class="et-home__hero-btn-icon" aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h12M13 7l5 5-5 5"/>
-                        </svg>
+                        <?php echo $et_home_hero_btn_arrow; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     </span>
                 </a>
             </div>
