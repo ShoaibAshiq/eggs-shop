@@ -17,11 +17,11 @@ get_header();
             <?php get_template_part( 'template-parts/home-v2', 'best-sellers' ); ?>
         </div>
 
-        <?php get_template_part( 'template-parts/home-v2', 'stories' ); ?>
-
         <?php get_template_part( 'template-parts/home-v2', 'youtube' ); ?>
 
         <?php get_template_part( 'template-parts/home-v2', 'products' ); ?>
+
+        <?php get_template_part( 'template-parts/home-v2', 'stories' ); ?>
 
         <?php get_template_part( 'template-parts/home-v2', 'parent-benefits' ); ?>
 
