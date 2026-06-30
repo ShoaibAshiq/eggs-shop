@@ -156,18 +156,20 @@ $et_home_social_cards = array(
                             </a>
                         </div>
 
-                        <?php if ( ! empty( $card['description'] ) ) : ?>
-                            <p class="et-home__social-desc"><?php echo esc_html( $card['description'] ); ?></p>
-                        <?php endif; ?>
+                        <div class="et-home__social-foot">
+                            <?php if ( ! empty( $card['description'] ) ) : ?>
+                                <p class="et-home__social-desc"><?php echo esc_html( $card['description'] ); ?></p>
+                            <?php endif; ?>
 
-                        <a href="<?php echo esc_url( $card['url'] ); ?>" class="et-home__social-cta" target="_blank" rel="noopener noreferrer">
-                            <?php echo esc_html( ! empty( $card['cta'] ) ? $card['cta'] : 'Visit Channel' ); ?>
-                            <span class="et-home__social-cta-icon" aria-hidden="true">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M5 12h12M13 7l5 5-5 5"/>
-                                </svg>
-                            </span>
-                        </a>
+                            <a href="<?php echo esc_url( $card['url'] ); ?>" class="et-home__social-cta" target="_blank" rel="noopener noreferrer">
+                                <?php echo esc_html( ! empty( $card['cta'] ) ? $card['cta'] : 'Visit Channel' ); ?>
+                                <span class="et-home__social-cta-icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M5 12h12M13 7l5 5-5 5"/>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </article>
                 </li>
             <?php endforeach; ?>
