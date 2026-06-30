@@ -582,12 +582,16 @@
 
 /* ----- Hero — split video banner (test) ----- */
 .et-home__hero--split-video {
+    display: flex;
+    align-items: center;
     min-height: auto;
-    align-items: flex-start;
     background-color: #eef7fc;
 }
 
 .et-home__hero--split-video .et-home__hero-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
     padding-top: 20px;
     padding-bottom: 100px;
     margin-bottom: 0;
@@ -597,7 +601,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 12px;
-    align-items: start;
+    align-items: center;
     width: 100%;
 }
 
@@ -915,15 +919,25 @@
 
 @media screen and (min-width: 768px) {
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-top: 24px;
-        padding-bottom: 100px;
+        padding-top: 40px;
+        padding-bottom: 120px;
     }
 }
 
 @media screen and (min-width: 992px) {
+    .et-home__hero--split-video {
+        min-height: clamp(540px, 70vh, 780px);
+    }
+
+    .et-home__hero--split-video .et-home__hero-inner {
+        padding-top: 48px;
+        padding-bottom: 140px;
+    }
+
     .et-home__hero-grid {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
+        justify-content: center;
         gap: 12px;
     }
 
@@ -957,9 +971,13 @@
 }
 
 @media screen and (min-width: 1200px) {
+    .et-home__hero--split-video {
+        min-height: clamp(580px, 72vh, 820px);
+    }
+
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-top: 28px;
-        padding-bottom: 200px;
+        padding-top: 52px;
+        padding-bottom: 160px;
     }
 
     .et-home__hero-grid {
