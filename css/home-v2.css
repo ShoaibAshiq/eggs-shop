@@ -779,12 +779,18 @@
     box-shadow: 0 6px 18px rgba(30, 58, 95, 0.18);
 }
 
-.et-home__story-play svg,
 .et-home__social-play svg {
     width: 22px;
     height: 22px;
     flex-shrink: 0;
     margin-left: 2px;
+}
+
+.et-home__story-play svg {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    margin-left: 3px;
 }
 
 .et-home__youtube-play--small {
