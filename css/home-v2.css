@@ -718,7 +718,7 @@
 }
 
 .et-home__hero-video-play,
-.et-home__youtube-play,
+.et-home__youtube-play--large,
 .et-home__story-play,
 .et-home__social-play {
     top: 50%;
@@ -735,13 +735,39 @@
 }
 
 .et-home__hero-video-play svg,
-.et-home__youtube-play svg,
-.et-home__story-play svg,
-.et-home__social-play svg {
-    width: 48px;
-    height: 48px;
+.et-home__youtube-play--large svg {
+    width: 40px;
+    height: 40px;
     flex-shrink: 0;
     margin-left: 3px;
+}
+
+.et-home__story-play,
+.et-home__social-play {
+    width: 56px;
+    height: 56px;
+    box-shadow: 0 6px 18px rgba(30, 58, 95, 0.18);
+}
+
+.et-home__story-play svg,
+.et-home__social-play svg {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+    margin-left: 2px;
+}
+
+.et-home__youtube-play--small {
+    width: 36px;
+    height: 36px;
+    box-shadow: 0 4px 12px rgba(30, 58, 95, 0.16);
+}
+
+.et-home__youtube-play--small svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    margin-left: 2px;
 }
 
 .et-home__hero-video-play {
@@ -1903,7 +1929,15 @@
 .et-home__youtube-play {
     position: absolute;
     z-index: 3;
+    top: 50%;
+    left: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.96);
     color: var(--et-home-blue);
+    transform: translate(-50%, -50%);
     transition: transform 0.2s ease;
 }
 
@@ -2543,7 +2577,7 @@
     margin-bottom: 0;
     border-radius: 50%;
     background: #e8f9ef;
-    color: #27ae60;
+    color: #1f8f4f;
 }
 
 .et-home__product-icon i {
@@ -2564,7 +2598,7 @@
 
 .et-home__product-icon--green {
     background: #e8f9ef;
-    color: #27ae60;
+    color: #1f8f4f;
 }
 
 .et-home__product-title {
@@ -2676,7 +2710,7 @@
 
 .et-home__products-feature-icon--green {
     background: #e8f9ef;
-    color: #27ae60;
+    color: #1f8f4f;
 }
 
 .et-home__products-feature-icon--purple {
@@ -3406,7 +3440,7 @@
 
 .et-home__parent-benefits-icon--green {
     background: #e8f9ef;
-    color: #27ae60;
+    color: #1f8f4f;
 }
 
 .et-home__parent-benefits-title {
@@ -3692,7 +3726,7 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    color: #27ae60;
+    color: #1f8f4f;
     line-height: 1;
 }
 
@@ -3781,7 +3815,7 @@
     height: 22px;
     font-size: 16px;
     line-height: 1;
-    color: #27ae60;
+    color: #1f8f4f;
 }
 
 .et-home__distributor-btn {
@@ -3795,9 +3829,9 @@
     min-height: 52px;
     min-width: 0;
     padding: 10px 10px 10px 24px !important;
-    border: 2px solid #27ae60 !important;
+    border: 2px solid #1f8f4f !important;
     border-radius: 50px !important;
-    background: #27ae60 !important;
+    background: #1f8f4f !important;
     color: #ffffff !important;
     font-family: 'Quicksand', 'Ubuntu', sans-serif !important;
     font-size: 12px !important;
@@ -3823,7 +3857,7 @@
     height: 34px;
     border-radius: 50%;
     background: #ffffff;
-    color: #27ae60;
+    color: #1f8f4f;
     font-size: 20px;
     line-height: 1;
 }
@@ -3835,8 +3869,8 @@
 
 .et-home__distributor-btn:hover,
 .et-home__distributor-btn:focus {
-    background: #219653 !important;
-    border-color: #219653 !important;
+    background: #1a7f45 !important;
+    border-color: #1a7f45 !important;
     color: #ffffff !important;
     transform: translateY(-1px);
 }
@@ -3913,7 +3947,7 @@
 
 .et-home__distributor-showcase-ornament {
     flex-shrink: 0;
-    color: #27ae60;
+    color: #1f8f4f;
     font-size: 9px;
     line-height: 1;
 }
