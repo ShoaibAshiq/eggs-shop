@@ -588,16 +588,19 @@
 }
 
 .et-home__hero--split-video .et-home__hero-inner {
-    padding-top: 20px;
-    padding-bottom: 100px;
+    display: flex;
+    align-items: center;
+    padding-top: 44px;
+    padding-bottom: 72px;
     margin-bottom: 0;
 }
 
 .et-home__hero-grid {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 12px;
-    align-items: start;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
 }
 
 .et-home__hero--split-video .et-home__hero-content {
@@ -675,7 +678,7 @@
 
 .et-home__hero--split-video .et-home__hero-actions {
     gap: 12px;
-    margin-bottom: 50px;
+    margin-bottom: 24px;
 }
 
 .et-home__hero--split-video .et-home__hero-btn {
@@ -908,28 +911,30 @@
 
 @media screen and (min-width: 768px) {
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-top: 24px;
-        padding-bottom: 100px;
+        padding-top: 52px;
+        padding-bottom: 80px;
     }
 }
 
 @media screen and (min-width: 992px) {
     .et-home__hero-grid {
         display: flex;
-        align-items: flex-start;
-        gap: 8px;
+        align-items: center;
+        gap: 0;
     }
 
     .et-home__hero--split-video .et-home__hero-content {
-        flex: 1 1 54%;
+        flex: 1 1 50%;
         min-width: 0;
         max-width: none;
+        padding-right: 8px;
     }
 
     .et-home__hero-media {
-        flex: 1 1 46%;
-        max-width: 46%;
-        align-self: stretch;
+        flex: 1 1 50%;
+        max-width: 50%;
+        align-self: center;
+        padding-left: 8px;
     }
 
     .et-home__hero-video-frame {
@@ -948,22 +953,23 @@
 
 @media screen and (min-width: 1200px) {
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-top: 28px;
-        padding-bottom: 200px;
+        padding-top: 60px;
+        padding-bottom: 88px;
     }
 
     .et-home__hero-grid {
-        gap: 10px;
+        gap: 0;
     }
 
     .et-home__hero--split-video .et-home__hero-content {
-        flex: 1 1 52%;
+        flex: 1 1 50%;
+        padding-right: 10px;
     }
 
     .et-home__hero-media {
-        flex: 1 1 48%;
-        max-width: 48%;
-        align-self: stretch;
+        flex: 1 1 50%;
+        max-width: 50%;
+        padding-left: 10px;
     }
 
     .et-home__hero-video-wrap {
@@ -992,8 +998,8 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-top: 20px;
-        padding-bottom: 100px;
+        padding-top: 40px;
+        padding-bottom: 64px;
     }
 }
 
