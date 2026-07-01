@@ -44,19 +44,6 @@ $et_home_social_cards = array(
         'description' => 'Quick, fun and engaging videos kids love!',
         'cta'         => 'Follow Us',
     ),
-    array(
-        'platform'    => 'world',
-        'name'        => 'Eggs Time World',
-        'handle'      => '@eggstime.world',
-        'url'         => 'https://www.instagram.com/eggstime.world/',
-        'type'        => 'Fun & Play',
-        'type_color'  => '#f39c12',
-        'images'      => array( 'https://img.youtube.com/vi/I8E_rZ6udJY/hqdefault.jpg' ),
-        'play'        => true,
-        'video'       => 'https://www.youtube.com/watch?v=I8E_rZ6udJY',
-        'description' => 'Games, activities and fun for the whole family!',
-        'cta'         => 'Follow Us',
-    ),
 );
 ?>
 <section id="et-home-social" class="et-home__social et-home__playful-section" aria-labelledby="et-home-social-title">
