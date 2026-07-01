@@ -369,19 +369,14 @@
         initHeroVideo();
     });
 
-    function initHeroVideo() {
-        var hero = document.querySelector('.et-home__hero--split-video');
-        if (!hero) {
-            return;
-        }
+    function initHeroVideoWrap(videoWrap) {
+        var video = videoWrap.querySelector('.et-home__hero-video');
+        var playToggle = videoWrap.querySelector('.et-home__hero-video-play');
+        var soundToggle = videoWrap.querySelector('.et-home__hero-video-sound');
 
-        var video = hero.querySelector('.et-home__hero-video');
-        var videoWrap = hero.querySelector('.et-home__hero-video-wrap');
         if (!video) {
             return;
         }
-
-        var playToggle = document.getElementById('et_home_hero_play_toggle');
 
         function updatePlayButtonLabel() {
             if (!playToggle) {
@@ -395,26 +390,35 @@
         }
 
         function setPlayingState(isPlaying) {
-            if (videoWrap) {
-                videoWrap.classList.toggle('is-playing', isPlaying);
-            }
+            videoWrap.classList.toggle('is-playing', isPlaying);
             updatePlayButtonLabel();
+        }
+
+        function markVideoReady() {
+            videoWrap.classList.remove('is-loading');
+        }
+
+        function markVideoLoading() {
+            videoWrap.classList.add('is-loading');
+        }
+
+        function setSoundState(isUnmuted) {
+            if (!soundToggle) {
+                return;
+            }
+
+            video.muted = !isUnmuted;
+            soundToggle.classList.toggle('is-unmuted', isUnmuted);
+            soundToggle.setAttribute('aria-pressed', isUnmuted ? 'true' : 'false');
+            soundToggle.setAttribute('aria-label', isUnmuted ? 'Turn sound off' : 'Turn sound on');
+
+            if (isUnmuted) {
+                video.play().catch(function () {});
+            }
         }
 
         video.pause();
         setPlayingState(false);
-
-        function markVideoReady() {
-            if (videoWrap) {
-                videoWrap.classList.remove('is-loading');
-            }
-        }
-
-        function markVideoLoading() {
-            if (videoWrap) {
-                videoWrap.classList.add('is-loading');
-            }
-        }
 
         video.addEventListener('play', function () {
             setPlayingState(true);
@@ -437,20 +441,18 @@
             });
         }
 
-        if (videoWrap) {
-            videoWrap.addEventListener('click', function (event) {
-                if (
-                    event.target.closest('.et-home__hero-video-sound') ||
-                    event.target.closest('.et-home__hero-video-play')
-                ) {
-                    return;
-                }
+        videoWrap.addEventListener('click', function (event) {
+            if (
+                event.target.closest('.et-home__hero-video-sound') ||
+                event.target.closest('.et-home__hero-video-play')
+            ) {
+                return;
+            }
 
-                if (!video.paused) {
-                    video.pause();
-                }
-            });
-        }
+            if (!video.paused) {
+                video.pause();
+            }
+        });
 
         markVideoLoading();
         video.addEventListener('loadeddata', markVideoReady);
@@ -460,28 +462,22 @@
             markVideoReady();
         }
 
-        var soundToggle = document.getElementById('et_home_hero_sound_toggle');
-
-        function setSoundState(isUnmuted) {
-            if (!soundToggle) {
-                return;
-            }
-
-            video.muted = !isUnmuted;
-            soundToggle.classList.toggle('is-unmuted', isUnmuted);
-            soundToggle.setAttribute('aria-pressed', isUnmuted ? 'true' : 'false');
-            soundToggle.setAttribute('aria-label', isUnmuted ? 'Turn sound off' : 'Turn sound on');
-
-            if (isUnmuted) {
-                video.play().catch(function () {});
-            }
-        }
-
         if (soundToggle) {
             soundToggle.addEventListener('click', function (event) {
                 event.stopPropagation();
                 setSoundState(!soundToggle.classList.contains('is-unmuted'));
             });
         }
+    }
+
+    function initHeroVideo() {
+        var hero = document.querySelector('.et-home__hero--split-video');
+        if (!hero) {
+            return;
+        }
+
+        hero.querySelectorAll('.et-home__hero-video-wrap').forEach(function (videoWrap) {
+            initHeroVideoWrap(videoWrap);
+        });
     }
 })(jQuery);

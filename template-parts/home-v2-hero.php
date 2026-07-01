@@ -4,17 +4,18 @@
  *
  * Set to false to revert to the static image banner.
  */
-$et_home_hero_use_video    = true;
-$et_home_hero_video_url    = 'https://eggstime.com/wp-content/uploads/2026/06/WhatsApp-Video-2026-06-25-at-2.18.18-PM-online-video-cutter.com-1.mp4';
-$et_home_hero_video_poster = 'https://eggstime.com/wp-content/uploads/2026/06/b629e4d0-2122-4ca9-a618-c1bff06faa12.png';
-$et_home_hero_bg           = 'https://eggstime.com/wp-content/uploads/2026/06/b629e4d0-2122-4ca9-a618-c1bff06faa12.png';
-$et_home_hero_btn_arrow    = '<svg class="et-home__hero-btn-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="none" d="M8 5l8 7-8 7" stroke="#098BE5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
-// Swap $et_home_hero_video_url when the new product-focused edit is ready.
+$et_home_hero_use_video       = true;
+$et_home_hero_video_url       = 'https://eggstime.com/wp-content/uploads/2026/07/Unboxing_magik.mp4';
+$et_home_hero_video_url_alt   = 'https://eggstime.com/wp-content/uploads/2026/07/51be273fce2746bcbecc5fda78856c43.mp4';
+$et_home_hero_show_test_video = true; // Temporary: remove after client picks one video.
+$et_home_hero_video_poster    = 'https://eggstime.com/wp-content/uploads/2026/06/b629e4d0-2122-4ca9-a618-c1bff06faa12.png';
+$et_home_hero_bg              = 'https://eggstime.com/wp-content/uploads/2026/06/b629e4d0-2122-4ca9-a618-c1bff06faa12.png';
+$et_home_hero_btn_arrow       = '<svg class="et-home__hero-btn-arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path fill="none" d="M8 5l8 7-8 7" stroke="#098BE5" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
 if ( $et_home_hero_use_video ) :
     ?>
 <section
-    class="et-home__hero et-home__hero--split-video et-home__playful-section"
+    class="et-home__hero et-home__hero--split-video et-home__playful-section<?php echo $et_home_hero_show_test_video ? ' et-home__hero--dual-video-test' : ''; ?>"
     aria-label="<?php esc_attr_e( 'Play, Learn and Grow with Eggs Time', 'eggs-shop' ); ?>"
     data-hero-video="<?php echo esc_url( $et_home_hero_video_url ); ?>"
 >
@@ -100,59 +101,117 @@ if ( $et_home_hero_use_video ) :
                 </ul>
             </div>
 
-            <div class="et-home__hero-media">
-                <div class="et-home__hero-video-frame">
-                    <div class="et-home__hero-video-wrap">
-                        <video
-                            class="et-home__hero-video"
-                            src="<?php echo esc_url( $et_home_hero_video_url ); ?>"
-                            muted
-                            loop
-                            playsinline
-                            preload="metadata"
-                            poster="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
-                        ></video>
-                        <img
-                            class="et-home__hero-video-fallback"
-                            src="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
-                            alt=""
-                            loading="eager"
-                            decoding="async"
-                        />
-                        <button
-                            type="button"
-                            class="et-home__hero-video-play"
-                            id="et_home_hero_play_toggle"
-                            aria-label="<?php esc_attr_e( 'Play video', 'eggs-shop' ); ?>"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </button>
-                        <button
-                            type="button"
-                            class="et-home__hero-video-sound"
-                            id="et_home_hero_sound_toggle"
-                            aria-label="Turn sound on"
-                            aria-pressed="false"
-                        >
-                        <span class="et-home__hero-video-sound-icon et-home__hero-video-sound-icon--off" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M11 5 6 9H3v6h3l5 4V5z"/>
-                                <line x1="23" y1="9" x2="17" y2="15"/>
-                                <line x1="17" y1="9" x2="23" y2="15"/>
-                            </svg>
-                        </span>
-                        <span class="et-home__hero-video-sound-icon et-home__hero-video-sound-icon--on" aria-hidden="true">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M11 5 6 9H3v6h3l5 4V5z"/>
-                                <path d="M15.54 8.46a5 5 0 010 7.07"/>
-                                <path d="M19.07 4.93a10 10 0 010 14.14"/>
-                            </svg>
-                        </span>
-                        <span class="et-home__hero-video-sound-label">Sound On</span>
-                    </button>
+            <div class="et-home__hero-media<?php echo $et_home_hero_show_test_video ? ' et-home__hero-media--dual-test' : ''; ?>">
+                <div class="et-home__hero-video-stack">
+                    <div class="et-home__hero-video-frame">
+                        <?php if ( $et_home_hero_show_test_video ) : ?>
+                            <p class="et-home__hero-video-label"><?php esc_html_e( 'Video option 1', 'eggs-shop' ); ?></p>
+                        <?php endif; ?>
+                        <div class="et-home__hero-video-wrap">
+                            <video
+                                class="et-home__hero-video"
+                                src="<?php echo esc_url( $et_home_hero_video_url ); ?>"
+                                muted
+                                loop
+                                playsinline
+                                preload="metadata"
+                                poster="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
+                            ></video>
+                            <img
+                                class="et-home__hero-video-fallback"
+                                src="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
+                                alt=""
+                                loading="eager"
+                                decoding="async"
+                            />
+                            <button
+                                type="button"
+                                class="et-home__hero-video-play"
+                                aria-label="<?php esc_attr_e( 'Play video', 'eggs-shop' ); ?>"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                            </button>
+                            <button
+                                type="button"
+                                class="et-home__hero-video-sound"
+                                aria-label="Turn sound on"
+                                aria-pressed="false"
+                            >
+                                <span class="et-home__hero-video-sound-icon et-home__hero-video-sound-icon--off" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 5 6 9H3v6h3l5 4V5z"/>
+                                        <line x1="23" y1="9" x2="17" y2="15"/>
+                                        <line x1="17" y1="9" x2="23" y2="15"/>
+                                    </svg>
+                                </span>
+                                <span class="et-home__hero-video-sound-icon et-home__hero-video-sound-icon--on" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M11 5 6 9H3v6h3l5 4V5z"/>
+                                        <path d="M15.54 8.46a5 5 0 010 7.07"/>
+                                        <path d="M19.07 4.93a10 10 0 010 14.14"/>
+                                    </svg>
+                                </span>
+                                <span class="et-home__hero-video-sound-label">Sound On</span>
+                            </button>
+                        </div>
                     </div>
+
+                    <?php if ( $et_home_hero_show_test_video ) : ?>
+                        <div class="et-home__hero-video-frame et-home__hero-video-frame--alt">
+                            <p class="et-home__hero-video-label"><?php esc_html_e( 'Video option 2', 'eggs-shop' ); ?></p>
+                            <div class="et-home__hero-video-wrap">
+                                <video
+                                    class="et-home__hero-video"
+                                    src="<?php echo esc_url( $et_home_hero_video_url_alt ); ?>"
+                                    muted
+                                    loop
+                                    playsinline
+                                    preload="metadata"
+                                    poster="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
+                                ></video>
+                                <img
+                                    class="et-home__hero-video-fallback"
+                                    src="<?php echo esc_url( $et_home_hero_video_poster ); ?>"
+                                    alt=""
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                                <button
+                                    type="button"
+                                    class="et-home__hero-video-play"
+                                    aria-label="<?php esc_attr_e( 'Play alternate video', 'eggs-shop' ); ?>"
+                                >
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </button>
+                                <button
+                                    type="button"
+                                    class="et-home__hero-video-sound"
+                                    aria-label="Turn sound on"
+                                    aria-pressed="false"
+                                >
+                                    <span class="et-home__hero-video-sound-icon et-home__hero-video-sound-icon--off" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M11 5 6 9H3v6h3l5 4V5z"/>
+                                            <line x1="23" y1="9" x2="17" y2="15"/>
+                                            <line x1="17" y1="9" x2="23" y2="15"/>
+                                        </svg>
+                                    </span>
+                                    <span class="et-home__hero-video-sound-icon et-home__hero-video-sound-icon--on" aria-hidden="true">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M11 5 6 9H3v6h3l5 4V5z"/>
+                                            <path d="M15.54 8.46a5 5 0 010 7.07"/>
+                                            <path d="M19.07 4.93a10 10 0 010 14.14"/>
+                                        </svg>
+                                    </span>
+                                    <span class="et-home__hero-video-sound-label">Sound On</span>
+                                </button>
+                            </div>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
         </div>
