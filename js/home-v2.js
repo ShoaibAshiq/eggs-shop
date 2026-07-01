@@ -100,7 +100,7 @@
     }
 
     function prepareEggWorldSliderForLoop($el) {
-        if ($el.data('et-loop-prepared')) {
+        if ($el.data('et-loop-prepared') || 'fixed' === $el.data('etCarouselMode')) {
             return;
         }
 
@@ -116,6 +116,10 @@
 
     function withInfiniteResponsiveSettings(responsive) {
         return $.map(responsive || [], function (breakpoint) {
+            if (typeof breakpoint.settings.infinite === 'boolean') {
+                return breakpoint;
+            }
+
             breakpoint.settings = $.extend({}, breakpoint.settings, { infinite: true });
             return breakpoint;
         });
@@ -148,10 +152,11 @@
         return {
             slidesToShow: settings.slidesToShow,
             slidesToScroll: settings.slidesToScroll,
+            initialSlide: typeof settings.initialSlide === 'number' ? settings.initialSlide : 0,
             arrows: true,
             appendArrows: $wrap,
             autoplay: false,
-            infinite: true,
+            infinite: typeof settings.infinite === 'boolean' ? settings.infinite : true,
             swipe: true,
             swipeToSlide: true,
             draggable: true,
@@ -193,19 +198,23 @@
         return getEggWorldSliderConfig($wrap, prevLabel, nextLabel, arrowClass, {
             slidesToShow: 6,
             slidesToScroll: 1,
+            initialSlide: 0,
+            infinite: false,
             responsive: [
                 {
                     breakpoint: 1199,
                     settings: {
                         slidesToShow: 3,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        infinite: false
                     }
                 },
                 {
                     breakpoint: 767,
                     settings: {
                         slidesToShow: 1,
-                        slidesToScroll: 1
+                        slidesToScroll: 1,
+                        infinite: false
                     }
                 }
             ]

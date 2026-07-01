@@ -1355,22 +1355,7 @@
 }
 
 .et-home__best-sellers-product::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    z-index: 0;
-    width: 72%;
-    height: 10px;
-    transform: translateX(-50%);
-    border-radius: 50%;
-    background: radial-gradient(
-        ellipse at center,
-        rgba(30, 58, 95, 0.18) 0%,
-        rgba(30, 58, 95, 0.08) 42%,
-        transparent 72%
-    );
-    pointer-events: none;
+    display: none;
 }
 
 .et-home__best-sellers-product-img {
@@ -1378,9 +1363,9 @@
     z-index: 1;
     display: block;
     width: auto;
-    max-width: min(168px, 100%);
+    max-width: min(148px, 100%);
     height: auto;
-    max-height: 148px;
+    max-height: 132px;
     margin: 0 auto;
     object-fit: contain;
     object-position: center center;

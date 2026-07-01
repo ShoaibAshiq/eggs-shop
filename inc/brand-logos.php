@@ -60,6 +60,7 @@ if ( ! function_exists( 'et_get_home_best_seller_cards' ) ) {
         }
 
         $meta  = et_get_home_core_egg_brand_meta();
+        $logos = et_get_egg_brand_logos();
         $cards = array();
 
         foreach ( et_get_home_core_egg_brand_keys() as $key ) {
@@ -69,9 +70,17 @@ if ( ! function_exists( 'et_get_home_best_seller_cards' ) ) {
 
             $brand = $meta[ $key ];
 
+            if ( ! empty( $brand['best_seller_image'] ) ) {
+                $image = $brand['best_seller_image'];
+            } elseif ( isset( $logos[ $key ]['image'] ) ) {
+                $image = $logos[ $key ]['image'];
+            } else {
+                $image = $brand['product_image'];
+            }
+
             $cards[] = array(
                 'name'             => $brand['name'],
-                'product_image'    => ! empty( $brand['best_seller_image'] ) ? $brand['best_seller_image'] : $brand['product_image'],
+                'product_image'    => $image,
                 'character_image'  => $brand['character_image'],
                 'shop_url'         => $brand['shop_url'],
                 'panel'            => $brand['panel'],

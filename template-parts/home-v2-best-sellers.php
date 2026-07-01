@@ -18,7 +18,7 @@ $et_home_best_sellers = function_exists( 'et_get_home_best_seller_cards' )
         </div>
 
         <div class="et-home__best-sellers-slider-wrap">
-            <ul class="et-home__best-sellers-grid et-home__best-sellers-slider">
+            <ul class="et-home__best-sellers-grid et-home__best-sellers-slider" data-et-carousel-mode="fixed">
             <?php foreach ( $et_home_best_sellers as $brand ) : ?>
                 <li class="et-home__best-sellers-item">
                     <article
