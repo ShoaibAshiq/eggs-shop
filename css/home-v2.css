@@ -3516,6 +3516,8 @@
 .et-home__parent-benefits .et-home__section-inner {
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-width: var(--et-home-max);
     padding-top: var(--et-home-section-gap);
     padding-bottom: var(--et-home-section-gap);
 }
@@ -3533,8 +3535,7 @@
     color: var(--et-home-blue) !important;
 }
 
-.et-home__parent-benefits-intro,
-.et-home__parent-benefits-grid {
+.et-home__parent-benefits-intro {
     max-width: var(--et-home-narrow);
     margin-left: auto;
     margin-right: auto;
@@ -3543,8 +3544,10 @@
 .et-home__parent-benefits-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 20px;
-    margin: 0 auto;
+    gap: clamp(14px, 1.8vw, 24px);
+    width: 100%;
+    max-width: none;
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -3561,7 +3564,8 @@
     align-items: center;
     gap: 18px;
     height: 100%;
-    padding: 28px 24px;
+    min-height: 100%;
+    padding: clamp(24px, 2.4vw, 32px) clamp(18px, 2vw, 28px);
     border-radius: 20px;
     background: #ffffff;
     border: 1px solid rgba(32, 77, 136, 0.08);
