@@ -43,6 +43,7 @@ get_header();
 
         <?php get_template_part( 'template-parts/home-v2', 'cta' ); ?>
 
+        <?php get_template_part( 'template-parts/home-v2', 'games-extra' ); ?>
     </div>
 </div>
 
