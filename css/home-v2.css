@@ -1238,9 +1238,9 @@
     }
 }
 
-.et-home__parent-benefits + .et-home__distributor .et-home__section-inner,
-.et-home__distributor + .et-home__social .et-home__section-inner,
-.et-home__social + .et-home__cta {
+.et-home__parent-benefits + .et-home__social .et-home__section-inner,
+.et-home__social + .et-home__distributor .et-home__section-inner,
+.et-home__distributor + .et-home__cta {
     padding-top: 12px;
 }
 
