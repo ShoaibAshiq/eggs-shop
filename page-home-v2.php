@@ -10,11 +10,12 @@
  * 4. Stories That Teach & Inspire
  * 5. Watch & Learn
  * 6. More Ways to Play & Learn
- * 7. Why Parents Love Eggs Time + Certifications (one trust section)
- * 8. Join the Eggs Time Community
- * 9. Become an Eggs Time Distributor
- * 10. Interested in Our Products
- * 11. Learn and Joy + Eggs Time Games (footer stack)
+ * 7. Fun in Every Egg
+ * 8. Why Parents Love Eggs Time + Certifications (one trust section)
+ * 9. Join the Eggs Time Community
+ * 10. Become an Eggs Time Distributor
+ * 11. Interested in Our Products
+ * 12. Learn and Joy + Eggs Time Games (footer stack)
  */
 get_header();
 ?>
@@ -35,6 +36,8 @@ get_header();
         <?php get_template_part( 'template-parts/home-v2', 'youtube' ); ?>
 
         <?php get_template_part( 'template-parts/home-v2', 'products' ); ?>
+
+        <?php get_template_part( 'template-parts/home-v2', 'fun-egg' ); ?>
 
         <?php get_template_part( 'template-parts/home-v2', 'parent-benefits' ); ?>
 

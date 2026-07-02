@@ -37,6 +37,9 @@ if ( ! function_exists( 'et_home_get_fa_icon_class' ) ) {
             'star'          => 'fa-star',
             'people'        => 'fa-users',
             'heart'         => 'fa-heart',
+            'map'           => 'fa-map',
+            'pencil'        => 'fa-pencil-alt',
+            'search'        => 'fa-search',
         );
 
         return isset( $icons[ $name ] ) ? $icons[ $name ] : null;

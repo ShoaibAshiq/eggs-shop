@@ -91,7 +91,8 @@
 .et-home__playful-section .et-home__parent-benefits-bg,
 .et-home__playful-section .et-home__distributor-bg,
 .et-home__playful-section .et-home__social-bg,
-.et-home__playful-section .et-home__cta-bg {
+.et-home__playful-section .et-home__cta-bg,
+.et-home__playful-section .et-home__fun-egg-bg {
     display: none;
 }
 
@@ -1238,6 +1239,8 @@
     }
 }
 
+.et-home__products + .et-home__fun-egg .et-home__section-inner,
+.et-home__fun-egg + .et-home__parent-benefits .et-home__section-inner,
 .et-home__parent-benefits + .et-home__social .et-home__section-inner,
 .et-home__social + .et-home__distributor .et-home__section-inner,
 .et-home__distributor + .et-home__cta .et-home__cta-inner {
@@ -3283,6 +3286,422 @@
 
     .et-home__products-slider-wrap .slick-arrow::before {
         font-size: 20px;
+    }
+}
+
+/* ----- Fun in Every Egg ----- */
+.et-home__fun-egg {
+    position: relative;
+    background: transparent;
+    width: 100%;
+    overflow: hidden;
+}
+
+.et-home__fun-egg .et-home__section-inner {
+    position: relative;
+    z-index: 1;
+    padding-top: var(--et-home-section-gap);
+    padding-bottom: var(--et-home-section-gap);
+}
+
+.et-home__fun-egg-head {
+    margin: 0 0 28px;
+    text-align: center;
+}
+
+.et-home__fun-egg .et-home__section-kicker {
+    margin-bottom: 14px;
+    color: var(--et-home-blue) !important;
+}
+
+.et-home__fun-egg-title {
+    margin: 0 0 12px;
+    font-family: 'Quicksand', 'Ubuntu', sans-serif;
+    font-size: clamp(34px, 4.4vw, 52px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+    color: var(--et-home-heading) !important;
+}
+
+.et-home__fun-egg-lead {
+    margin: 0 auto;
+    max-width: 760px;
+    font-size: clamp(16px, 1.7vw, 19px);
+    font-weight: 500;
+    line-height: 1.6;
+    color: var(--et-home-text) !important;
+}
+
+.et-home__fun-egg-panel {
+    margin-bottom: 28px;
+    padding: 24px 22px 20px;
+    border: 2px solid rgba(233, 30, 140, 0.22);
+    border-radius: 24px;
+    background: #ffffff;
+    box-shadow: 0 12px 32px rgba(30, 58, 95, 0.08);
+}
+
+.et-home__fun-egg-panel-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.8fr) minmax(0, 1.1fr);
+    gap: 18px 20px;
+    align-items: center;
+}
+
+.et-home__fun-egg-games-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.et-home__fun-egg-games-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #ffe8f3;
+    color: #e91e8c;
+    flex-shrink: 0;
+}
+
+.et-home__fun-egg-games-icon i {
+    font-size: 15px;
+}
+
+.et-home__fun-egg-games-title {
+    margin: 0;
+    font-family: 'Quicksand', 'Ubuntu', sans-serif;
+    font-size: clamp(18px, 2vw, 22px);
+    font-weight: 800;
+    line-height: 1.15;
+    color: #e91e8c !important;
+    text-transform: uppercase;
+}
+
+.et-home__fun-egg-games-desc {
+    margin: 0 0 16px;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--et-home-text) !important;
+}
+
+.et-home__fun-egg-previews {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.et-home__fun-egg-preview {
+    display: block;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #f7fafc;
+    text-decoration: none;
+}
+
+.et-home__fun-egg-preview-media {
+    display: block;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+}
+
+.et-home__fun-egg-preview-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.et-home__fun-egg-preview-label {
+    display: block;
+    padding: 8px 10px;
+    font-size: 13px;
+    font-weight: 700;
+    text-align: center;
+    color: #ffffff !important;
+    background: #e91e8c;
+}
+
+.et-home__fun-egg-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 220px;
+}
+
+.et-home__fun-egg-hero-img {
+    display: block;
+    width: auto;
+    max-width: min(220px, 100%);
+    max-height: 260px;
+    object-fit: contain;
+}
+
+.et-home__fun-egg-side {
+    position: relative;
+    min-height: 220px;
+    padding-right: 88px;
+}
+
+.et-home__fun-egg-activities {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.et-home__fun-egg-activity {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    text-decoration: none;
+    color: var(--et-home-heading) !important;
+}
+
+.et-home__fun-egg-activity-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    color: #ffffff;
+}
+
+.et-home__fun-egg-activity-icon i {
+    font-size: 14px;
+}
+
+.et-home__fun-egg-activity-icon--pink { background: #e91e8c; }
+.et-home__fun-egg-activity-icon--orange { background: #f39c12; }
+.et-home__fun-egg-activity-icon--green { background: #27ae60; }
+.et-home__fun-egg-activity-icon--purple { background: #8e44ad; }
+
+.et-home__fun-egg-activity-label {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.et-home__fun-egg-more {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #e91e8c !important;
+    text-decoration: none;
+}
+
+.et-home__fun-egg-side-character {
+    position: absolute;
+    right: -8px;
+    bottom: -6px;
+    width: auto;
+    max-width: 96px;
+    max-height: 150px;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.et-home__fun-egg-app {
+    padding-top: 8px;
+}
+
+.et-home__fun-egg-app-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.5fr) minmax(0, 0.55fr);
+    gap: 16px 20px;
+    align-items: center;
+}
+
+.et-home__fun-egg-app-intro {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 0;
+}
+
+.et-home__fun-egg-app-character {
+    display: block;
+    width: auto;
+    max-width: 92px;
+    max-height: 130px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.et-home__fun-egg-app-kicker {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin: 0 0 8px;
+    font-family: 'Quicksand', 'Ubuntu', sans-serif;
+    font-size: clamp(16px, 1.8vw, 20px);
+    font-weight: 800;
+    line-height: 1.25;
+    color: var(--et-home-blue) !important;
+}
+
+.et-home__fun-egg-app-kicker-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #e8f3fc;
+    color: #1a9fe0;
+    flex-shrink: 0;
+}
+
+.et-home__fun-egg-app-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--et-home-text) !important;
+}
+
+.et-home__fun-egg-app-games {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.et-home__fun-egg-app-game {
+    display: block;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #ffffff;
+    border: 1px solid rgba(32, 77, 136, 0.08);
+    box-shadow: 0 8px 20px rgba(30, 58, 95, 0.06);
+    text-decoration: none;
+}
+
+.et-home__fun-egg-app-game-media {
+    display: block;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+}
+
+.et-home__fun-egg-app-game-media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.et-home__fun-egg-app-game-label {
+    display: block;
+    padding: 8px 8px 10px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.25;
+    text-align: center;
+    color: var(--et-home-blue) !important;
+}
+
+.et-home__fun-egg-app-aside {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.et-home__fun-egg-app-stores {
+    display: flex;
+    justify-content: center;
+    gap: 14px 24px;
+    margin-top: 22px;
+}
+
+.et-home__fun-egg-store-link {
+    display: block;
+    height: 35px;
+    background: no-repeat 50% 50% / contain;
+}
+
+.et-home__fun-egg-store-link--play {
+    width: 125px;
+    background-image: url('../images/playmarket.png');
+}
+
+.et-home__fun-egg-store-link--app {
+    width: 105px;
+    background-image: url('../images/appstore.png');
+}
+
+@media screen and (max-width: 1199px) {
+    .et-home__fun-egg-panel-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .et-home__fun-egg-hero {
+        grid-column: 1 / -1;
+        order: -1;
+        min-height: 0;
+        padding: 4px 0 8px;
+    }
+
+    .et-home__fun-egg-side {
+        padding-right: 72px;
+    }
+
+    .et-home__fun-egg-app-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .et-home__fun-egg-app-aside {
+        display: none;
+    }
+
+    .et-home__fun-egg-app-games {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .et-home__fun-egg-panel {
+        padding: 18px 16px;
+    }
+
+    .et-home__fun-egg-panel-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .et-home__fun-egg-side {
+        padding-right: 0;
+        min-height: 0;
+    }
+
+    .et-home__fun-egg-side-character {
+        position: static;
+        display: block;
+        margin: 12px auto 0;
+        max-width: 84px;
+    }
+
+    .et-home__fun-egg-app-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .et-home__fun-egg-app-kicker {
+        justify-content: center;
+    }
+
+    .et-home__fun-egg-app-games {
+        grid-template-columns: 1fr;
     }
 }
 
