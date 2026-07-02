@@ -1239,12 +1239,15 @@
     }
 }
 
-.et-home__products + .et-home__fun-egg .et-home__section-inner,
 .et-home__fun-egg + .et-home__parent-benefits .et-home__section-inner,
 .et-home__parent-benefits + .et-home__social .et-home__section-inner,
 .et-home__social + .et-home__distributor .et-home__section-inner,
 .et-home__distributor + .et-home__cta .et-home__cta-inner {
     padding-top: 12px;
+}
+
+.et-home__products + .et-home__fun-egg .et-home__section-inner {
+    padding-top: 36px;
 }
 
 /* ----- Best Sellers (license-style brand row) ----- */
