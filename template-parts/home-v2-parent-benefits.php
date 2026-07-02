@@ -41,7 +41,6 @@ $et_home_trust_certs = function_exists( 'et_get_home_trust_certifications' )
 
         <?php if ( ! empty( $et_home_trust_certs ) ) : ?>
             <div class="et-home__parent-benefits-certs" id="et-home-parent-trust">
-                <p class="et-home__section-kicker et-home__parent-benefits-certs-kicker">Certifications &amp; Safety Standards</p>
 
                 <div class="et-home__parent-trust-certs">
                     <div class="et-home__parent-trust-certs-slider-wrap">
