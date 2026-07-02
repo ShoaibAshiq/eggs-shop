@@ -3371,7 +3371,7 @@
     width: 100%;
     max-width: min(1040px, 100%);
     margin: 0 auto 28px;
-    padding: 34px 30px 30px;
+    padding: 34px 40px 30px;
     border: none;
     border-radius: 28px;
     background: #ffffff;
@@ -3767,7 +3767,7 @@
     }
 
     .et-home__fun-egg-panel {
-        padding: 22px 30px 20px;
+        padding: 22px 40px 20px;
         border-radius: 22px;
     }
 
