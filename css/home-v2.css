@@ -1536,7 +1536,7 @@
 .et-home__games-extra-main {
     background: #ff1849;
     color: #fff;
-    padding: 40px 0 20px;
+    padding: 40px 0;
 }
 
 .et-home__games-extra-main-inner {
@@ -1723,7 +1723,7 @@
 
 @media screen and (min-width: 1200px) {
     .et-home__games-extra-main {
-        padding: 45px 0 4px;
+        padding: 45px 0;
     }
 
     .et-home__games-extra-ratings span {
@@ -1758,7 +1758,7 @@
     }
 
     .et-home__games-extra-main {
-        padding: 24px 0 16px;
+        padding: 24px 0;
     }
 
     .et-home__games-extra-title {
