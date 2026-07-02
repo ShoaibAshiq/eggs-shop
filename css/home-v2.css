@@ -3359,10 +3359,10 @@
 .et-home__fun-egg-panel {
     margin-bottom: 28px;
     padding: 34px 38px 30px;
-    border: 2px solid rgba(233, 30, 140, 0.28);
-    border-radius: 28px;
-    background: #ffffff;
-    box-shadow: 0 12px 32px rgba(30, 58, 95, 0.08);
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
 }
 
 .et-home__fun-egg-panel-grid {
@@ -3732,7 +3732,6 @@
 
     .et-home__fun-egg-panel {
         padding: 22px 18px 20px;
-        border-radius: 22px;
     }
 
     .et-home__fun-egg-panel-grid {
