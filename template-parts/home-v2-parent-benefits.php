@@ -20,7 +20,6 @@ $et_home_trust_certs = function_exists( 'et_get_home_trust_certifications' )
                 <span class="et-home__section-star" aria-hidden="true">★</span>
             </p>
             <h2 class="et-home__section-title" id="et-home-parent-benefits-title">Why Parents Love Eggs Time</h2>
-            <p class="et-home__parent-benefits-trust-line">Trusted by Families Worldwide</p>
         </div>
 
         <ul class="et-home__parent-benefits-grid">
@@ -40,8 +39,18 @@ $et_home_trust_certs = function_exists( 'et_get_home_trust_certifications' )
         </ul>
 
         <?php if ( ! empty( $et_home_trust_certs ) ) : ?>
-            <div class="et-home__parent-benefits-certs" id="et-home-parent-trust">
-                <p class="et-home__section-kicker et-home__parent-benefits-certs-kicker">Certifications &amp; Safety Standards</p>
+            <div class="et-home__parent-benefits-certs" id="et-home-parent-trust" aria-labelledby="et-home-parent-trust-title">
+                <div class="et-home__parent-benefits-certs-heading">
+                    <span class="et-home__parent-benefits-certs-heading-side" aria-hidden="true">
+                        <span class="et-home__parent-benefits-certs-heading-line"></span>
+                        <span class="et-home__parent-benefits-certs-heading-dot"></span>
+                    </span>
+                    <h3 class="et-home__parent-benefits-certs-heading-text" id="et-home-parent-trust-title">Trusted by Families Worldwide</h3>
+                    <span class="et-home__parent-benefits-certs-heading-side et-home__parent-benefits-certs-heading-side--right" aria-hidden="true">
+                        <span class="et-home__parent-benefits-certs-heading-dot"></span>
+                        <span class="et-home__parent-benefits-certs-heading-line"></span>
+                    </span>
+                </div>
 
                 <div class="et-home__parent-trust-certs">
                     <div class="et-home__parent-trust-certs-slider-wrap">

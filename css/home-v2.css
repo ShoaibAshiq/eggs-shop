@@ -4716,8 +4716,54 @@
     color: var(--et-home-blue) !important;
 }
 
-.et-home__parent-benefits-trust-line {
-    margin: 10px 0 0;
+.et-home__parent-benefits-certs {
+    margin-top: 36px;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.et-home__parent-benefits-certs-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(10px, 1.6vw, 16px);
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto 24px;
+}
+
+.et-home__parent-benefits-certs-heading-side {
+    display: flex;
+    align-items: center;
+    flex: 1 1 0;
+    min-width: 0;
+    max-width: 220px;
+    gap: 10px;
+}
+
+.et-home__parent-benefits-certs-heading-side--right {
+    justify-content: flex-end;
+}
+
+.et-home__parent-benefits-certs-heading-line {
+    flex: 1 1 auto;
+    min-width: 36px;
+    height: 2px;
+    border-radius: 999px;
+    background: #27ae60;
+}
+
+.et-home__parent-benefits-certs-heading-dot {
+    flex-shrink: 0;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #27ae60;
+}
+
+.et-home__parent-benefits-certs-heading-text {
+    margin: 0;
+    flex: 0 1 auto;
     font-family: 'Quicksand', 'Ubuntu', sans-serif;
     font-size: clamp(22px, 2.8vw, 30px);
     font-weight: 700;
@@ -4727,18 +4773,18 @@
     -webkit-text-stroke: 0;
 }
 
-.et-home__parent-benefits-certs {
-    margin-top: 36px;
-    padding-top: 8px;
-    text-align: center;
-}
+@media screen and (max-width: 575px) {
+    .et-home__parent-benefits-certs-heading {
+        gap: 8px;
+    }
 
-.et-home__parent-benefits-certs-kicker {
-    margin: 0 0 20px;
-    font-size: clamp(15px, 1.6vw, 18px);
-    font-weight: 800;
-    letter-spacing: 0.1em;
-    color: var(--et-home-blue) !important;
+    .et-home__parent-benefits-certs-heading-side {
+        max-width: 72px;
+    }
+
+    .et-home__parent-benefits-certs-heading-text {
+        font-size: clamp(18px, 5vw, 22px);
+    }
 }
 
 .et-home__parent-benefits-grid {
