@@ -20,6 +20,11 @@ $et_home_trust_certs = function_exists( 'et_get_home_trust_certifications' )
                 <span class="et-home__section-star" aria-hidden="true">★</span>
             </p>
             <h2 class="et-home__section-title" id="et-home-parent-benefits-title">Why Parents Love Eggs Time</h2>
+            <p class="et-home__parent-benefits-trust-line et-home__parent-benefits-trust-line--hearts">
+                <span class="et-home__parent-benefits-heart" aria-hidden="true">♥</span>
+                Trusted by Families Worldwide
+                <span class="et-home__parent-benefits-heart" aria-hidden="true">♥</span>
+            </p>
         </div>
 
         <ul class="et-home__parent-benefits-grid">
