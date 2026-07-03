@@ -26,7 +26,7 @@ $skazka_character = $brand_meta['skazka']['character_image'];
 
 $et_home_fun_egg_activities = array(
     array(
-        'label' => 'Paper Maze',
+        'label' => 'Maze Puzzle',
         'icon'  => 'map',
         'tone'  => 'pink',
         'url'   => 'http://eggstime.com/upload/mazes/index.html',
@@ -38,28 +38,28 @@ $et_home_fun_egg_activities = array(
         'url'   => 'http://eggstime.com/upload/index.html',
     ),
     array(
-        'label' => 'Puzzle',
-        'icon'  => 'puzzle',
+        'label' => 'Puzzles',
+        'icon'  => 'star',
         'tone'  => 'green',
         'url'   => 'http://eggstime.com/upload/puzzles/index.html',
     ),
     array(
-        'label' => 'Spot the difference',
-        'icon'  => 'search',
+        'label' => 'Dot & Join the Dots',
+        'icon'  => 'dots',
         'tone'  => 'purple',
-        'url'   => 'http://eggstime.com/upload/diff/index.html',
+        'url'   => 'http://eggstime.com/upload/index.html',
     ),
 );
 
 $et_home_fun_egg_previews = array(
     array(
-        'label' => 'Paper Puzzle',
+        'label' => 'Maze Puzzle',
         'image' => $theme_uri . '/images/inside_image.jpg',
         'url'   => 'http://eggstime.com/upload/mazes/index.html',
     ),
     array(
-        'label' => 'Coloring Page',
-        'image' => $theme_uri . '/images/game_2.jpg',
+        'label' => 'Dot to Dot',
+        'image' => $theme_uri . '/images/game_1.jpg',
         'url'   => 'http://eggstime.com/upload/index.html',
     ),
 );
@@ -112,11 +112,16 @@ $appstore_url   = 'https://itunes.apple.com/us/app/eggs-time-coloring-books/id12
                 <div class="et-home__fun-egg-games">
                     <div class="et-home__fun-egg-games-head">
                         <span class="et-home__fun-egg-games-icon" aria-hidden="true">
-                            <?php echo et_home_icon( 'book-open' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                            <?php echo et_home_icon( 'gamepad' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                         </span>
                         <h3 class="et-home__fun-egg-games-title">Games Inside Every Egg</h3>
                     </div>
-                    <p class="et-home__fun-egg-games-desc">Colorful and exciting games will have kids entertained for a long time!</p>
+                    <p class="et-home__fun-egg-games-desc">
+                        <span class="et-home__fun-egg-colorful" aria-label="<?php esc_attr_e( 'Colorful', 'eggs-shop' ); ?>">
+                            <span class="et-home__fun-egg-colorful-char et-home__fun-egg-colorful-char--blue">C</span><span class="et-home__fun-egg-colorful-char et-home__fun-egg-colorful-char--green">o</span><span class="et-home__fun-egg-colorful-char et-home__fun-egg-colorful-char--orange">l</span><span class="et-home__fun-egg-colorful-char et-home__fun-egg-colorful-char--pink">o</span><span class="et-home__fun-egg-colorful-char et-home__fun-egg-colorful-char--blue">r</span><span class="et-home__fun-egg-colorful-char et-home__fun-egg-colorful-char--green">f</span><span class="et-home__fun-egg-colorful-char et-home__fun-egg-colorful-char--orange">u</span><span class="et-home__fun-egg-colorful-char et-home__fun-egg-colorful-char--pink">l</span>
+                        </span>
+                        fun and games to fuel young minds every day!
+                    </p>
                     <ul class="et-home__fun-egg-previews">
                         <?php foreach ( $et_home_fun_egg_previews as $preview ) : ?>
                             <li class="et-home__fun-egg-preview-item">
@@ -159,7 +164,7 @@ $appstore_url   = 'https://itunes.apple.com/us/app/eggs-time-coloring-books/id12
                             </li>
                         <?php endforeach; ?>
                     </ul>
-                    <a href="<?php echo esc_url( $games_url ); ?>" class="et-home__fun-egg-more">...and more</a>
+                    <a href="<?php echo esc_url( $games_url ); ?>" class="et-home__fun-egg-more">...and more!</a>
                 </div>
 
                 <div class="et-home__fun-egg-mascot" aria-hidden="true">

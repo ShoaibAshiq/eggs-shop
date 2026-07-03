@@ -40,6 +40,8 @@ if ( ! function_exists( 'et_home_get_fa_icon_class' ) ) {
             'map'           => 'fa-map',
             'pencil'        => 'fa-pencil-alt',
             'search'        => 'fa-search',
+            'gamepad'       => 'fa-gamepad',
+            'dots'          => 'fa-braille',
         );
 
         return isset( $icons[ $name ] ) ? $icons[ $name ] : null;
