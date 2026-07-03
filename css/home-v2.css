@@ -3383,7 +3383,7 @@
 
 .et-home__fun-egg-panel-grid {
     display: grid;
-    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.88fr) minmax(0, 0.72fr) minmax(0, 0.68fr);
+    grid-template-columns: minmax(0, 1.22fr) minmax(0, 0.88fr) minmax(0, 0.72fr) minmax(0, 0.68fr);
     gap: 12px 18px;
     align-items: center;
     width: 100%;
@@ -3428,7 +3428,7 @@
     flex: 1 1 auto;
     min-width: 0;
     font-family: 'Quicksand', 'Ubuntu', sans-serif;
-    font-size: clamp(14px, 1.45vw, 17px);
+    font-size: clamp(16px, 1.65vw, 20px);
     font-weight: 800;
     line-height: 1.2;
     color: #e91e8c !important;
@@ -3438,10 +3438,16 @@
 
 .et-home__fun-egg-games-desc {
     margin: 0 0 16px;
-    font-size: 15px;
+    font-size: clamp(13px, 1.15vw, 15px);
     font-weight: 500;
     line-height: 1.5;
     color: var(--et-home-heading) !important;
+}
+
+@media screen and (min-width: 992px) {
+    .et-home__fun-egg-games-desc {
+        white-space: nowrap;
+    }
 }
 
 .et-home__fun-egg-colorful {
