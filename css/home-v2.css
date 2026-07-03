@@ -3854,7 +3854,7 @@
     align-items: flex-end;
     justify-content: flex-end;
     flex-wrap: nowrap;
-    gap: 12px;
+    gap: 14px;
     margin: 0;
     padding: 0 0 4px;
     list-style: none;
@@ -3870,10 +3870,10 @@
 
 .et-home__fun-egg-app-game {
     display: block;
-    width: 172px;
-    max-width: 172px;
-    padding: 9px 9px 11px;
-    border-radius: 20px;
+    width: 192px;
+    max-width: 192px;
+    padding: 10px 10px 12px;
+    border-radius: 22px;
     background: #ffffff;
     box-shadow: 0 6px 16px rgba(30, 58, 95, 0.08);
     text-decoration: none !important;
@@ -3895,7 +3895,7 @@
     display: block;
     overflow: hidden;
     aspect-ratio: 1 / 1;
-    border-radius: 14px;
+    border-radius: 16px;
     border: 2px solid rgba(32, 77, 136, 0.12);
     line-height: 0;
     background: #ffffff;
@@ -3911,8 +3911,8 @@
 
 .et-home__fun-egg-app-game-label {
     display: block;
-    margin-top: 9px;
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 15px;
     font-weight: 700;
     line-height: 1.2;
     text-align: center;
@@ -4039,14 +4039,14 @@
 
     .et-home__fun-egg-app-games {
         width: 100%;
-        max-width: 400px;
+        max-width: 440px;
         flex-wrap: wrap;
         justify-content: center;
     }
 
     .et-home__fun-egg-app-game {
-        width: 158px;
-        max-width: 158px;
+        width: 172px;
+        max-width: 172px;
     }
 }
 
@@ -4118,8 +4118,8 @@
     }
 
     .et-home__fun-egg-app-game {
-        width: calc(50% - 6px);
-        max-width: 170px;
+        width: calc(50% - 7px);
+        max-width: 182px;
     }
 
     .et-home__fun-egg-app-right {
