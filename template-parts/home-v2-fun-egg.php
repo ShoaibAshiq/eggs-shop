@@ -54,12 +54,12 @@ $et_home_fun_egg_activities = array(
 $et_home_fun_egg_previews = array(
     array(
         'label' => 'Maze Puzzle',
-        'image' => $theme_uri . '/images/inside_image.jpg',
+        'image' => $theme_uri . '/images/fun-egg-maze-preview.png',
         'url'   => 'http://eggstime.com/upload/mazes/index.html',
     ),
     array(
         'label' => 'Dot to Dot',
-        'image' => $theme_uri . '/images/game_1.jpg',
+        'image' => $theme_uri . '/images/fun-egg-dot-preview.png',
         'url'   => 'http://eggstime.com/upload/index.html',
     ),
 );
@@ -131,11 +131,10 @@ $appstore_url   = 'https://itunes.apple.com/us/app/eggs-time-coloring-books/id12
                                     <span class="et-home__fun-egg-preview-media">
                                         <img
                                             src="<?php echo esc_url( $preview['image'] ); ?>"
-                                            alt=""
+                                            alt="<?php echo esc_attr( $preview['label'] ); ?>"
                                             loading="lazy"
                                             decoding="async"
                                         />
-                                        <span class="et-home__fun-egg-preview-label"><?php echo esc_html( $preview['label'] ); ?></span>
                                     </span>
                                 </a>
                             </li>
