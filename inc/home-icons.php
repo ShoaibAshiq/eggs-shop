@@ -42,6 +42,7 @@ if ( ! function_exists( 'et_home_get_fa_icon_class' ) ) {
             'search'        => 'fa-search',
             'gamepad'       => 'fa-gamepad',
             'file-play'     => 'fa-file-video',
+            'mobile'        => 'fa-mobile-alt',
             'dots'          => 'fa-braille',
         );
 
