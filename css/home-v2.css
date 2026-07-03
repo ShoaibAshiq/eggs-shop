@@ -3472,11 +3472,9 @@
 .et-home__fun-egg-colorful-char--red { color: #e74c3c; }
 
 .et-home__fun-egg-previews {
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    gap: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -3487,15 +3485,15 @@
 
 .et-home__fun-egg-preview-item {
     display: flex;
-    flex: 0 0 auto;
+    min-width: 0;
 }
 
 .et-home__fun-egg-preview {
     display: block;
-    width: 145px;
-    max-width: 145px;
-    padding: 8px;
-    border-radius: 16px;
+    width: 100%;
+    max-width: none;
+    padding: 10px;
+    border-radius: 18px;
     background: #ffffff;
     box-shadow: 0 8px 20px rgba(30, 58, 95, 0.12);
     text-decoration: none;
@@ -3527,7 +3525,7 @@
     display: block;
     overflow: hidden;
     aspect-ratio: 253 / 229;
-    border-radius: 10px;
+    border-radius: 12px;
     background: #ffffff;
 }
 
