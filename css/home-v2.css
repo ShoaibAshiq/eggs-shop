@@ -4717,8 +4717,8 @@
 }
 
 .et-home__parent-benefits-certs {
-    margin-top: 36px;
-    padding-top: 8px;
+    margin-top: 16px;
+    padding-top: 0;
     text-align: center;
 }
 
@@ -4769,7 +4769,7 @@
     font-weight: 700;
     line-height: 1.2;
     letter-spacing: -0.01em;
-    color: var(--et-home-heading) !important;
+    color: #27ae60 !important;
     -webkit-text-stroke: 0;
 }
 
