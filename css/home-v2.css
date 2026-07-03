@@ -3371,7 +3371,7 @@
 .et-home__fun-egg-panel {
     width: 100%;
     max-width: min(1200px, 100%);
-    margin: 0 auto 14px;
+    margin: 0 auto 4px;
     padding: 32px 42px 28px;
     border: 1px solid rgba(32, 77, 136, 0.1);
     border-radius: 24px;
@@ -3660,7 +3660,8 @@
 }
 
 .et-home__fun-egg-app {
-    padding-top: 6px;
+    padding-top: 0;
+    margin-top: -2px;
 }
 
 .et-home__fun-egg-app-panel {
@@ -3668,7 +3669,7 @@
     width: 100%;
     max-width: min(1200px, 100%);
     margin: 0 auto;
-    padding: 16px 34px 22px;
+    padding: 10px 34px 22px;
     border-radius: 24px;
     overflow: hidden;
     background:
@@ -4101,7 +4102,7 @@
     }
 
     .et-home__fun-egg-app-panel {
-        padding: 14px 18px 18px;
+        padding: 10px 18px 18px;
         border-radius: 18px;
     }
 
