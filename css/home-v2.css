@@ -3807,44 +3807,51 @@
 }
 
 .et-home__fun-egg-app-games {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 12px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 14px;
     margin: 0;
     padding: 0 0 4px;
     list-style: none;
     align-self: end;
 }
 
+.et-home__fun-egg-app-game-item {
+    flex: 0 0 auto;
+}
+
 .et-home__fun-egg-app-game {
     display: block;
+    width: 152px;
+    max-width: 152px;
     overflow: hidden;
-    border-radius: 16px;
-    background: #ffffff;
-    padding: 6px;
-    box-shadow: 0 8px 20px rgba(30, 58, 95, 0.1);
+    border-radius: 18px;
+    background: transparent;
+    box-shadow: 0 6px 16px rgba(30, 58, 95, 0.1);
     text-decoration: none;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .et-home__fun-egg-app-game:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 24px rgba(30, 58, 95, 0.14);
+    box-shadow: 0 10px 22px rgba(30, 58, 95, 0.14);
 }
 
 .et-home__fun-egg-app-game-media {
     display: block;
     overflow: hidden;
-    aspect-ratio: 130 / 186;
-    border-radius: 12px;
+    aspect-ratio: 192 / 221;
+    border-radius: 18px;
 }
 
 .et-home__fun-egg-app-game-media img {
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center;
 }
 
 .et-home__fun-egg-app-stores {
@@ -3936,8 +3943,14 @@
 
     .et-home__fun-egg-app-games {
         width: 100%;
-        max-width: 520px;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 360px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .et-home__fun-egg-app-game {
+        width: 142px;
+        max-width: 142px;
     }
 }
 
@@ -4004,7 +4017,12 @@
 
     .et-home__fun-egg-app-games {
         max-width: none;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .et-home__fun-egg-app-game {
+        width: calc(50% - 6px);
+        max-width: 152px;
     }
 
     .et-home__fun-egg-app-right {
