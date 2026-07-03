@@ -3826,32 +3826,32 @@
     display: block;
     width: 152px;
     max-width: 152px;
-    overflow: hidden;
-    border-radius: 18px;
-    background: transparent;
-    box-shadow: 0 6px 16px rgba(30, 58, 95, 0.1);
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
     text-decoration: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .et-home__fun-egg-app-game:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 22px rgba(30, 58, 95, 0.14);
+    box-shadow: none;
 }
 
 .et-home__fun-egg-app-game-media {
     display: block;
-    overflow: hidden;
-    aspect-ratio: 192 / 221;
-    border-radius: 18px;
+    line-height: 0;
+    background: none;
 }
 
 .et-home__fun-egg-app-game-media img {
     display: block;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: center;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    background: none;
 }
 
 .et-home__fun-egg-app-stores {
