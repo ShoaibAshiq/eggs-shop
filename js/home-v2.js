@@ -346,6 +346,50 @@
         });
     }
 
+    function getProductsSliderConfig($wrap, prevLabel, nextLabel, arrowClass) {
+        var $panel = $wrap.closest('.et-home__products-panel');
+        var config = getEggWorldSliderConfig($wrap, prevLabel, nextLabel, arrowClass, {
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1400,
+                    settings: {
+                        slidesToShow: 5,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
+        config.dots = true;
+        config.appendDots = $panel.find('.et-home__products-dots');
+        config.autoplay = false;
+
+        return config;
+    }
+
     $(document).ready(function () {
         initEggWorldSlider(
             '.et-home__best-sellers-slider',
@@ -376,12 +420,13 @@
             'resize.etHomeStoriesSlider'
         );
 
-        bindResponsiveSlider(
+        initEggWorldSlider(
             '.et-home__products-slider',
             '.et-home__products-slider-wrap',
             'Previous products',
             'Next products',
             'et-home__products-arrow',
+            getProductsSliderConfig,
             'resize.etHomeProductsSlider'
         );
 

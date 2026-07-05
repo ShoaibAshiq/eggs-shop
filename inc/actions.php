@@ -137,7 +137,7 @@ function add_single_product_css()
  * First request after deploy purges theme transients and common page caches.
  */
 if ( ! defined( 'ET_HOME_V2_CACHE_REV' ) ) {
-    define( 'ET_HOME_V2_CACHE_REV', '2025070529' );
+    define( 'ET_HOME_V2_CACHE_REV', '2025070530' );
 }
 
 /**
@@ -153,6 +153,7 @@ function et_home_v2_asset_version( $relative_path ) {
     $markers = array(
         '/page-home-v2.php',
         '/template-parts/home-v2-hero.php',
+        '/template-parts/home-v2-products.php',
     );
 
     $marker_mtime = 0;
@@ -268,6 +269,13 @@ function add_home_v2_css()
             TEMPLATEURI . '/css/home-v2-characters.css',
             array( 'home-v2', 'fontawesome' ),
             et_home_v2_asset_version( 'css/home-v2-characters.css' )
+        );
+
+        wp_enqueue_style(
+            'home-v2-products-showcase',
+            TEMPLATEURI . '/css/home-v2-products-showcase.css',
+            array( 'home-v2', 'home-v2-characters' ),
+            et_home_v2_asset_version( 'css/home-v2-products-showcase.css' )
         );
 
         wp_enqueue_script(
