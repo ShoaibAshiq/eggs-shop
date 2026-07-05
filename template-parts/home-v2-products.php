@@ -55,7 +55,7 @@ $et_home_products_url = home_url( '/product-category/toys/' );
 
                 <p class="et-home__products-lead">
                     <span class="et-home__products-lead-heart" aria-hidden="true">♥</span>
-                    Discover toys, puzzles, and collectibles from every Eggs Time world.
+                    Discover toys, puzzles, games, and collectibles from every Eggs Time world.
                     <span class="et-home__products-lead-heart" aria-hidden="true">♥</span>
                 </p>
             </header>
