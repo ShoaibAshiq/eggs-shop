@@ -14,7 +14,7 @@ if ( $et_home_hero_use_video ) :
     ?>
 <section
     class="et-home__hero et-home__hero--split-video et-home__playful-section"
-    aria-label="<?php esc_attr_e( 'Play, Learn and Grow with Eggs Time', 'eggs-shop' ); ?>"
+    aria-label="<?php esc_attr_e( 'Discover the Fun Inside Every Egg', 'eggs-shop' ); ?>"
     data-hero-video="<?php echo esc_url( $et_home_hero_video_url ); ?>"
 >
     <div class="et-home__hero-inner center">
@@ -30,9 +30,9 @@ if ( $et_home_hero_use_video ) :
                 </p>
 
                 <h1 class="et-home__hero-title">
-                    <span class="et-home__hero-title-line">Play, Learn &amp; Grow</span>
+                    <span class="et-home__hero-title-line">Discover the Fun</span>
                     <span class="et-home__hero-title-line">
-                        with <span class="et-home__hero-title-accent">Eggs Time!</span>
+                        Inside <span class="et-home__hero-title-accent">Every Egg!</span>
                     </span>
                 </h1>
 
@@ -162,7 +162,7 @@ else :
     ?>
 <section
     class="et-home__hero et-home__playful-section"
-    aria-label="<?php esc_attr_e( 'Play, Learn and Grow with Eggs Time', 'eggs-shop' ); ?>"
+    aria-label="<?php esc_attr_e( 'Discover the Fun Inside Every Egg', 'eggs-shop' ); ?>"
 >
     <div class="et-home__hero-overlay" aria-hidden="true"></div>
     <div class="et-home__hero-inner center">
@@ -177,9 +177,9 @@ else :
             </p>
 
             <h1 class="et-home__hero-title">
-                <span class="et-home__hero-title-line">Play, Learn &amp; Grow</span>
+                <span class="et-home__hero-title-line">Discover the Fun</span>
                 <span class="et-home__hero-title-line">
-                    with <span class="et-home__hero-title-accent">Eggs Time!</span>
+                    Inside <span class="et-home__hero-title-accent">Every Egg!</span>
                 </span>
             </h1>
 
