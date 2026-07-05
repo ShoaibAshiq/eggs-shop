@@ -18,27 +18,35 @@
 }
 
 .et-home {
-    --et-home-navy: #1e3a5f;
-    --et-home-heading: #204d88;
-    --et-home-accent: #33c4f0;
-    --et-home-blue: #1a9fe0;
-    --et-home-blue-dark: #1578b0;
-    --et-home-btn: #1578b0;
-    --et-home-btn-hover: #125f8f;
-    --et-home-yellow: #ffcc00;
-    --et-home-text: #3d5570;
+    --et-home-navy: #1a3352;
+    --et-home-heading: #1b4a8a;
+    --et-home-accent: #18c3ff;
+    --et-home-blue: #12a8f0;
+    --et-home-blue-dark: #0d7fd4;
+    --et-home-btn: #0d8fe8;
+    --et-home-btn-hover: #0a75c4;
+    --et-home-yellow: #ffd400;
+    --et-home-pink: #ff3da5;
+    --et-home-purple: #9b4dca;
+    --et-home-green: #2ecc71;
+    --et-home-orange: #ff9800;
+    --et-home-text: #3a5370;
     --et-home-max: 1650px;
     --et-home-narrow: 1140px;
     --et-home-section-x: 20px;
     --et-home-section-gap: 56px;
-    --et-home-panel-bg: #f4f5f7;
+    --et-home-panel-bg: #f0f7ff;
     --et-home-playful-bg-url: 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
+    --et-home-sparkle-gold: rgba(255, 212, 0, 0.85);
+    --et-home-sparkle-pink: rgba(255, 61, 165, 0.8);
+    --et-home-sparkle-blue: rgba(24, 195, 255, 0.75);
+    --et-home-sparkle-purple: rgba(155, 77, 202, 0.7);
     font-family: 'Quicksand', 'Ubuntu', sans-serif;
     color: var(--et-home-text);
     line-height: 1.6;
     box-sizing: border-box;
     width: 100%;
-    background: #ffffff;
+    background: linear-gradient(180deg, #ffffff 0%, #f8fcff 100%);
     overflow-x: clip;
 }
 
@@ -54,7 +62,8 @@
     position: relative;
     isolation: isolate;
     overflow: hidden;
-    background-color: #eef7fc;
+    background-color: #dff0ff;
+    background-image: linear-gradient(180deg, #eef8ff 0%, #e4f4ff 55%, #daf0e8 100%);
 }
 
 .et-home__playful-section::after,
@@ -63,12 +72,16 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-    background-color: #eef7fc;
-    background-image: url('https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png');
+    background-color: #dff0ff;
+    background-image:
+        radial-gradient(circle at 14% 20%, rgba(255, 212, 0, 0.18) 0, transparent 22%),
+        radial-gradient(circle at 86% 12%, rgba(255, 61, 165, 0.14) 0, transparent 24%),
+        radial-gradient(circle at 72% 78%, rgba(24, 195, 255, 0.16) 0, transparent 26%),
+        url('https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center bottom;
-    -webkit-background-size: cover;
+    background-size: auto, auto, auto, cover;
+    background-position: center, center, center, center bottom;
+    -webkit-background-size: auto, auto, auto, cover;
     pointer-events: none;
 }
 
@@ -77,9 +90,20 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(255, 255, 255, 0.08);
+    background:
+        radial-gradient(circle at 10% 16%, var(--et-home-sparkle-gold) 0 3px, transparent 4px),
+        radial-gradient(circle at 22% 68%, var(--et-home-sparkle-pink) 0 2.5px, transparent 3.5px),
+        radial-gradient(circle at 88% 24%, var(--et-home-sparkle-blue) 0 3px, transparent 4px),
+        radial-gradient(circle at 76% 72%, var(--et-home-sparkle-purple) 0 2px, transparent 3px),
+        radial-gradient(circle at 48% 10%, var(--et-home-sparkle-gold) 0 2px, transparent 3px),
+        radial-gradient(circle at 62% 52%, var(--et-home-sparkle-pink) 0 2px, transparent 3px),
+        radial-gradient(circle at 6% 42%, var(--et-home-sparkle-blue) 0 2px, transparent 3px),
+        radial-gradient(circle at 94% 58%, var(--et-home-sparkle-gold) 0 2.5px, transparent 3.5px),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.06) 100%);
+    background-repeat: no-repeat;
     pointer-events: none;
     z-index: 1;
+    opacity: 0.92;
 }
 
 .et-home__playful-section > *,
@@ -1175,7 +1199,10 @@
     color: var(--et-home-yellow);
     font-size: 0.72em;
     line-height: 1;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+    text-shadow:
+        0 0 8px rgba(255, 212, 0, 0.55),
+        0 1px 0 rgba(255, 255, 255, 0.65);
+    filter: drop-shadow(0 2px 4px rgba(255, 152, 0, 0.25));
 }
 
 .et-home__best-sellers-title.et-home__section-title--stars {
@@ -5998,5 +6025,273 @@
     .et-home__cta-cards {
         max-width: none;
         gap: 18px;
+    }
+}
+
+/* ----- Visual branding enhancements (vibrancy + playful decor) ----- */
+.et-home__hero {
+    background: linear-gradient(135deg, #eef8ff 0%, #fff5fb 48%, #fff9e8 100%);
+}
+
+.et-home__hero-overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.96) 0%,
+        rgba(255, 248, 252, 0.9) 34%,
+        rgba(232, 246, 255, 0.62) 58%,
+        rgba(255, 255, 255, 0.12) 100%
+    );
+}
+
+.et-home__hero-badge {
+    background: linear-gradient(135deg, #ffe566 0%, #ffd400 52%, #ffb800 100%);
+    box-shadow: 0 4px 14px rgba(255, 184, 0, 0.35);
+}
+
+.et-home__hero-btn--primary {
+    background: linear-gradient(135deg, #22b8ff 0%, #0d8fe8 55%, #0a75c4 100%) !important;
+    border-color: transparent !important;
+    box-shadow: 0 8px 22px rgba(13, 143, 232, 0.35);
+}
+
+.et-home__characters .et-home__section-inner,
+.et-home__best-sellers .et-home__section-inner,
+.et-home__stories .et-home__section-inner,
+.et-home__youtube .et-home__section-inner,
+.et-home__products .et-home__section-inner,
+.et-home__fun-egg .et-home__section-inner {
+    position: relative;
+}
+
+.et-home__characters .et-home__section-inner::before,
+.et-home__best-sellers .et-home__section-inner::before,
+.et-home__stories .et-home__section-inner::before,
+.et-home__youtube .et-home__section-inner::before,
+.et-home__products .et-home__section-inner::before,
+.et-home__fun-egg .et-home__section-inner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+        radial-gradient(circle at 6% 14%, var(--et-home-sparkle-gold) 0 3.5px, transparent 4.5px),
+        radial-gradient(circle at 14% 72%, var(--et-home-sparkle-pink) 0 2.5px, transparent 3.5px),
+        radial-gradient(circle at 92% 20%, var(--et-home-sparkle-blue) 0 3px, transparent 4px),
+        radial-gradient(circle at 84% 68%, var(--et-home-sparkle-purple) 0 2.5px, transparent 3.5px),
+        radial-gradient(circle at 50% 8%, var(--et-home-sparkle-gold) 0 2px, transparent 3px),
+        radial-gradient(circle at 38% 46%, var(--et-home-sparkle-blue) 0 2px, transparent 3px);
+    background-repeat: no-repeat;
+    opacity: 0.75;
+}
+
+.et-home__characters .et-home__section-inner > *,
+.et-home__best-sellers .et-home__section-inner > *,
+.et-home__stories .et-home__section-inner > *,
+.et-home__youtube .et-home__section-inner > *,
+.et-home__products .et-home__section-inner > *,
+.et-home__fun-egg .et-home__section-inner > * {
+    position: relative;
+    z-index: 1;
+}
+
+.et-home__stories {
+    background: linear-gradient(180deg, #ffffff 0%, #f3f9ff 100%);
+}
+
+.et-home__stories-bg {
+    background:
+        radial-gradient(circle at 8% 18%, rgba(24, 195, 255, 0.16) 0, transparent 34%),
+        radial-gradient(circle at 92% 12%, rgba(255, 212, 0, 0.2) 0, transparent 28%),
+        radial-gradient(circle at 78% 82%, rgba(255, 61, 165, 0.12) 0, transparent 30%),
+        radial-gradient(circle at 12% 88%, rgba(155, 77, 202, 0.1) 0, transparent 26%),
+        linear-gradient(180deg, rgba(238, 247, 252, 0.55) 0%, rgba(255, 255, 255, 0) 42%);
+}
+
+.et-home__stories::after,
+.et-home__products::after,
+.et-home__youtube::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    opacity: 0.55;
+}
+
+.et-home__stories::after {
+    top: 12%;
+    right: 5%;
+    background: #ffd400;
+    box-shadow:
+        -64px 28px 0 -4px #ff3da5,
+        -110px -18px 0 -5px #18c3ff,
+        24px 52px 0 -6px #9b4dca;
+}
+
+.et-home__products::after {
+    top: 10%;
+    left: 4%;
+    background: #18c3ff;
+    box-shadow:
+        48px 36px 0 -5px #ffd400,
+        96px -12px 0 -6px #ff3da5,
+        140px 44px 0 -5px #2ecc71;
+}
+
+.et-home__youtube::after {
+    top: 8%;
+    right: 7%;
+    background: #ff3da5;
+    box-shadow:
+        -52px 32px 0 -5px #ffd400,
+        -98px -8px 0 -6px #18c3ff;
+}
+
+.et-home__youtube-panel {
+    background: linear-gradient(145deg, #dff4ff 0%, #c8ebff 42%, #e8f7ff 100%);
+    border-color: rgba(18, 168, 240, 0.28);
+    box-shadow:
+        0 18px 48px rgba(18, 168, 240, 0.18),
+        inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+.et-home__youtube-bg {
+    background-image:
+        radial-gradient(circle at 10% 16%, rgba(255, 212, 0, 0.55) 0 5px, transparent 6px),
+        radial-gradient(circle at 18% 72%, rgba(24, 195, 255, 0.45) 0 4px, transparent 5px),
+        radial-gradient(circle at 88% 22%, rgba(255, 212, 0, 0.5) 0 6px, transparent 7px),
+        radial-gradient(circle at 72% 78%, rgba(255, 61, 165, 0.35) 0 4px, transparent 5px),
+        radial-gradient(circle at 42% 38%, rgba(155, 77, 202, 0.28) 0 3px, transparent 4px);
+}
+
+.et-home__products {
+    background: linear-gradient(180deg, #ffffff 0%, #fff8fd 55%, #f2faff 100%);
+}
+
+.et-home__product-card {
+    box-shadow:
+        0 10px 28px rgba(30, 58, 95, 0.1),
+        0 2px 0 rgba(255, 255, 255, 0.85) inset;
+}
+
+.et-home__product-card--pink .et-home__product-btn {
+    background: linear-gradient(135deg, #ff8ec4 0%, #ff3da5 55%, #e91e8c 100%) !important;
+}
+
+.et-home__product-card--blue .et-home__product-btn {
+    background: linear-gradient(135deg, #4dd4ff 0%, #12a8f0 55%, #0d7fd4 100%) !important;
+}
+
+.et-home__product-card--purple .et-home__product-btn {
+    background: linear-gradient(135deg, #c896df 0%, #9b4dca 55%, #8e44ad 100%) !important;
+}
+
+.et-home__product-card--green .et-home__product-btn {
+    background: linear-gradient(135deg, #6ee7a8 0%, #2ecc71 55%, #27ae60 100%) !important;
+}
+
+.et-home__product-card--orange .et-home__product-btn,
+.et-home__product-card--yellow .et-home__product-btn {
+    background: linear-gradient(135deg, #ffc766 0%, #ff9800 55%, #f39c12 100%) !important;
+}
+
+.et-home__fun-egg-panel {
+    background:
+        radial-gradient(circle at 10% 0%, rgba(255, 255, 255, 0.85) 0, transparent 36%),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.94) 0%, rgba(255, 248, 252, 0.88) 100%);
+    box-shadow: 0 14px 36px rgba(30, 58, 95, 0.1);
+}
+
+.et-home__fun-egg-app-panel {
+    background:
+        radial-gradient(circle at 12% 18%, rgba(255, 255, 255, 0.75) 0, transparent 34%),
+        radial-gradient(circle at 88% 14%, rgba(255, 212, 0, 0.22) 0, transparent 28%),
+        radial-gradient(circle at 72% 88%, rgba(255, 61, 165, 0.14) 0, transparent 32%),
+        linear-gradient(180deg, #e5f6ff 0%, #f0faff 62%, #d4f5d9 62%, #b8ecc0 100%);
+    box-shadow:
+        0 16px 40px rgba(18, 168, 240, 0.14),
+        0 8px 24px rgba(46, 204, 113, 0.12);
+}
+
+.et-home__fun-egg-app-panel::before {
+    opacity: 0.95;
+    box-shadow:
+        120px -8px 0 #ff8ecf,
+        240px 4px 0 #4dd4ff,
+        360px -4px 0 #ffd400,
+        480px 8px 0 #ff8ecf,
+        600px 0 0 #4dd4ff,
+        720px 6px 0 #c896df;
+}
+
+.et-home__parent-benefits-bg {
+    background:
+        radial-gradient(circle at 12% 22%, rgba(255, 255, 255, 0.92) 0, transparent 34%),
+        radial-gradient(circle at 88% 18%, rgba(255, 212, 0, 0.16) 0, transparent 30%),
+        radial-gradient(circle at 50% 100%, rgba(46, 204, 113, 0.14) 0, transparent 42%),
+        radial-gradient(circle at 24% 68%, rgba(255, 61, 165, 0.1) 0, transparent 28%);
+}
+
+.et-home__social-bg,
+.et-home__distributor-bg,
+.et-home__cta-bg {
+    background:
+        radial-gradient(circle at 16% 20%, rgba(255, 212, 0, 0.14) 0, transparent 28%),
+        radial-gradient(circle at 84% 24%, rgba(24, 195, 255, 0.12) 0, transparent 30%),
+        radial-gradient(circle at 72% 78%, rgba(255, 61, 165, 0.1) 0, transparent 26%);
+}
+
+.et-home__games-extra-inside {
+    background: linear-gradient(135deg, #7b3fa8 0%, #9b4dca 45%, #e91e8c 100%);
+}
+
+.et-home__games-extra-main {
+    background: linear-gradient(135deg, #ff5a7a 0%, #ff1849 52%, #d81040 100%);
+}
+
+.et-home__card-btn {
+    box-shadow: 0 6px 18px rgba(30, 58, 95, 0.14);
+}
+
+.et-home__character-card,
+.et-home__best-sellers-card {
+    box-shadow:
+        0 10px 28px rgba(30, 58, 95, 0.11),
+        0 2px 0 rgba(255, 255, 255, 0.8) inset;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .et-home__playful-section::before,
+    .et-home__bg-band--playful::before {
+        animation: et-home-sparkle-drift 18s ease-in-out infinite alternate;
+    }
+
+    .et-home__stories::after,
+    .et-home__products::after,
+    .et-home__youtube::after {
+        animation: et-home-float-shapes 14s ease-in-out infinite alternate;
+    }
+}
+
+@keyframes et-home-sparkle-drift {
+    0% { opacity: 0.82; transform: translateY(0); }
+    100% { opacity: 0.96; transform: translateY(-6px); }
+}
+
+@keyframes et-home-float-shapes {
+    0% { transform: translateY(0) scale(1); }
+    100% { transform: translateY(-8px) scale(1.04); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .et-home__playful-section::before,
+    .et-home__bg-band--playful::before,
+    .et-home__stories::after,
+    .et-home__products::after,
+    .et-home__youtube::after {
+        animation: none;
     }
 }
