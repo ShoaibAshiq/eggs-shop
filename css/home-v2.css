@@ -3547,7 +3547,7 @@
 
 .et-home__fun-egg-games-copy {
     flex: 1 1 auto;
-    min-width: 0;
+    min-width: min-content;
 }
 
 .et-home__fun-egg-games-icon {
@@ -3575,6 +3575,7 @@
     color: #e91e8c !important;
     text-transform: uppercase;
     letter-spacing: 0.04em;
+    white-space: nowrap;
 }
 
 .et-home__fun-egg-games-subtitle {
@@ -4156,7 +4157,6 @@
 
     .et-home__fun-egg-games {
         width: 100%;
-        max-width: 420px;
         margin-inline: auto;
     }
 
