@@ -3447,7 +3447,10 @@
     --et-fun-egg-box-y-bottom: 28px;
     --et-fun-egg-box-radius: 24px;
     --et-fun-egg-box-shadow: 0 10px 28px rgba(30, 58, 95, 0.07);
-    --et-fun-egg-box-gap: 6px;
+    --et-fun-egg-box-gap: 18px;
+    --et-fun-egg-app-gap: 24px;
+    --et-fun-egg-app-y-top: 44px;
+    --et-fun-egg-app-y-bottom: 40px;
 }
 
 .et-home__fun-egg .et-home__section-inner {
@@ -3810,7 +3813,8 @@
     width: 100%;
     max-width: var(--et-fun-egg-box-max);
     margin: 0 auto;
-    padding-top: 0;
+    padding-top: var(--et-fun-egg-app-gap);
+    padding-bottom: var(--et-fun-egg-app-gap);
 }
 
 .et-home__fun-egg-app-panel {
@@ -3818,7 +3822,7 @@
     width: 100%;
     max-width: var(--et-fun-egg-box-max);
     margin: 0 auto;
-    padding: var(--et-fun-egg-box-y-top) var(--et-fun-egg-box-x) var(--et-fun-egg-box-y-bottom);
+    padding: var(--et-fun-egg-app-y-top) var(--et-fun-egg-box-x) var(--et-fun-egg-app-y-bottom);
     border: 1px solid rgba(32, 77, 136, 0.08);
     border-radius: var(--et-fun-egg-box-radius);
     overflow: hidden;
@@ -4247,7 +4251,10 @@
         --et-fun-egg-box-y-top: 22px;
         --et-fun-egg-box-y-bottom: 20px;
         --et-fun-egg-box-radius: 18px;
-        --et-fun-egg-box-gap: 4px;
+        --et-fun-egg-box-gap: 14px;
+        --et-fun-egg-app-gap: 18px;
+        --et-fun-egg-app-y-top: 30px;
+        --et-fun-egg-app-y-bottom: 28px;
     }
 
     .et-home__fun-egg-head {
@@ -4316,7 +4323,7 @@
     }
 
     .et-home__fun-egg-app-panel {
-        padding: var(--et-fun-egg-box-y-top) var(--et-fun-egg-box-x) var(--et-fun-egg-box-y-bottom);
+        padding: var(--et-fun-egg-app-y-top) var(--et-fun-egg-box-x) var(--et-fun-egg-app-y-bottom);
         border-radius: var(--et-fun-egg-box-radius);
     }
 
