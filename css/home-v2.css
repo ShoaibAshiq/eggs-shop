@@ -1819,6 +1819,7 @@
 .et-home__stories .et-home__section-inner {
     position: relative;
     z-index: 1;
+    padding-bottom: var(--et-home-section-top-spacing);
 }
 
 .et-home__stories .et-home__section-kicker,
