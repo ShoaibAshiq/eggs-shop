@@ -22,7 +22,7 @@ $et_home_games_cards = array(
         'url'   => 'http://eggstime.com/upload/puzzles/index.html',
     ),
     array(
-        'title' => 'Differences Time',
+        'title' => 'Difference Time',
         'image' => $theme_uri . '/images/game_1.jpg',
         'url'   => 'http://eggstime.com/upload/diff/index.html',
     ),

@@ -25,19 +25,19 @@ $magik_character  = $brand_meta['magik']['character_image'];
 
 $et_home_fun_egg_activities = array(
     array(
-        'label' => 'Maze Puzzle',
+        'label' => 'Maze Time',
         'icon'  => 'map',
         'tone'  => 'pink',
         'url'   => 'http://eggstime.com/upload/mazes/index.html',
     ),
     array(
-        'label' => 'Coloring',
+        'label' => 'Coloring Time',
         'icon'  => 'pencil',
         'tone'  => 'orange',
         'url'   => 'http://eggstime.com/upload/index.html',
     ),
     array(
-        'label' => 'Puzzles',
+        'label' => 'Puzzle Time',
         'icon'  => 'star',
         'tone'  => 'green',
         'url'   => 'http://eggstime.com/upload/puzzles/index.html',
@@ -52,7 +52,7 @@ $et_home_fun_egg_activities = array(
 
 $et_home_fun_egg_previews = array(
     array(
-        'label' => 'Maze Puzzle',
+        'label' => 'Maze Time',
         'image' => $theme_uri . '/images/fun-egg-maze-preview.png',
         'url'   => 'http://eggstime.com/upload/mazes/index.html',
     ),
@@ -65,25 +65,25 @@ $et_home_fun_egg_previews = array(
 
 $et_home_fun_egg_app_games = array(
     array(
-        'label' => 'Maze Game',
+        'label' => 'Maze Time',
         'image' => $theme_uri . '/images/fun-app-maze-thumb.png',
         'tone'  => 'blue',
         'url'   => 'http://eggstime.com/upload/mazes/index.html',
     ),
     array(
-        'label' => 'Coloring Game',
+        'label' => 'Coloring Time',
         'image' => $theme_uri . '/images/fun-app-coloring-thumb.png',
         'tone'  => 'pink',
         'url'   => 'http://eggstime.com/upload/index.html',
     ),
     array(
-        'label' => 'Puzzle Game',
+        'label' => 'Puzzle Time',
         'image' => $theme_uri . '/images/fun-app-puzzle-thumb.png',
         'tone'  => 'green',
         'url'   => 'http://eggstime.com/upload/puzzles/index.html',
     ),
     array(
-        'label' => 'Memory Game',
+        'label' => 'Difference Time',
         'image' => $theme_uri . '/images/fun-app-memory-thumb.png',
         'tone'  => 'purple',
         'url'   => 'http://eggstime.com/upload/diff/index.html',
