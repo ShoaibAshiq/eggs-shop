@@ -213,6 +213,70 @@ if ( ! function_exists( 'et_home_build_showcase_from_pool' ) ) {
     }
 }
 
+if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
+    /**
+     * Curated Collect, Play & Learn cards for the home toys row.
+     *
+     * @return array<int, array<string, string>>
+     */
+    function et_home_get_collect_play_learn_products() {
+        if ( ! function_exists( 'et_get_home_core_egg_brand_meta' ) ) {
+            require_once get_template_directory() . '/inc/home-characters.php';
+        }
+
+        $uploads = 'https://eggstime.com/wp-content/uploads/2026/07/';
+        $brands  = et_get_home_core_egg_brand_meta();
+
+        return array(
+            array(
+                'title'       => 'Lucky Egg Toys',
+                'description' => 'Collect adorable animal friends and discover fun surprises in every Lucky Egg.',
+                'image'       => $uploads . 'Lucky.png',
+                'url'         => $brands['lucky']['shop_url'],
+                'panel'       => '#fde8f2',
+                'emoji'       => '🧸',
+                'tone'        => 'pink',
+            ),
+            array(
+                'title'       => 'King Egg Toys',
+                'description' => 'Play with colorful finger puppets and imaginative King Egg characters.',
+                'image'       => $uploads . 'King.jpg.jpeg',
+                'url'         => $brands['king']['shop_url'],
+                'panel'       => '#e8f3fc',
+                'emoji'       => '👑',
+                'tone'        => 'blue',
+            ),
+            array(
+                'title'       => 'Magik Egg Toys',
+                'description' => 'Meet funny little monsters and build your own magical collection.',
+                'image'       => $uploads . 'Magik.png',
+                'url'         => $brands['magik']['shop_url'],
+                'panel'       => '#f3ebf9',
+                'emoji'       => '👾',
+                'tone'        => 'purple',
+            ),
+            array(
+                'title'       => 'Skazka Toys',
+                'description' => 'Step into fairy tales with magical characters, puzzles and collectible toys.',
+                'image'       => $uploads . 'Skazka.png',
+                'url'         => $brands['skazka']['shop_url'],
+                'panel'       => '#eaf8ef',
+                'emoji'       => '🏰',
+                'tone'        => 'green',
+            ),
+            array(
+                'title'       => 'Emoji Inspirational Toys',
+                'description' => 'Positive characters, magnetic puzzles and inspirational messages for every child.',
+                'image'       => $uploads . 'Emoji.png',
+                'url'         => $brands['emoji']['shop_url'],
+                'panel'       => '#fff8e6',
+                'emoji'       => '😊',
+                'tone'        => 'yellow',
+            ),
+        );
+    }
+}
+
 if ( ! function_exists( 'et_home_get_design_showcase_fallback' ) ) {
     /**
      * Curated toy cards matching the approved homepage design.
@@ -220,40 +284,7 @@ if ( ! function_exists( 'et_home_get_design_showcase_fallback' ) ) {
      * @return array<int, array<string, string>>
      */
     function et_home_get_design_showcase_fallback() {
-        return array(
-            array(
-                'title' => 'Clapping Hands',
-                'image' => 'https://eggstime.com/wp-content/uploads/2022/05/05.png',
-                'url'   => home_url( '/products/' ),
-                'panel' => '#e3f5ea',
-                'icon'  => 'hand',
-                'tone'  => 'green',
-            ),
-            array(
-                'title' => 'Magik Toy / Grabber',
-                'image' => 'https://eggstime.com/wp-content/uploads/2022/05/02.png',
-                'url'   => home_url( '/products/' ),
-                'panel' => '#fff8e6',
-                'icon'  => 'wand',
-                'tone'  => 'yellow',
-            ),
-            array(
-                'title' => 'Lucky Toy / Sound Animals',
-                'image' => 'https://eggstime.com/wp-content/uploads/2022/05/01.png',
-                'url'   => home_url( '/products/big-king-egg/' ),
-                'panel' => '#e8f3fc',
-                'icon'  => 'music',
-                'tone'  => 'blue',
-            ),
-            array(
-                'title' => 'Skazka Puzzles',
-                'image' => 'https://eggstime.com/wp-content/uploads/2022/05/03.png',
-                'url'   => home_url( '/products/' ),
-                'panel' => '#eaf8ef',
-                'icon'  => 'puzzle',
-                'tone'  => 'green',
-            ),
-        );
+        return et_home_get_collect_play_learn_products();
     }
 }
 
@@ -299,29 +330,19 @@ if ( ! function_exists( 'et_home_get_showcase_brand_fallback' ) ) {
 
 if ( ! function_exists( 'et_home_get_quality_products' ) ) {
     /**
-     * Fetch four toy showcase products in canonical brand order (cached).
+     * Fetch five Collect, Play & Learn showcase cards (cached).
      *
      * @return array<int, array<string, string>>
      */
     function et_home_get_quality_products() {
-        $cache_key = 'et_home_quality_products_v7';
+        $cache_key = 'et_home_quality_products_v8';
         $cached    = get_transient( $cache_key );
 
         if ( is_array( $cached ) && ! empty( $cached ) ) {
             return $cached;
         }
 
-        $products = array();
-
-        try {
-            $products = et_home_build_showcase_from_pool( et_home_get_wc_product_pool() );
-        } catch ( Throwable $e ) {
-            $products = array();
-        }
-
-        if ( empty( $products ) ) {
-            return et_home_get_design_showcase_fallback();
-        }
+        $products = et_home_get_collect_play_learn_products();
 
         set_transient( $cache_key, $products, 6 * HOUR_IN_SECONDS );
 

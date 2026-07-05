@@ -9,7 +9,7 @@
  * 3. Best Sellers
  * 4. Stories That Teach & Inspire
  * 5. Watch & Learn
- * 6. More Ways to Play & Learn
+ * 6. Collect, Play & Learn
  * 7. Fun in Every Egg
  * 8. Why Parents Love Eggs Time + Certifications (one trust section)
  * 9. Join the Eggs Time Community

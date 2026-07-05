@@ -2710,7 +2710,7 @@
     }
 }
 
-/* ----- More Ways to Play & Learn ----- */
+/* ----- Collect, Play & Learn ----- */
 .et-home__products {
     background: #ffffff;
     width: 100%;
@@ -2809,6 +2809,16 @@
     -webkit-text-stroke: 0;
 }
 
+.et-home__products-lead {
+    margin: 8px 0 0;
+    max-width: 620px;
+    font-family: 'Quicksand', 'Ubuntu', sans-serif;
+    font-size: clamp(14px, 1.4vw, 16px);
+    font-weight: 500;
+    line-height: 1.55;
+    color: var(--et-home-text) !important;
+}
+
 .et-home__products-all {
     display: inline-flex !important;
     align-items: center;
@@ -2884,7 +2894,7 @@
 
 .et-home__products-slider:not(.slick-initialized) {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 24px;
 }
 
@@ -3033,10 +3043,10 @@
 .et-home__product-body {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     gap: 14px;
     flex-shrink: 0;
-    min-height: 96px;
+    min-height: 118px;
     padding: 16px 18px 18px;
     background: #ffffff;
 }
@@ -3068,6 +3078,20 @@
     display: block;
     font-size: 22px;
     line-height: 1;
+}
+
+.et-home__product-icon-emoji {
+    display: block;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.et-home__product-icon--pink {
+    background: #fde8f2;
+}
+
+.et-home__product-icon--purple {
+    background: #f3ebf9;
 }
 
 .et-home__product-icon--yellow {
@@ -3106,6 +3130,15 @@
 .et-home__product-title a:hover,
 .et-home__product-title a:focus {
     color: var(--et-home-blue) !important;
+}
+
+.et-home__product-desc {
+    margin: 0;
+    font-family: 'Quicksand', 'Ubuntu', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.45;
+    color: var(--et-home-text) !important;
 }
 
 .et-home__product-link {

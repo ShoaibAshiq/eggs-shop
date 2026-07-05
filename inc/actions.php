@@ -137,7 +137,7 @@ function add_single_product_css()
  * First request after deploy purges theme transients and common page caches.
  */
 if ( ! defined( 'ET_HOME_V2_CACHE_REV' ) ) {
-    define( 'ET_HOME_V2_CACHE_REV', '2025070501' );
+    define( 'ET_HOME_V2_CACHE_REV', '2025070502' );
 }
 
 /**
@@ -175,6 +175,7 @@ function et_home_v2_flush_all_caches() {
     $transients = array(
         'et_home_quality_products_v6',
         'et_home_quality_products_v7',
+        'et_home_quality_products_v8',
         'et_home_social_images_v2',
         'et_home_character_products_v3',
         'et_home_character_products_v4',
@@ -278,38 +279,6 @@ function add_home_v2_css()
     }
 }
 
-add_action( 'wp_enqueue_scripts', 'add_toys_collect_assets', 1003 );
-function add_toys_collect_assets() {
-    if ( ! is_page( 'toys' ) && ! is_page_template( 'page-toys.php' ) ) {
-        return;
-    }
-
-    wp_enqueue_style(
-        'toys-collect-font',
-        'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@500;600;700;800&display=swap',
-        array(),
-        null
-    );
-
-    $css_path = get_template_directory() . '/css/toys-collect.css';
-    $js_path  = get_template_directory() . '/js/toys-collect.js';
-
-    wp_enqueue_style(
-        'toys-collect',
-        TEMPLATEURI . '/css/toys-collect.css',
-        array( 'style-all', 'header-new', 'toys-collect-font' ),
-        file_exists( $css_path ) ? (string) filemtime( $css_path ) : '1.0'
-    );
-
-    wp_enqueue_script(
-        'toys-collect',
-        TEMPLATEURI . '/js/toys-collect.js',
-        array( 'jquery', 'slick' ),
-        file_exists( $js_path ) ? (string) filemtime( $js_path ) : '1.0',
-        true
-    );
-}
-
 /**
  * Clear license product cache when products change.
  */
@@ -331,6 +300,9 @@ function et_license_flush_product_cache( $post_id = 0 ) {
     delete_transient( 'et_home_quality_products_v3' );
     delete_transient( 'et_home_quality_products_v4' );
     delete_transient( 'et_home_quality_products_v5' );
+    delete_transient( 'et_home_quality_products_v6' );
+    delete_transient( 'et_home_quality_products_v7' );
+    delete_transient( 'et_home_quality_products_v8' );
     delete_transient( 'et_home_social_images_v1' );
 }
 
