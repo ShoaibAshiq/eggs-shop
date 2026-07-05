@@ -1092,7 +1092,7 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-bottom: 100px;
+        padding-bottom: 56px;
     }
 }
 
@@ -1121,7 +1121,7 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding: var(--et-home-section-top-spacing) 18px 100px;
+        padding: var(--et-home-section-top-spacing) 16px 56px;
     }
 
     .et-home__hero--split-video .et-home__hero-title {
@@ -1794,6 +1794,10 @@
         margin-bottom: 22px;
     }
 
+    .et-home__games-extra-slider-wrap {
+        padding: 0 40px;
+    }
+
     .et-home__games-extra-slider:not(.slick-initialized) {
         flex-direction: column;
         align-items: center;
@@ -2160,7 +2164,7 @@
 .et-home__youtube {
     position: relative;
     background: #ffffff;
-    overflow: visible;
+    overflow: hidden;
 }
 
 .et-home__youtube .et-home__section-inner {
@@ -4264,6 +4268,15 @@
 
     .et-home__fun-egg-games-copy {
         text-align: left;
+        min-width: 0;
+    }
+
+    .et-home__fun-egg-games-title {
+        white-space: normal;
+    }
+
+    .et-home__fun-egg-games-desc {
+        white-space: normal;
     }
 
     .et-home__fun-egg-hero {
@@ -4279,7 +4292,7 @@
 
     .et-home__fun-egg-activities {
         width: 100%;
-        max-width: 280px;
+        max-width: min(100%, 320px);
         margin-inline: auto;
     }
 
@@ -4814,20 +4827,45 @@
 @media screen and (max-width: 991px) {
     .et-home__social-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
     }
 }
 
 @media screen and (max-width: 767px) {
     .et-home__social-intro {
-        margin-bottom: 12px;
+        margin-bottom: 16px;
     }
 
     .et-home__social-grid {
-        gap: 14px;
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 
     .et-home__social-card {
-        min-height: 380px;
+        min-height: 0;
+    }
+
+    .et-home__social-logo {
+        height: 56px;
+        margin-bottom: 14px;
+    }
+
+    .et-home__social-title {
+        font-size: clamp(26px, 7vw, 34px);
+    }
+
+    .et-home__social-lead {
+        font-size: clamp(15px, 4vw, 17px);
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .et-home__social-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .et-home__social-card {
+        min-height: 0;
     }
 
     .et-home__social-grid-images,
@@ -5647,6 +5685,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .et-home__parent-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+
     .et-home__parent-trust-certs-slider:not(.slick-initialized) {
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
@@ -5676,6 +5718,31 @@
     }
 }
 
+@media screen and (max-width: 767px) {
+    .et-home__distributor-showcase-label {
+        white-space: normal;
+        flex-wrap: wrap;
+    }
+
+    .et-home__distributor-showcase-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .et-home__distributor-showcase-item {
+        min-height: 112px;
+        padding: 12px 8px;
+    }
+
+    .et-home__distributor-showcase-product {
+        max-height: 88px;
+    }
+
+    .et-home__distributor-btn {
+        width: 100%;
+    }
+}
+
 @media screen and (max-width: 575px) {
     .et-home__distributor-panel {
         padding: 22px 16px;
@@ -5689,6 +5756,10 @@
 
     .et-home__distributor-showcase-item {
         min-height: 104px;
+    }
+
+    .et-home__distributor-showcase-grid {
+        grid-template-columns: 1fr;
     }
 
     .et-home__distributor-btn {
@@ -6007,6 +6078,18 @@
         max-width: none;
         gap: 18px;
     }
+
+    .et-home__cta-card {
+        padding: 26px 20px 22px;
+    }
+
+    .et-home__cta-title {
+        font-size: clamp(28px, 7vw, 36px);
+    }
+
+    .et-home__cta-card-title {
+        font-size: clamp(20px, 5vw, 24px);
+    }
 }
 
 /* ----- Visual branding enhancements (vibrancy + playful decor) ----- */
@@ -6305,5 +6388,42 @@
     .et-home__games-extra-market {
         gap: 10px 20px;
         margin-bottom: 28px;
+    }
+
+    .et-home__best-sellers-character {
+        width: 56px;
+        height: 56px;
+        right: 8px;
+        bottom: 8px;
+        padding: 6px;
+    }
+
+    .et-home__best-sellers-character-img {
+        max-height: 40px;
+    }
+
+    .et-home__youtube-panel {
+        padding: 22px 16px 24px;
+        border-radius: 22px;
+    }
+
+    .et-home__hero-btn--shop {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 24px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .et-home {
+        --et-home-section-x: 16px;
+    }
+
+    .et-home__best-sellers-character {
+        display: none;
+    }
+
+    .et-home__games-extra-slider-wrap {
+        padding: 0 36px;
     }
 }
