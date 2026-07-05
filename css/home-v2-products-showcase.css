@@ -26,6 +26,7 @@
 .et-home__products--showcase .et-home__section-inner {
     width: 100%;
     max-width: var(--et-home-max);
+    padding-top: var(--et-home-section-top-spacing);
     padding-left: var(--et-home-section-x);
     padding-right: var(--et-home-section-x);
 }

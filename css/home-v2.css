@@ -34,9 +34,11 @@
     --et-home-max: 1650px;
     --et-home-narrow: 1140px;
     --et-home-section-x: 20px;
-    /* Inter-section gap — matches hero banner → Choose Your Egg World spacing */
-    --et-home-section-gap: 36px;
-    --et-home-section-spacing: var(--et-home-section-gap);
+    /* Section top spacing — matches Stories "Educational Adventures" header */
+    --et-home-section-top-spacing: 36px;
+    /* Inter-section gap between stacked sections */
+    --et-home-section-gap: var(--et-home-section-top-spacing);
+    --et-home-section-spacing: var(--et-home-section-top-spacing);
     --et-home-panel-bg: #f0f7ff;
     --et-home-playful-bg-url: 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
     --et-home-sparkle-gold: rgba(255, 212, 0, 0.85);
@@ -619,7 +621,7 @@
     display: flex;
     align-items: center;
     width: 100%;
-    padding-top: 20px;
+    padding-top: var(--et-home-section-top-spacing);
     padding-bottom: 100px;
     margin-bottom: 0;
 }
@@ -965,7 +967,6 @@
 
 @media screen and (min-width: 768px) {
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-top: 40px;
         padding-bottom: 120px;
     }
 }
@@ -990,7 +991,6 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-top: 48px;
         padding-bottom: 140px;
     }
 
@@ -1044,7 +1044,6 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-top: 52px;
         padding-bottom: 160px;
     }
 
@@ -1093,7 +1092,6 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-top: 20px;
         padding-bottom: 100px;
     }
 }
@@ -1123,7 +1121,7 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding: 14px 18px 100px;
+        padding: var(--et-home-section-top-spacing) 18px 100px;
     }
 
     .et-home__hero--split-video .et-home__hero-title {
@@ -1150,7 +1148,7 @@
     width: 100%;
     max-width: var(--et-home-max);
     margin: 0 auto;
-    padding-top: var(--et-home-section-gap);
+    padding-top: var(--et-home-section-top-spacing);
     padding-bottom: 0;
     padding-left: var(--et-home-section-x);
     padding-right: var(--et-home-section-x);
@@ -1158,7 +1156,7 @@
 
 @media screen and (min-width: 1200px) {
     .et-home {
-        --et-home-section-gap: 40px;
+        --et-home-section-top-spacing: 40px;
     }
 }
 
@@ -1524,7 +1522,7 @@
 /* ----- Eggs Time Games (footer-adjacent) ----- */
 .et-home__games-extra {
     width: 100%;
-    padding-top: var(--et-home-section-gap);
+    padding-top: var(--et-home-section-top-spacing);
     padding-bottom: var(--et-home-section-gap);
 }
 
@@ -5729,7 +5727,7 @@
     width: 100%;
     max-width: var(--et-home-max);
     margin: 0 auto;
-    padding-top: var(--et-home-section-gap);
+    padding-top: var(--et-home-section-top-spacing);
     padding-bottom: 0;
     padding-left: var(--et-home-section-x);
     padding-right: var(--et-home-section-x);
