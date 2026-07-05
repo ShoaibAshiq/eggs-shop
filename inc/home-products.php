@@ -230,48 +230,63 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
         return array(
             array(
                 'title'       => 'Lucky Egg Toys',
-                'description' => 'Collect adorable animal friends and discover fun surprises in every Lucky Egg.',
+                'description' => 'Collect adorable animal friends.',
                 'image'       => $uploads . 'Lucky.png',
                 'url'         => $brands['lucky']['shop_url'],
                 'panel'       => '#fde8f2',
-                'emoji'       => '🧸',
+                'icon'        => 'heart',
                 'tone'        => 'pink',
+                'accent'      => '#e91e8c',
             ),
             array(
                 'title'       => 'King Egg Toys',
-                'description' => 'Play with colorful finger puppets and imaginative King Egg characters.',
+                'description' => 'Fun finger puppets for interactive play.',
                 'image'       => $uploads . 'King.jpg.jpeg',
                 'url'         => $brands['king']['shop_url'],
                 'panel'       => '#e8f3fc',
-                'emoji'       => '👑',
+                'icon'        => 'crown',
                 'tone'        => 'blue',
+                'accent'      => '#1a9fe0',
             ),
             array(
                 'title'       => 'Magik Egg Toys',
-                'description' => 'Meet funny little monsters and build your own magical collection.',
+                'description' => 'Discover magical monster friends.',
                 'image'       => $uploads . 'Magik.png',
                 'url'         => $brands['magik']['shop_url'],
                 'panel'       => '#f3ebf9',
-                'emoji'       => '👾',
+                'icon'        => 'star',
                 'tone'        => 'purple',
+                'accent'      => '#8e44ad',
             ),
             array(
                 'title'       => 'Skazka Toys',
-                'description' => 'Step into fairy tales with magical characters, puzzles and collectible toys.',
+                'description' => 'Magical stories come to life.',
                 'image'       => $uploads . 'Skazka.png',
                 'url'         => $brands['skazka']['shop_url'],
                 'panel'       => '#eaf8ef',
-                'emoji'       => '🏰',
+                'icon'        => 'castle',
                 'tone'        => 'green',
+                'accent'      => '#27ae60',
             ),
             array(
                 'title'       => 'Emoji Inspirational Toys',
-                'description' => 'Positive characters, magnetic puzzles and inspirational messages for every child.',
+                'description' => 'Positive quotes to inspire every day.',
                 'image'       => $uploads . 'Emoji.png',
                 'url'         => $brands['emoji']['shop_url'],
-                'panel'       => '#fff8e6',
-                'emoji'       => '😊',
-                'tone'        => 'yellow',
+                'panel'       => '#fff4df',
+                'icon'        => 'smile',
+                'tone'        => 'orange',
+                'accent'      => '#f39c12',
+            ),
+            array(
+                'title'       => 'Happy Learning Toys',
+                'description' => 'Puzzles, play & learn every day!',
+                'image'       => $uploads . '5-2.png',
+                'url'         => home_url( '/products/happy-toys/' ),
+                'panel'       => '#fde8f2',
+                'icon'        => 'puzzle',
+                'tone'        => 'pink',
+                'accent'      => '#e91e8c',
             ),
         );
     }
@@ -330,12 +345,12 @@ if ( ! function_exists( 'et_home_get_showcase_brand_fallback' ) ) {
 
 if ( ! function_exists( 'et_home_get_quality_products' ) ) {
     /**
-     * Fetch five Collect, Play & Learn showcase cards (cached).
+     * Fetch six Collect, Play & Learn showcase cards (cached).
      *
      * @return array<int, array<string, string>>
      */
     function et_home_get_quality_products() {
-        $cache_key = 'et_home_quality_products_v8';
+        $cache_key = 'et_home_quality_products_v10';
         $cached    = get_transient( $cache_key );
 
         if ( is_array( $cached ) && ! empty( $cached ) ) {

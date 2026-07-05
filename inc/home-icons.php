@@ -37,6 +37,8 @@ if ( ! function_exists( 'et_home_get_fa_icon_class' ) ) {
             'star'          => 'fa-star',
             'people'        => 'fa-users',
             'heart'         => 'fa-heart',
+            'crown'         => 'fa-chess-king',
+            'castle'        => 'fa-chess-rook',
             'map'           => 'fa-map',
             'pencil'        => 'fa-pencil-alt',
             'search'        => 'fa-search',

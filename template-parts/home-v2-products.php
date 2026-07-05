@@ -54,10 +54,14 @@ $et_home_products_url = home_url( '/product-category/toys/' );
         <div class="et-home__products-slider-wrap">
             <ul class="et-home__products-grid et-home__products-slider">
             <?php foreach ( $et_home_quality_products as $item ) : ?>
+                <?php
+                $item_tone   = ! empty( $item['tone'] ) ? $item['tone'] : 'green';
+                $item_accent = ! empty( $item['accent'] ) ? $item['accent'] : '#27ae60';
+                ?>
                 <li class="et-home__products-item">
                     <article
-                        class="et-home__product-card"
-                        style="--et-home-product-panel: <?php echo esc_attr( $item['panel'] ); ?>;"
+                        class="et-home__product-card et-home__product-card--<?php echo esc_attr( $item_tone ); ?>"
+                        style="--et-home-product-panel: <?php echo esc_attr( $item['panel'] ); ?>; --et-card-accent: <?php echo esc_attr( $item_accent ); ?>;"
                     >
                         <a href="<?php echo esc_url( $item['url'] ); ?>" class="et-home__product-media">
                             <img
@@ -69,32 +73,27 @@ $et_home_products_url = home_url( '/product-category/toys/' );
                             />
                         </a>
                         <div class="et-home__product-body">
-                            <span class="et-home__product-icon et-home__product-icon--<?php echo esc_attr( ! empty( $item['tone'] ) ? $item['tone'] : 'green' ); ?>" aria-hidden="true">
-                                <?php if ( ! empty( $item['emoji'] ) ) : ?>
+                            <span class="et-home__product-icon et-home__product-icon--<?php echo esc_attr( $item_tone ); ?>" aria-hidden="true">
+                                <?php if ( ! empty( $item['icon'] ) ) : ?>
+                                    <?php echo et_home_icon( $item['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                <?php elseif ( ! empty( $item['emoji'] ) ) : ?>
                                     <span class="et-home__product-icon-emoji"><?php echo esc_html( $item['emoji'] ); ?></span>
                                 <?php else : ?>
-                                    <?php
-                                    $icon_name = ! empty( $item['icon'] ) ? $item['icon'] : 'hand';
-                                    echo et_home_icon( $icon_name ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-                                    ?>
+                                    <?php echo et_home_icon( 'puzzle' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                                 <?php endif; ?>
                             </span>
-                            <div class="et-home__product-copy">
-                                <h3 class="et-home__product-title">
-                                    <a href="<?php echo esc_url( $item['url'] ); ?>"><?php echo esc_html( $item['title'] ); ?></a>
-                                </h3>
-                                <?php if ( ! empty( $item['description'] ) ) : ?>
-                                    <p class="et-home__product-desc"><?php echo esc_html( $item['description'] ); ?></p>
-                                <?php endif; ?>
-                                <a href="<?php echo esc_url( $item['url'] ); ?>" class="et-home__product-link">
-                                    Explore Collection
-                                    <span class="et-home__product-link-icon" aria-hidden="true">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
-                                            <path d="M5 12h12M13 7l5 5-5 5"/>
-                                        </svg>
-                                    </span>
-                                </a>
-                            </div>
+                            <h3 class="et-home__product-title"><?php echo esc_html( $item['title'] ); ?></h3>
+                            <?php if ( ! empty( $item['description'] ) ) : ?>
+                                <p class="et-home__product-desc"><?php echo esc_html( $item['description'] ); ?></p>
+                            <?php endif; ?>
+                            <a href="<?php echo esc_url( $item['url'] ); ?>" class="et-home__product-btn et-home__card-btn">
+                                <span class="et-home__product-btn-label et-home__card-btn-label">Explore Collection</span>
+                                <span class="et-home__product-btn-icon et-home__card-btn-icon" aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+                                        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
                         </div>
                     </article>
                 </li>
