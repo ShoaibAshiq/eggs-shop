@@ -278,6 +278,38 @@ function add_home_v2_css()
     }
 }
 
+add_action( 'wp_enqueue_scripts', 'add_toys_collect_assets', 1003 );
+function add_toys_collect_assets() {
+    if ( ! is_page( 'toys' ) && ! is_page_template( 'page-toys.php' ) ) {
+        return;
+    }
+
+    wp_enqueue_style(
+        'toys-collect-font',
+        'https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Quicksand:wght@500;600;700;800&display=swap',
+        array(),
+        null
+    );
+
+    $css_path = get_template_directory() . '/css/toys-collect.css';
+    $js_path  = get_template_directory() . '/js/toys-collect.js';
+
+    wp_enqueue_style(
+        'toys-collect',
+        TEMPLATEURI . '/css/toys-collect.css',
+        array( 'style-all', 'header-new', 'toys-collect-font' ),
+        file_exists( $css_path ) ? (string) filemtime( $css_path ) : '1.0'
+    );
+
+    wp_enqueue_script(
+        'toys-collect',
+        TEMPLATEURI . '/js/toys-collect.js',
+        array( 'jquery', 'slick' ),
+        file_exists( $js_path ) ? (string) filemtime( $js_path ) : '1.0',
+        true
+    );
+}
+
 /**
  * Clear license product cache when products change.
  */

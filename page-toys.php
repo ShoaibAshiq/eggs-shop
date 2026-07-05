@@ -1,7 +1,7 @@
 <?php
 get_header(); ?>
 
-  <div class="main">
+  <div class="main main--toys">
 
     <div class="head">
             <?php $bannerfield = get_field('add_new_banner_images');
@@ -15,6 +15,9 @@ get_header(); ?>
               
             <div class="head__title"><?php the_title(); ?></div>
         </div>
+
+    <?php get_template_part( 'template-parts/toys-collect', 'play-learn' ); ?>
+
     <div class="woocommerce-notices-wrapper"></div>
     <div class="products-list">
       <div class="center">

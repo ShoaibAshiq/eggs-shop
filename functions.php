@@ -27,6 +27,7 @@ $required_files = array(
     'home-icons.php',
     'home-characters.php',
     'home-products.php',
+    'toys-collect.php',
     'license-inquiry.php',
     'actions.php',
     'custom_listing_template.php'
