@@ -229,6 +229,16 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
 
         return array(
             array(
+                'title'       => 'Happy Learning Toys',
+                'description' => 'Creative puzzles, dress-up activities and educational play for curious minds.',
+                'image'       => $uploads . '5-2.png',
+                'url'         => home_url( '/products/happy-toys/' ),
+                'panel'       => '#fde8f2',
+                'icon'        => 'puzzle',
+                'tone'        => 'pink',
+                'accent'      => '#e91e8c',
+            ),
+            array(
                 'title'       => 'Lucky Egg Toys',
                 'description' => 'Collect adorable animal friends and discover fun surprises in every Lucky Egg.',
                 'image'       => $uploads . 'Lucky.png',
@@ -277,16 +287,6 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
                 'icon'        => 'smile',
                 'tone'        => 'orange',
                 'accent'      => '#f39c12',
-            ),
-            array(
-                'title'       => 'Happy Learning Toys',
-                'description' => 'Creative puzzles, dress-up activities and educational play for curious minds.',
-                'image'       => $uploads . '5-2.png',
-                'url'         => home_url( '/products/happy-toys/' ),
-                'panel'       => '#fde8f2',
-                'icon'        => 'puzzle',
-                'tone'        => 'pink',
-                'accent'      => '#e91e8c',
             ),
         );
     }
@@ -350,7 +350,7 @@ if ( ! function_exists( 'et_home_get_quality_products' ) ) {
      * @return array<int, array<string, string>>
      */
     function et_home_get_quality_products() {
-        $cache_key = 'et_home_quality_products_v11';
+        $cache_key = 'et_home_quality_products_v12';
         $cached    = get_transient( $cache_key );
 
         if ( is_array( $cached ) && ! empty( $cached ) ) {
