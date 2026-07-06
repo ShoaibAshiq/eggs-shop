@@ -691,9 +691,10 @@
     background: transparent;
 }
 
-/* Hero poster: thumb_2EFFD4E7...png (360x360) */
+/* Hero poster (1:1) vs video (16:9) use separate aspect ratios. */
 .et-home__hero--split-video {
     --et-home-hero-poster-aspect-ratio: 1 / 1;
+    --et-home-hero-video-aspect-ratio: 16 / 9;
 }
 
 .et-home__hero--split-video .et-home__hero-video-wrap {
@@ -703,12 +704,26 @@
     min-height: 0;
     max-height: none;
     flex: none;
+    background: #0d1520;
 }
 
-.et-home__hero--split-video .et-home__hero-video,
-.et-home__hero--split-video .et-home__hero-video-fallback {
-    object-fit: cover;
+.et-home__hero--split-video .et-home__hero-video-wrap.is-playing {
+    aspect-ratio: var(--et-home-hero-video-aspect-ratio);
+}
+
+.et-home__hero--split-video .et-home__hero-video-wrap:not(.is-playing) .et-home__hero-video,
+.et-home__hero--split-video .et-home__hero-video-wrap:not(.is-playing) .et-home__hero-video-fallback {
+    object-fit: contain;
     object-position: center center;
+}
+
+.et-home__hero--split-video .et-home__hero-video-wrap.is-playing .et-home__hero-video {
+    object-fit: contain;
+    object-position: center center;
+}
+
+.et-home__hero--split-video .et-home__hero-video-wrap.is-playing .et-home__hero-video-fallback {
+    display: none;
 }
 
 .et-home__hero--split-video .et-home__hero-badge {
@@ -1060,6 +1075,10 @@
         height: auto;
     }
 
+    .et-home__hero--split-video .et-home__hero-video-wrap.is-playing {
+        aspect-ratio: var(--et-home-hero-video-aspect-ratio);
+    }
+
     .et-home__hero-media--dual-test .et-home__hero-video-wrap {
         min-height: 0;
     }
@@ -1107,6 +1126,10 @@
         height: auto;
     }
 
+    .et-home__hero--split-video .et-home__hero-video-wrap.is-playing {
+        aspect-ratio: var(--et-home-hero-video-aspect-ratio);
+    }
+
     .et-home__hero--split-video .et-home__hero-title {
         font-size: clamp(42px, 3.9vw, 58px);
     }
@@ -1131,14 +1154,6 @@
 }
 
 @media screen and (max-width: 767px) {
-    .et-home__hero--split-video .et-home__hero-video {
-        display: none;
-    }
-
-    .et-home__hero--split-video .et-home__hero-video-fallback {
-        display: block;
-    }
-
     .et-home__hero-media {
         max-width: 100%;
     }
@@ -1150,6 +1165,10 @@
         height: auto;
         min-height: 0;
         max-height: none;
+    }
+
+    .et-home__hero--split-video .et-home__hero-video-wrap.is-playing {
+        aspect-ratio: var(--et-home-hero-video-aspect-ratio);
     }
 
     .et-home__hero-video-wrap {
@@ -1183,6 +1202,7 @@
 
     .et-home__hero--split-video .et-home__hero-video-fallback {
         display: block;
+        object-fit: contain;
     }
 }
 

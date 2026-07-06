@@ -483,11 +483,62 @@
 
     function initHeroVideoWrap(videoWrap) {
         var video = videoWrap.querySelector('.et-home__hero-video');
+        var fallbackImg = videoWrap.querySelector('.et-home__hero-video-fallback');
         var playToggle = videoWrap.querySelector('.et-home__hero-video-play');
         var soundToggle = videoWrap.querySelector('.et-home__hero-video-sound');
 
         if (!video) {
             return;
+        }
+
+        function applyVideoAspectRatio() {
+            var videoWidth = video.videoWidth;
+            var videoHeight = video.videoHeight;
+
+            if (!videoWidth || !videoHeight) {
+                return;
+            }
+
+            videoWrap.style.setProperty(
+                '--et-home-hero-video-aspect-ratio',
+                videoWidth + ' / ' + videoHeight
+            );
+        }
+
+        function captureHighResPosterFrame() {
+            var videoWidth = video.videoWidth;
+            var videoHeight = video.videoHeight;
+
+            if (!fallbackImg || !videoWidth || !videoHeight || video.readyState < 2) {
+                return;
+            }
+
+            var cropSize = Math.min(videoWidth, videoHeight);
+            var sourceX = (videoWidth - cropSize) / 2;
+            var sourceY = (videoHeight - cropSize) / 2;
+            var canvas = document.createElement('canvas');
+
+            canvas.width = cropSize;
+            canvas.height = cropSize;
+
+            try {
+                canvas.getContext('2d').drawImage(
+                    video,
+                    sourceX,
+                    sourceY,
+                    cropSize,
+                    cropSize,
+                    0,
+                    0,
+                    cropSize,
+                    cropSize
+                );
+                fallbackImg.src = canvas.toDataURL('image/jpeg', 0.92);
+                fallbackImg.width = cropSize;
+                fallbackImg.height = cropSize;
+            } catch (error) {
+                return;
+            }
         }
 
         function updatePlayButtonLabel() {
@@ -507,6 +558,8 @@
         }
 
         function markVideoReady() {
+            applyVideoAspectRatio();
+            captureHighResPosterFrame();
             videoWrap.classList.remove('is-loading');
         }
 
@@ -567,8 +620,13 @@
         });
 
         markVideoLoading();
+        video.addEventListener('loadedmetadata', applyVideoAspectRatio);
         video.addEventListener('loadeddata', markVideoReady);
         video.addEventListener('canplay', markVideoReady);
+
+        if (video.readyState >= 1) {
+            applyVideoAspectRatio();
+        }
 
         if (video.readyState >= 2) {
             markVideoReady();
