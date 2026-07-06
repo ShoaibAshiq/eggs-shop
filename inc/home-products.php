@@ -231,7 +231,7 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
             array(
                 'title'       => 'Happy Toy™ — Find inside Happy Egg®',
                 'description' => 'Creative surprises found inside every Happy Egg®.',
-                'image'       => $uploads . '5-2.png',
+                'image'       => $uploads . 'WhatsApp-Image-2026-07-06-at-12.59.58-AM.jpeg',
                 'url'         => home_url( '/products/happy-toys/' ),
                 'panel'       => '#fde8f2',
                 'icon'        => 'puzzle',
@@ -350,7 +350,7 @@ if ( ! function_exists( 'et_home_get_quality_products' ) ) {
      * @return array<int, array<string, string>>
      */
     function et_home_get_quality_products() {
-        $cache_key = 'et_home_quality_products_v14';
+        $cache_key = 'et_home_quality_products_v15';
         $cached    = get_transient( $cache_key );
 
         if ( is_array( $cached ) && ! empty( $cached ) ) {
