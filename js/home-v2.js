@@ -486,6 +486,7 @@
         var fallbackImg = videoWrap.querySelector('.et-home__hero-video-fallback');
         var playToggle = videoWrap.querySelector('.et-home__hero-video-play');
         var soundToggle = videoWrap.querySelector('.et-home__hero-video-sound');
+        var configuredLetterboxColor = video ? video.getAttribute('data-letterbox-color') : '';
 
         if (!video) {
             return;
@@ -499,6 +500,69 @@
             videoWrap.style.setProperty(
                 '--et-home-hero-poster-aspect-ratio',
                 fallbackImg.naturalWidth + ' / ' + fallbackImg.naturalHeight
+            );
+        }
+
+        function applyConfiguredLetterboxColor() {
+            if (!configuredLetterboxColor) {
+                return;
+            }
+
+            videoWrap.style.setProperty('--et-home-hero-video-letterbox-color', configuredLetterboxColor);
+        }
+
+        function sampleVideoLetterboxColor() {
+            var videoWidth = video.videoWidth;
+            var videoHeight = video.videoHeight;
+            var canvas;
+            var ctx;
+            var samplePoints;
+            var red = 0;
+            var green = 0;
+            var blue = 0;
+            var index;
+            var pixel;
+
+            if (!videoWidth || !videoHeight || video.readyState < 2) {
+                return;
+            }
+
+            canvas = document.createElement('canvas');
+            canvas.width = videoWidth;
+            canvas.height = videoHeight;
+
+            try {
+                ctx = canvas.getContext('2d');
+                ctx.drawImage(video, 0, 0, videoWidth, videoHeight);
+            } catch (error) {
+                return;
+            }
+
+            samplePoints = [
+                [0, 0],
+                [videoWidth - 1, 0],
+                [0, videoHeight - 1],
+                [videoWidth - 1, videoHeight - 1],
+                [Math.floor(videoWidth / 2), 0],
+                [Math.floor(videoWidth / 2), videoHeight - 1],
+                [0, Math.floor(videoHeight / 2)],
+                [videoWidth - 1, Math.floor(videoHeight / 2)]
+            ];
+
+            for (index = 0; index < samplePoints.length; index += 1) {
+                pixel = ctx.getImageData(samplePoints[index][0], samplePoints[index][1], 1, 1).data;
+                red += pixel[0];
+                green += pixel[1];
+                blue += pixel[2];
+            }
+
+            red = Math.round(red / samplePoints.length);
+            green = Math.round(green / samplePoints.length);
+            blue = Math.round(blue / samplePoints.length);
+
+            videoWrap.style.setProperty(
+                '--et-home-hero-video-letterbox-color',
+                'rgb(' + red + ', ' + green + ', ' + blue + ')'
             );
         }
 
@@ -519,6 +583,7 @@
         }
 
         function markVideoReady() {
+            sampleVideoLetterboxColor();
             videoWrap.classList.remove('is-loading');
         }
 
@@ -543,9 +608,11 @@
 
         video.pause();
         setPlayingState(false);
+        applyConfiguredLetterboxColor();
 
         video.addEventListener('play', function () {
             setPlayingState(true);
+            sampleVideoLetterboxColor();
         });
 
         video.addEventListener('pause', function () {

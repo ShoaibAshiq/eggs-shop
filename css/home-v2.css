@@ -691,9 +691,10 @@
     background: transparent;
 }
 
-/* Hero media: one container aspect ratio (poster) for both image and video — no layout shift on play. */
+/* Hero media: fixed poster frame; video letterboxes inside with a themed fill color. */
 .et-home__hero--split-video {
     --et-home-hero-poster-aspect-ratio: 1 / 1;
+    --et-home-hero-video-letterbox-color: #ffcc00;
 }
 
 .et-home__hero--split-video .et-home__hero-video-wrap {
@@ -706,9 +707,17 @@
     background: transparent;
 }
 
-.et-home__hero--split-video .et-home__hero-video,
+.et-home__hero--split-video .et-home__hero-video-wrap.is-playing {
+    background: var(--et-home-hero-video-letterbox-color);
+}
+
 .et-home__hero--split-video .et-home__hero-video-fallback {
     object-fit: cover;
+    object-position: center center;
+}
+
+.et-home__hero--split-video .et-home__hero-video {
+    object-fit: contain;
     object-position: center center;
 }
 
