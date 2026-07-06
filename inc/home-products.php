@@ -229,7 +229,7 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
 
         return array(
             array(
-                'title'       => 'Happy Learning Toys',
+                'title'       => 'Happy Toy™ — Find inside Happy Egg®',
                 'description' => 'Creative puzzles, dress-up activities and educational play for curious minds.',
                 'image'       => $uploads . '5-2.png',
                 'url'         => home_url( '/products/happy-toys/' ),
@@ -239,7 +239,7 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
                 'accent'      => '#e91e8c',
             ),
             array(
-                'title'       => 'Lucky Egg Toys',
+                'title'       => 'Lucky Toy™ — Find inside Lucky Egg®',
                 'description' => 'Collect adorable animal friends and discover fun surprises in every Lucky Egg.',
                 'image'       => $uploads . 'Lucky.png',
                 'url'         => $brands['lucky']['shop_url'],
@@ -249,7 +249,7 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
                 'accent'      => '#e91e8c',
             ),
             array(
-                'title'       => 'King Egg Toys',
+                'title'       => 'King Toy™ — Find inside King Egg®',
                 'description' => 'Play with colorful finger puppets and imaginative King Egg characters.',
                 'image'       => $uploads . 'King.jpg.jpeg',
                 'url'         => $brands['king']['shop_url'],
@@ -259,7 +259,7 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
                 'accent'      => '#1a9fe0',
             ),
             array(
-                'title'       => 'Magik Egg Toys',
+                'title'       => 'Magik Toy™ — Find inside Magik Egg®',
                 'description' => 'Meet funny little monsters and build your own magical collection.',
                 'image'       => $uploads . 'Magik.png',
                 'url'         => $brands['magik']['shop_url'],
@@ -269,7 +269,7 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
                 'accent'      => '#8e44ad',
             ),
             array(
-                'title'       => 'Skazka Toys',
+                'title'       => 'Skazka Toy™ — Find inside Skazka Egg®',
                 'description' => 'Step into fairy tales with magical characters, puzzles and collectible toys.',
                 'image'       => $uploads . 'Skazka.png',
                 'url'         => $brands['skazka']['shop_url'],
@@ -279,7 +279,7 @@ if ( ! function_exists( 'et_home_get_collect_play_learn_products' ) ) {
                 'accent'      => '#27ae60',
             ),
             array(
-                'title'       => 'Emoji Inspirational Toys',
+                'title'       => 'Emoji Toy™ — Find inside Emoji Egg®',
                 'description' => 'Positive characters, magnetic puzzles and inspirational messages for every child.',
                 'image'       => $uploads . 'Emoji.png',
                 'url'         => $brands['emoji']['shop_url'],
@@ -350,7 +350,7 @@ if ( ! function_exists( 'et_home_get_quality_products' ) ) {
      * @return array<int, array<string, string>>
      */
     function et_home_get_quality_products() {
-        $cache_key = 'et_home_quality_products_v12';
+        $cache_key = 'et_home_quality_products_v13';
         $cached    = get_transient( $cache_key );
 
         if ( is_array( $cached ) && ! empty( $cached ) ) {
