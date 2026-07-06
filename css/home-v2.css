@@ -691,6 +691,10 @@
     background: transparent;
 }
 
+.et-home__hero--split-video .et-home__hero-video-wrap {
+    background: linear-gradient(180deg, #f89b29 0%, #f89b29 44%, #2db0e4 44%, #2db0e4 100%);
+}
+
 .et-home__hero--split-video .et-home__hero-badge {
     width: fit-content;
     max-width: 100%;
@@ -763,6 +767,12 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center center;
+}
+
+.et-home__hero--split-video .et-home__hero-video,
+.et-home__hero--split-video .et-home__hero-video-fallback {
+    object-fit: contain;
     object-position: center center;
 }
 
