@@ -691,10 +691,10 @@
     background: transparent;
 }
 
-/* Hero media: fixed poster frame; video letterboxes inside with a themed fill color. */
+/* Hero media: fixed poster frame; video fits inside with themed gaps (not browser black). */
 .et-home__hero--split-video {
     --et-home-hero-poster-aspect-ratio: 1 / 1;
-    --et-home-hero-video-letterbox-color: #ffcc00;
+    --et-home-hero-video-letterbox-color: #faf6ee;
 }
 
 .et-home__hero--split-video .et-home__hero-video-wrap {
@@ -708,6 +708,9 @@
 }
 
 .et-home__hero--split-video .et-home__hero-video-wrap.is-playing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background: var(--et-home-hero-video-letterbox-color);
 }
 
@@ -716,9 +719,22 @@
     object-position: center center;
 }
 
-.et-home__hero--split-video .et-home__hero-video {
+.et-home__hero--split-video .et-home__hero-video-wrap:not(.is-playing) .et-home__hero-video {
+    object-fit: cover;
+    object-position: center center;
+}
+
+.et-home__hero--split-video .et-home__hero-video-wrap.is-playing .et-home__hero-video {
+    position: relative;
+    inset: auto;
+    flex: 0 0 auto;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
     object-fit: contain;
     object-position: center center;
+    background: transparent;
 }
 
 .et-home__hero--split-video .et-home__hero-video-wrap:not(.is-playing) .et-home__hero-video-fallback {
