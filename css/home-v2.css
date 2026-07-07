@@ -1,4 +1,4 @@
-﻿/**
+﻿  /**
  * Eggs Time â€” Home v2 (isolated from theme .head / entry-content)
  */
 
@@ -5590,7 +5590,7 @@
 
 .et-home__distributor-btn-wrap {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 100%;
     margin-top: 2px;
 }
