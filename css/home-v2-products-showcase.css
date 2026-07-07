@@ -203,6 +203,9 @@
 
 .et-home__products--showcase .et-home__products-all:hover,
 .et-home__products--showcase .et-home__products-all:focus {
+    background: var(--et-home-btn) !important;
+    border-color: var(--et-home-btn) !important;
+    color: #ffffff !important;
     transform: translateY(-1px);
 }
 
