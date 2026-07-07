@@ -1318,6 +1318,10 @@
     width: 100%;
 }
 
+.et-home__best-sellers .et-home__section-inner {
+    padding-bottom: var(--et-home-section-top-spacing);
+}
+
 .et-home__best-sellers-head {
     margin: 0 0 24px;
     text-align: center;
