@@ -314,8 +314,12 @@
 .et-home__products--showcase .et-home__product-body {
     align-items: stretch;
     gap: 8px;
-    padding: 10px 12px 12px;
+    padding: 18px 12px 18px;
     text-align: left;
+}
+
+.et-home__products--showcase .et-home__product-copy {
+    margin: 6px 0;
 }
 
 .et-home__product-heading {
@@ -441,7 +445,7 @@
 
     .et-home__products--showcase .et-home__product-body {
         gap: 10px;
-        padding: 12px 14px 14px;
+        padding: 20px 14px 20px;
     }
 
     .et-home__products--showcase .et-home__product-heading {

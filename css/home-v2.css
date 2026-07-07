@@ -5853,6 +5853,7 @@
     .et-home__distributor-btn-wrap,
     .et-home__distributor-btn {
         width: 100%;
+        max-width: 100%;
     }
 }
 
@@ -5878,6 +5879,7 @@
     .et-home__distributor-btn-wrap,
     .et-home__distributor-btn {
         width: 100%;
+        max-width: 100%;
     }
 }
 
