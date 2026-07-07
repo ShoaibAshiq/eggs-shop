@@ -207,8 +207,8 @@
 }
 
 .et-home__products--showcase .et-home__products-all-icon {
-    width: 28px;
-    height: 28px;
+    width: auto;
+    height: auto;
 }
 
 .et-home__products--showcase .et-home__products-all-icon i {

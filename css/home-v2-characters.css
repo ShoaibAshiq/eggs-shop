@@ -278,12 +278,12 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    flex: 0 0 28px;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: #ffffff;
-    color: var(--et-card-accent, var(--et-home-blue));
+    flex: 0 0 auto;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    color: inherit !important;
 }
 
 .et-home__best-sellers-btn .et-home__card-btn-icon i,

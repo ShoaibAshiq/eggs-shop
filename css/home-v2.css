@@ -343,10 +343,10 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    border: 2px solid currentColor;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    border: none;
 }
 
 .et-home__hero-btn-icon svg {
@@ -364,19 +364,19 @@
 .et-home__hero-btn-arrow,
 .et-home__hero-btn-arrow path {
     fill: none !important;
-    stroke: #098BE5 !important;
+    stroke: currentColor !important;
     stroke-width: 2.5;
     stroke-linecap: round;
     stroke-linejoin: round;
 }
 
 .et-home__hero-btn--primary .et-home__hero-btn-icon {
-    background: #ffffff;
-    border-color: #ffffff;
+    background: transparent;
+    border-color: transparent;
 }
 
 .et-home__hero-btn--secondary .et-home__hero-btn-icon {
-    background: #ffffff;
+    background: transparent;
 }
 
 .et-home__hero-btn--primary {
@@ -2929,11 +2929,11 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background: var(--et-home-btn);
-    color: #ffffff;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
 }
 
 .et-home__products-all-icon i {
@@ -2951,8 +2951,8 @@
 
 .et-home__products-all:hover .et-home__products-all-icon,
 .et-home__products-all:focus .et-home__products-all-icon {
-    background: #ffffff;
-    color: var(--et-home-blue);
+    background: transparent;
+    color: inherit;
 }
 
 .et-home__products-grid {
@@ -4841,10 +4841,11 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #ffffff;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    color: inherit !important;
 }
 
 .et-home__social-cta-icon svg {
@@ -5629,11 +5630,11 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-    background: #ffffff;
-    color: #1f8f4f;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    color: inherit;
     line-height: 1;
 }
 
@@ -5654,7 +5655,7 @@
 
 .et-home__distributor-btn:hover .et-home__distributor-btn-icon,
 .et-home__distributor-btn:focus .et-home__distributor-btn-icon {
-    color: #1f8f4f;
+    color: inherit;
 }
 
 .et-home__distributor-visual {
