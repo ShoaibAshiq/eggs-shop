@@ -6162,7 +6162,7 @@
 
 @media screen and (min-width: 1200px) {
     .et-home__cta-card {
-        padding: 36px 30px 30px;
+        padding: 36px 30px;
     }
 }
 
@@ -6189,7 +6189,7 @@
     }
 
     .et-home__cta-card {
-        padding: 26px 20px 22px;
+        padding: 26px 20px;
     }
 
     .et-home__cta-title {
