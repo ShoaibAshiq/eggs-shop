@@ -5600,8 +5600,8 @@
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    width: 100%;
-    max-width: 100%;
+    width: 40%;
+    max-width: 40%;
     min-height: 50px;
     margin: 0;
     padding: 8px 8px 8px 18px !important;
