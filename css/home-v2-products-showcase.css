@@ -393,7 +393,7 @@
 }
 
 .et-home__products--showcase .et-home__product-title {
-    margin: 0 0 2px;
+    margin: 0 0 10px;
     text-align: center;
     font-size: clamp(15px, 1.1vw, 17px);
     font-weight: 800;
@@ -453,7 +453,7 @@
     }
 
     .et-home__products--showcase .et-home__product-title {
-        margin: 0 0 4px;
+        margin: 0 0 10px;
         line-height: 1.2;
     }
 
