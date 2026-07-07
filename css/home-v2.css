@@ -5911,7 +5911,7 @@
     max-width: var(--et-home-max);
     margin: 0 auto;
     padding-top: var(--et-home-section-top-spacing);
-    padding-bottom: 0;
+    padding-bottom: var(--et-home-section-top-spacing);
     padding-left: var(--et-home-section-x);
     padding-right: var(--et-home-section-x);
 }
@@ -5979,7 +5979,7 @@
     width: 100%;
     min-height: 0;
     height: 100%;
-    padding: 34px 28px;
+    padding: 34px 28px 28px;
     border-radius: 24px;
     border: 1px solid rgba(32, 77, 136, 0.08);
     background: #ffffff;
@@ -6162,7 +6162,7 @@
 
 @media screen and (min-width: 1200px) {
     .et-home__cta-card {
-        padding: 36px 30px;
+        padding: 36px 30px 30px;
     }
 }
 
@@ -6189,7 +6189,7 @@
     }
 
     .et-home__cta-card {
-        padding: 26px 20px;
+        padding: 26px 20px 22px;
     }
 
     .et-home__cta-title {
