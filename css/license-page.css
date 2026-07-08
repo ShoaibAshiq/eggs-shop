@@ -948,7 +948,7 @@
 .et-license__partners-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 18px 12px;
+    gap: 20px 14px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -960,7 +960,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: flex-start;
+    gap: 14px;
     text-align: center;
 }
 
@@ -968,12 +969,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
+    flex: 0 0 auto;
+    width: 56px;
+    height: 56px;
     border-radius: 50%;
     background: #ffffff;
     color: var(--et-partner-color);
-    font-size: 27px;
+    font-size: 24px;
     line-height: 1;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
@@ -984,11 +986,18 @@
 }
 
 .et-license__partner-label {
-    display: block;
-    max-width: 9em;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.4;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    min-height: 2.6em;
+    margin: 0;
+    padding: 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: 0.01em;
+    text-align: center;
     color: var(--et-lic-heading) !important;
 }
 
@@ -1324,7 +1333,8 @@
 
     .et-license__partner-label {
         font-size: 14px;
-        max-width: 100%;
+        font-weight: 600;
+        min-height: 2.5em;
     }
 
     .et-license__process-wrap {
@@ -1397,13 +1407,19 @@
     }
 
     .et-license__partner-icon {
-        width: 54px;
-        height: 54px;
-        font-size: 23px;
+        width: 52px;
+        height: 52px;
+        font-size: 22px;
+    }
+
+    .et-license__partner-item {
+        gap: 12px;
     }
 
     .et-license__partner-label {
         font-size: 13px;
+        font-weight: 600;
+        min-height: 2.4em;
     }
 
     .et-license__contact-panel {
