@@ -97,9 +97,11 @@ $et_license_characters_img = function_exists( 'et_get_license_why_characters_ima
                             </li>
                             <?php if ( $index < $process_count - 1 ) : ?>
                                 <li class="et-license__process-connector" aria-hidden="true">
-                                    <span class="et-license__process-line"></span>
-                                    <span class="et-license__process-diamond">&#9670;</span>
-                                    <span class="et-license__process-line"></span>
+                                    <span class="et-license__process-arrow">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                            <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </svg>
+                                    </span>
                                 </li>
                             <?php endif; ?>
                         <?php endforeach; ?>
