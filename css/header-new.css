@@ -5,8 +5,8 @@
  */
 
  :root {
-    --et-pink: #e91e8c;
-    --et-pink-dark: #d81b7d;
+    --et-pink: var(--et-brand-pink);
+    --et-pink-dark: var(--et-brand-pink-dark);
     --et-nav: #3d3d3d;
     --et-header-h: 80px;
     --et-header-max: 1650px;

@@ -119,14 +119,3 @@ if ( ! function_exists( 'et_get_license_page_brands' ) ) {
         return et_get_brands_by_keys( $keys );
     }
 }
-
-if ( ! function_exists( 'et_get_license_why_characters_image' ) ) {
-    /**
-     * Three core egg characters (Happy, King, Magik) for the Why License card.
-     *
-     * @return string
-     */
-    function et_get_license_why_characters_image() {
-        return trailingslashit( get_template_directory_uri() ) . 'images/license-why-characters.png';
-    }
-}

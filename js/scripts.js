@@ -350,8 +350,8 @@ $(document).ready(function(){
     });
 
     (function () {
-        var FOOTER_ACCORDION_BREAKPOINT = 1024;
-        var $footerItems = $('.footer__accordion-item');
+        var FOOTER_ACCORDION_BREAKPOINT = 768;
+        var $footerItems = $('.footer__accordion-item, .et-footer__accordion-item');
 
         if (!$footerItems.length) {
             return;
@@ -363,16 +363,16 @@ $(document).ready(function(){
 
         function resetFooterAccordion() {
             $footerItems.removeClass('is-open')
-                .find('.footer__accordion-toggle')
+                .find('.footer__accordion-toggle, .et-footer__accordion-toggle')
                 .attr('aria-expanded', 'false');
         }
 
-        $(document).on('click', '.footer__accordion-toggle', function () {
+        $(document).on('click', '.footer__accordion-toggle, .et-footer__accordion-toggle', function () {
             if (!isFooterAccordionMode()) {
                 return;
             }
 
-            var $item = $(this).closest('.footer__accordion-item');
+            var $item = $(this).closest('.footer__accordion-item, .et-footer__accordion-item');
             var willOpen = !$item.hasClass('is-open');
 
             $item.toggleClass('is-open', willOpen);

@@ -68,10 +68,21 @@ function et_enqueue_cookie_banner_assets()
     );
 }
 
+add_action('wp_enqueue_scripts', 'add_et_brand_colors_css', 99997);
+function add_et_brand_colors_css()
+{
+    wp_enqueue_style(
+        'et-brand-colors',
+        TEMPLATEURI . '/css/et-brand-colors.css',
+        array(),
+        '1.0.' . filemtime( get_template_directory() . '/css/et-brand-colors.css' )
+    );
+}
+
 add_action('wp_enqueue_scripts', 'add_header_new_css', 99999);
 function add_header_new_css()
 {
-    wp_enqueue_style('header-new', TEMPLATEURI . '/css/header-new.css', array('style-all', 'style-buy'), '3.0.' . time());
+    wp_enqueue_style('header-new', TEMPLATEURI . '/css/header-new.css', array('style-all', 'style-buy', 'et-brand-colors'), '3.0.' . time());
 
     $inline = '
 .et-header .et-header__menu > li > a {
@@ -96,6 +107,17 @@ function add_header_new_css()
     wp_add_inline_style('header-new', $inline);
 }
 
+add_action('wp_enqueue_scripts', 'add_footer_new_css', 100000);
+function add_footer_new_css()
+{
+    wp_enqueue_style(
+        'footer-new',
+        TEMPLATEURI . '/css/footer-new.css',
+        array( 'style-all', 'header-new', 'et-brand-colors' ),
+        '1.0.' . filemtime( get_template_directory() . '/css/footer-new.css' )
+    );
+}
+
 add_action('wp_enqueue_scripts', 'add_license_page_css', 1001);
 function add_license_page_css()
 {
@@ -103,7 +125,7 @@ function add_license_page_css()
         wp_enqueue_style(
             'license-page',
             TEMPLATEURI . '/css/license-page.css',
-            array( 'style-all', 'header-new' ),
+            array( 'style-all', 'header-new', 'et-brand-colors' ),
             '1.0.' . filemtime( get_template_directory() . '/css/license-page.css' )
         );
 

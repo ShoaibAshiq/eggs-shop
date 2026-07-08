@@ -23,11 +23,13 @@ $required_files = array(
     'cpt.php',
     'template.php',
     'brand-logos.php',
+    'footer-links.php',
     'home-trust.php',
     'home-icons.php',
     'home-characters.php',
     'home-products.php',
     'license-inquiry.php',
+    'license-assets.php',
     'actions.php',
     'custom_listing_template.php'
 );

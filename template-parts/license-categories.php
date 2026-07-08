@@ -5,12 +5,12 @@
 $et_license_categories = array(
     array(
         'label' => 'Toys & Collectibles',
-        'color' => '#2b7bbf',
+        'color' => '#1b4a8a',
         'icon'  => 'fa-child',
     ),
     array(
         'label' => 'Surprise Eggs',
-        'color' => '#e91e8c',
+        'color' => '#ff3da5',
         'icon'  => 'egg',
     ),
     array(
@@ -30,12 +30,12 @@ $et_license_categories = array(
     ),
     array(
         'label' => 'Publishing & Educational Products',
-        'color' => '#d4a017',
+        'color' => '#ffd400',
         'icon'  => 'fa-book-open',
     ),
     array(
         'label' => 'Games & Digital Content',
-        'color' => '#3498db',
+        'color' => '#12a8f0',
         'icon'  => 'fa-gamepad',
     ),
     array(

@@ -1,0 +1,39 @@
+/**
+ * Eggs Time — canonical approved brand color palette.
+ * Shared across license page, header, footer, and home v2.
+ */
+
+:root {
+    /* Navy & blue */
+    --et-brand-navy: #1a3352;
+    --et-brand-blue: #1b4a8a;
+    --et-brand-blue-bright: #12a8f0;
+    --et-brand-blue-accent: #18c3ff;
+    --et-brand-blue-dark: #0d7fd4;
+    --et-brand-blue-muted: #7a9cc4;
+
+    /* Pink */
+    --et-brand-pink: #ff3da5;
+    --et-brand-pink-dark: #e63593;
+    --et-brand-pink-deep: #c91d7a;
+
+    /* Yellow */
+    --et-brand-yellow: #ffd400;
+
+    /* Neutrals */
+    --et-brand-text: #3a5370;
+    --et-brand-text-muted: #5c6b7a;
+    --et-brand-white: #ffffff;
+    --et-brand-max: 1650px;
+
+    /* RGB companions for translucent shadows and overlays */
+    --et-brand-navy-rgb: 26, 51, 82;
+    --et-brand-blue-rgb: 27, 74, 138;
+    --et-brand-pink-rgb: 255, 61, 165;
+    /* Typography weights (shared) */
+    --et-brand-fw-display: 800;
+    --et-brand-fw-heading: 800;
+    --et-brand-fw-subheading: 700;
+    --et-brand-fw-body: 500;
+    --et-brand-fw-strong: 700;
+}

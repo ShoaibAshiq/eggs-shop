@@ -1,45 +1,11 @@
 <?php
 /**
  * License page — Existing Products & Merchandise
- *
- * Fixed showcase of the six licensable merchandise categories (image + title +
- * short description). Uses theme-local imagery so the section always reflects
- * the approved design instead of the live WooCommerce egg-pack catalogue.
  */
-$et_license_img = trailingslashit( get_template_directory_uri() ) . 'images/';
 
-$et_license_products = array(
-	array(
-		'title'       => 'Character Caps',
-		'description' => 'Fun and colorful caps featuring our characters.',
-		'image'       => $et_license_img . 'toys_king_1.png',
-	),
-	array(
-		'title'       => 'Plush Toys',
-		'description' => 'Soft, high-quality plush toys kids love to cuddle.',
-		'image'       => $et_license_img . 'toys_1.png',
-	),
-	array(
-		'title'       => 'Surprise Eggs',
-		'description' => 'Exciting surprises, toys and tasty treats inside.',
-		'image'       => $et_license_img . 'distributor/king-egg.png',
-	),
-	array(
-		'title'       => 'Product Packaging',
-		'description' => 'Attractive packaging designed for retail success.',
-		'image'       => $et_license_img . 'distributor/magik-egg.png',
-	),
-	array(
-		'title'       => 'Retail Displays',
-		'description' => 'Eye-catching displays that drive sales.',
-		'image'       => $et_license_img . 'distributor/emoji-egg.png',
-	),
-	array(
-		'title'       => 'Digital Games & Content',
-		'description' => 'Engaging games and digital experiences for kids.',
-		'image'       => $et_license_img . 'game_image_1.png',
-	),
-);
+$et_license_products = function_exists( 'et_get_license_products' )
+    ? et_get_license_products()
+    : array();
 ?>
 <section class="et-license__products" aria-labelledby="et-license-products-title">
     <div class="et-license__section-inner center">

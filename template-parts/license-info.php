@@ -15,16 +15,16 @@ $et_license_partners = array(
     array( 'label' => 'Manufacturers', 'icon' => 'fa-industry', 'color' => '#7b5ea7' ),
     array( 'label' => 'Distributors', 'icon' => 'fa-truck', 'color' => '#27ae60' ),
     array( 'label' => 'Retailers', 'icon' => 'fa-store', 'color' => '#e67e22' ),
-    array( 'label' => 'Licensing Agents', 'icon' => 'fa-user-tie', 'color' => '#3498db' ),
-    array( 'label' => 'Promotional Partners', 'icon' => 'fa-bullhorn', 'color' => '#e91e8c' ),
-    array( 'label' => 'International Business Partners', 'icon' => 'fa-globe-americas', 'color' => '#2b7bbf' ),
+    array( 'label' => 'Licensing Agents', 'icon' => 'fa-user-tie', 'color' => '#12a8f0' ),
+    array( 'label' => 'Promotional Partners', 'icon' => 'fa-bullhorn', 'color' => '#ff3da5' ),
+    array( 'label' => 'International Business Partners', 'icon' => 'fa-globe-americas', 'color' => '#1b4a8a' ),
 );
 
 $et_license_process = array(
-    array( 'num' => '1', 'label' => 'Submit Inquiry', 'icon' => 'fa-paper-plane', 'color' => '#2b7bbf' ),
+    array( 'num' => '1', 'label' => 'Submit Inquiry', 'icon' => 'fa-paper-plane', 'color' => '#1b4a8a' ),
     array( 'num' => '2', 'label' => 'Opportunity Review', 'icon' => 'fa-search', 'color' => '#27ae60' ),
     array( 'num' => '3', 'label' => 'Category & Territory Discussion', 'icon' => 'fa-comments', 'color' => '#f39c12' ),
-    array( 'num' => '4', 'label' => 'Licensing Agreement', 'icon' => 'fa-file-signature', 'color' => '#e91e8c' ),
+    array( 'num' => '4', 'label' => 'Licensing Agreement', 'icon' => 'fa-file-signature', 'color' => '#ff3da5' ),
     array( 'num' => '5', 'label' => 'Product Development & Launch', 'icon' => 'fa-rocket', 'color' => '#7b5ea7' ),
 );
 
