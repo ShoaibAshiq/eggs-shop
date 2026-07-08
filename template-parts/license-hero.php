@@ -10,6 +10,14 @@ $et_license_hero_bg = 'https://eggstime.com/wp-content/uploads/2026/07/3c06db2a-
     aria-label="<?php esc_attr_e( 'License Eggs Time Brands', 'eggs-shop' ); ?>"
     style="--et-license-hero-bg: url('<?php echo esc_url( $et_license_hero_bg ); ?>');"
 >
+    <img
+        class="et-license__hero-bg-image"
+        src="<?php echo esc_url( $et_license_hero_bg ); ?>"
+        alt=""
+        loading="eager"
+        decoding="async"
+        aria-hidden="true"
+    />
     <div class="et-license__hero-overlay" aria-hidden="true"></div>
     <div class="et-license__hero-inner center">
         <div class="et-license__hero-content">
