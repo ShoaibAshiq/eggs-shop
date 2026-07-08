@@ -28,7 +28,9 @@ $et_license_process = array(
     array( 'num' => '5', 'label' => 'Product Development & Launch', 'icon' => 'fa-rocket', 'color' => '#7b5ea7' ),
 );
 
-$et_license_characters_img = 'https://eggstime.com/wp-content/uploads/2017/12/Happy-Eggs-4.png';
+$et_license_characters_img = function_exists( 'et_get_license_why_characters_image' )
+    ? et_get_license_why_characters_image()
+    : trailingslashit( get_template_directory_uri() ) . 'images/license-why-characters.png';
 ?>
 <section class="et-license__info" aria-label="Licensing information">
     <div class="et-license__section-inner center">
