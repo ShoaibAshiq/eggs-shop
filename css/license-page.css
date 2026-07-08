@@ -707,7 +707,8 @@
     border: var(--et-lic-card-border);
     border-radius: var(--et-lic-card-radius-lg);
     box-shadow: var(--et-lic-card-shadow-elevated);
-    padding: 30px 36px;
+    padding: 36px 36px;
+    overflow: visible;
 }
 
 .et-license__products-slider-wrap {
@@ -720,12 +721,21 @@
     padding: 0;
 }
 
+.et-license__products-slider .slick-slide {
+    padding: 14px 8px;
+}
+
+.et-license__products-slider .slick-list {
+    padding-block: 4px;
+}
+
 /* Pre-slick fallback — compact horizontal strip until JS initializes */
 .et-license__products-slider:not(.slick-initialized) {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
     overflow: hidden;
+    padding-block: 14px;
 }
 
 .et-license__products-slider:not(.slick-initialized) .et-license__product-item {
@@ -737,6 +747,7 @@
     margin: 0;
     padding: 0;
     height: 100%;
+    box-sizing: border-box;
 }
 
 .et-license__product-card {
@@ -749,6 +760,7 @@
     box-shadow: var(--et-lic-card-shadow-elevated);
     overflow: hidden;
     transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    margin-block: 2px;
 }
 
 .et-license__product-card:hover {
@@ -825,12 +837,20 @@
 
 @media screen and (max-width: 767px) {
     .et-license__products-panel {
-        padding: 30px 22px;
+        padding: 32px 22px;
         border-radius: var(--et-lic-card-radius);
     }
 
     .et-license__products-slider-wrap {
         padding: 0 40px;
+    }
+
+    .et-license__products-slider .slick-slide {
+        padding: 12px 8px;
+    }
+
+    .et-license__products-slider:not(.slick-initialized) {
+        padding-block: 12px;
     }
 
     .et-license__products-slider:not(.slick-initialized) .et-license__product-item {
@@ -840,7 +860,7 @@
 
 @media screen and (max-width: 575px) {
     .et-license__products-panel {
-        padding: 30px 16px;
+        padding: 28px 16px;
     }
 
     .et-license__product-image-wrap {
@@ -849,6 +869,14 @@
 
     .et-license__product-meta {
         padding: 24px 16px;
+    }
+
+    .et-license__products-slider .slick-slide {
+        padding: 10px 6px;
+    }
+
+    .et-license__products-slider:not(.slick-initialized) {
+        padding-block: 10px;
     }
 }
 
