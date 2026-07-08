@@ -93,8 +93,8 @@
 }
 
 /* Hide duplicate banner if old HTML still in WP editor cache */
-.main--license .et-license__hero ~ .et-license__hero,
-.main--license .entry-content .et-license__hero {
+.main--license .et-license-home-hero ~ .et-license__hero,
+.main--license .entry-content > .et-license__hero {
     display: none !important;
 }
 
@@ -104,128 +104,17 @@
     box-sizing: border-box;
 }
 
-/* ----- Hero banner ----- */
-.et-license__hero {
-    position: relative;
-    min-height: clamp(520px, 68vh, 720px);
-    display: flex;
-    align-items: center;
-    background-color: #e8f4ea;
-    background-image: url('https://eggstime.com/wp-content/uploads/2017/12/banner3-min.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    overflow: hidden;
+/* ----- Hero banner (home-v2 split video design) ----- */
+.et-license-home-hero {
     width: 100%;
 }
 
-.et-license__hero-confetti {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.35;
-    background-image:
-        radial-gradient(circle, rgba(var(--et-brand-pink-rgb), 0.55) 0 2px, transparent 3px),
-        radial-gradient(circle, rgba(var(--et-brand-blue-rgb), 0.5) 0 2px, transparent 3px),
-        radial-gradient(circle, rgba(var(--et-brand-yellow-rgb), 0.65) 0 2.5px, transparent 3.5px),
-        radial-gradient(circle, rgba(39, 174, 96, 0.45) 0 2px, transparent 3px);
-    background-size: 120px 120px, 160px 160px, 140px 140px, 180px 180px;
-    background-position: 0 0, 40px 60px, 80px 20px, 20px 100px;
+.et-license-home-hero .et-home__hero.et-license__hero {
+    /* Home playful + split-video styles own the look; keep this marker class only. */
+    background-image: none;
 }
 
-.et-license__hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.94) 0%,
-        rgba(255, 255, 255, 0.82) 42%,
-        rgba(255, 255, 255, 0.28) 68%,
-        rgba(255, 255, 255, 0.08) 100%
-    );
-    pointer-events: none;
-}
-
-.et-license__hero-inner {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    max-width: var(--et-lic-max);
-    margin: 0 auto;
-    padding: 88px 20px 96px;
-    font-size: var(--et-lic-font-body);
-    text-align: left;
-}
-
-.et-license__hero-content {
-    max-width: 640px;
-    margin: 0;
-}
-
-@media screen and (min-width: 768px) {
-    .et-license__hero-inner {
-        padding: 104px 28px 112px;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    .et-license__hero-inner {
-        padding: 120px 32px 128px;
-    }
-}
-
-.et-license__hero-kicker {
-    margin: 0 0 10px;
-    font-size: var(--et-lic-font-hero-kicker);
-    font-weight: var(--et-lic-fw-heading);
-    line-height: 1.05;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--et-lic-navy) !important;
-}
-
-.et-license__hero-title {
-    margin: 0 0 28px;
-    font-size: clamp(44px, 6vw, 68px);
-    font-weight: var(--et-lic-fw-display);
-    line-height: 1.05;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-}
-
-.et-license__hero-title-line {
-    display: block;
-}
-
-.et-license__hero-title-line:first-child {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: baseline;
-    column-gap: 0.35em;
-    white-space: nowrap;
-}
-
-.et-license__hero-title-kicker {
-    flex: 0 0 auto;
-    color: var(--et-lic-navy) !important;
-}
-
-.et-license__hero-title-pink {
-    flex: 0 0 auto;
-    color: var(--et-lic-pink) !important;
-}
-
-.et-license__hero-text {
-    margin: 0 0 48px;
-    font-size: clamp(18px, 2vw, 21px);
-    font-weight: var(--et-lic-fw-body);
-    line-height: 1.7;
-    color: var(--et-lic-navy) !important;
-    max-width: 560px;
-}
-
-/* Primary CTA buttons — hero + contact form */
-.et-license__hero-btn,
+/* Primary CTA button — contact form submit */
 .et-license__form-submit {
     display: inline-flex !important;
     align-items: center;
@@ -256,8 +145,6 @@
     opacity: 1 !important;
 }
 
-.et-license__hero-btn:hover,
-.et-license__hero-btn:focus,
 .et-license__form-submit:hover,
 .et-license__form-submit:focus {
     background: linear-gradient(
@@ -271,7 +158,6 @@
     box-shadow: var(--et-lic-btn-shadow-hover);
 }
 
-.et-license__hero-btn svg,
 .et-license__form-submit svg {
     flex-shrink: 0;
     width: 22px;
@@ -280,41 +166,11 @@
 }
 
 @media screen and (max-width: 991px) {
-    .et-license__hero {
-        min-height: 400px;
-        background-position: 70% center;
-    }
-
-    .et-license__hero-overlay {
-        background: linear-gradient(
-            180deg,
-            rgba(255, 255, 255, 0.94) 0%,
-            rgba(255, 255, 255, 0.88) 50%,
-            rgba(255, 255, 255, 0.55) 100%
-        );
-    }
-
-    .et-license__hero-btn,
     .et-license__form-submit {
         width: 100%;
         font-size: 17px !important;
         padding: 20px 28px !important;
         min-height: 56px;
-    }
-}
-
-@media screen and (max-width: 575px) {
-    .et-license__hero-inner {
-        padding: 64px 16px 72px;
-    }
-
-    .et-license__hero-title {
-        font-size: clamp(34px, 8.8vw, 42px);
-    }
-
-    .et-license__hero-title-line:first-child {
-        flex-wrap: wrap;
-        white-space: normal;
     }
 }
 
@@ -1447,7 +1303,7 @@
     margin-top: 28px;
 }
 
-/* form-submit styles shared with .et-license__hero-btn above */
+/* form-submit styles defined with contact primary button styles above */
 
 /* Info + contact responsive */
 @media screen and (max-width: 1199px) {
