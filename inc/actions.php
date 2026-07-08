@@ -123,16 +123,38 @@ function add_license_page_css()
 {
     if ( is_page( 'license' ) ) {
         wp_enqueue_style(
+            'home-v2-google-font',
+            'https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800&display=swap',
+            array(),
+            null
+        );
+
+        wp_enqueue_style(
+            'home-v2',
+            TEMPLATEURI . '/css/home-v2.css',
+            array( 'style-all', 'header-new', 'home-v2-google-font', 'et-brand-colors' ),
+            et_home_v2_asset_version( 'css/home-v2.css' )
+        );
+
+        wp_enqueue_style(
             'license-page',
             TEMPLATEURI . '/css/license-page.css',
-            array( 'style-all', 'header-new', 'et-brand-colors' ),
+            array( 'style-all', 'header-new', 'home-v2', 'et-brand-colors' ),
             '1.0.' . filemtime( get_template_directory() . '/css/license-page.css' )
+        );
+
+        wp_enqueue_script(
+            'home-v2',
+            TEMPLATEURI . '/js/home-v2.js',
+            array( 'jquery', 'slick' ),
+            et_home_v2_asset_version( 'js/home-v2.js' ),
+            true
         );
 
         wp_enqueue_script(
             'license-page',
             TEMPLATEURI . '/js/license-page.js',
-            array( 'jquery', 'slick' ),
+            array( 'jquery', 'slick', 'home-v2' ),
             '1.0.' . filemtime( get_template_directory() . '/js/license-page.js' ),
             true
         );

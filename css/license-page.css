@@ -100,6 +100,27 @@
     display: none !important;
 }
 
+/* Home-style hero banner wrapper (uses home-v2.css) */
+.et-license__hero-wrap.et-home {
+    width: 100%;
+    overflow-x: clip;
+}
+
+.et-license__hero-wrap .et-home__hero--split-video .et-home__hero-btn--primary {
+    border-color: var(--et-lic-pink) !important;
+    background: var(--et-lic-pink) !important;
+}
+
+.et-license__hero-wrap .et-home__hero--split-video .et-home__hero-btn--primary:hover,
+.et-license__hero-wrap .et-home__hero--split-video .et-home__hero-btn--primary:focus {
+    border-color: var(--et-lic-pink-dark) !important;
+    background: var(--et-lic-pink-dark) !important;
+}
+
+.et-license__hero-wrap .et-home__hero-title-accent {
+    color: var(--et-lic-pink) !important;
+}
+
 .et-license *,
 .et-license *::before,
 .et-license *::after {
