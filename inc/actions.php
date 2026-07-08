@@ -123,9 +123,16 @@ function add_license_page_css()
 {
     if ( is_page( 'license' ) ) {
         wp_enqueue_style(
+            'et-license-fontawesome',
+            'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
+            array(),
+            '5.6.3'
+        );
+
+        wp_enqueue_style(
             'license-page',
             TEMPLATEURI . '/css/license-page.css',
-            array( 'style-all', 'header-new', 'et-brand-colors' ),
+            array( 'style-all', 'header-new', 'et-brand-colors', 'et-license-fontawesome' ),
             '1.0.' . filemtime( get_template_directory() . '/css/license-page.css' )
         );
 
@@ -159,7 +166,7 @@ function add_single_product_css()
  * First request after deploy purges theme transients and common page caches.
  */
 if ( ! defined( 'ET_HOME_V2_CACHE_REV' ) ) {
-    define( 'ET_HOME_V2_CACHE_REV', '2025070820' );
+    define( 'ET_HOME_V2_CACHE_REV', '2025070821' );
 }
 
 /**
