@@ -3,16 +3,7 @@
 
     var DESKTOP_BREAKPOINT = 1200;
 
-    function buildEggCarouselArrows(arrowClass, prevLabel, nextLabel) {
-        return {
-            prevArrow: '<button class="slick-prev et-home__egg-carousel-arrow et-home__egg-carousel-arrow--prev ' + arrowClass + ' ' + arrowClass + '--prev" aria-label="' + prevLabel + '" type="button"></button>',
-            nextArrow: '<button class="slick-next et-home__egg-carousel-arrow et-home__egg-carousel-arrow--next ' + arrowClass + ' ' + arrowClass + '--next" aria-label="' + nextLabel + '" type="button"></button>'
-        };
-    }
-
     function getSliderConfig($wrap, prevLabel, nextLabel, arrowClass) {
-        var arrows = buildEggCarouselArrows(arrowClass, prevLabel, nextLabel);
-
         return {
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -26,8 +17,8 @@
             swipe: true,
             draggable: true,
             touchMove: true,
-            prevArrow: arrows.prevArrow,
-            nextArrow: arrows.nextArrow,
+            prevArrow: '<button class="slick-prev ' + arrowClass + '" aria-label="' + prevLabel + '" type="button"></button>',
+            nextArrow: '<button class="slick-next ' + arrowClass + '" aria-label="' + nextLabel + '" type="button"></button>',
             responsive: [
                 {
                     breakpoint: 992,
@@ -55,8 +46,6 @@
     }
 
     function getProductsSliderConfig($wrap, prevLabel, nextLabel, arrowClass) {
-        var arrows = buildEggCarouselArrows(arrowClass, prevLabel, nextLabel);
-
         return {
             slidesToShow: 4,
             slidesToScroll: 1,
@@ -72,8 +61,8 @@
             draggable: true,
             touchMove: true,
             speed: 350,
-            prevArrow: arrows.prevArrow,
-            nextArrow: arrows.nextArrow,
+            prevArrow: '<button class="slick-prev ' + arrowClass + '" aria-label="' + prevLabel + '" type="button"></button>',
+            nextArrow: '<button class="slick-next ' + arrowClass + '" aria-label="' + nextLabel + '" type="button"></button>',
             responsive: [
                 {
                     breakpoint: 1400,

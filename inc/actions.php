@@ -123,16 +123,9 @@ function add_license_page_css()
 {
     if ( is_page( 'license' ) ) {
         wp_enqueue_style(
-            'et-license-fontawesome',
-            'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
-            array(),
-            '5.6.3'
-        );
-
-        wp_enqueue_style(
             'license-page',
             TEMPLATEURI . '/css/license-page.css',
-            array( 'style-all', 'header-new', 'et-brand-colors', 'et-license-fontawesome' ),
+            array( 'style-all', 'header-new', 'et-brand-colors' ),
             '1.0.' . filemtime( get_template_directory() . '/css/license-page.css' )
         );
 
@@ -166,7 +159,7 @@ function add_single_product_css()
  * First request after deploy purges theme transients and common page caches.
  */
 if ( ! defined( 'ET_HOME_V2_CACHE_REV' ) ) {
-    define( 'ET_HOME_V2_CACHE_REV', '2025070823' );
+    define( 'ET_HOME_V2_CACHE_REV', '2025070647' );
 }
 
 /**
@@ -259,13 +252,7 @@ function et_home_v2_maybe_purge_caches() {
 
 add_action( 'template_redirect', 'et_home_v2_send_nocache_headers', 0 );
 function et_home_v2_send_nocache_headers() {
-    $is_license_page = function_exists( 'is_page' ) && is_page( 'license' );
-
-    if (
-        ! is_page( 'home-v2' )
-        && ! is_page_template( 'page-home-v2.php' )
-        && ! $is_license_page
-    ) {
+    if ( ! is_page( 'home-v2' ) && ! is_page_template( 'page-home-v2.php' ) ) {
         return;
     }
 
