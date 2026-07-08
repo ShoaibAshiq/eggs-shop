@@ -133,12 +133,38 @@ if ( ! function_exists( 'et_get_license_why_characters_image' ) ) {
 }
 
 if ( ! function_exists( 'et_get_license_cta_characters' ) ) {
-    /**
-     * @return array<int, array{name: string, image: string}>
-     */
-    function et_get_license_cta_characters() {
-        return et_get_license_hero_characters();
-    }
+	/**
+	 * Five core characters for the license CTA banner cast (left-to-right cluster).
+	 *
+	 * @return array<int, array{key: string, name: string, image: string}>
+	 */
+	function et_get_license_cta_characters() {
+		if ( ! function_exists( 'et_get_home_core_egg_brand_meta' ) ) {
+			require_once get_template_directory() . '/inc/home-characters.php';
+		}
+
+		$meta = et_get_home_core_egg_brand_meta();
+		$keys = array( 'happy', 'magik', 'king', 'skazka', 'emoji' );
+		$out  = array();
+
+		foreach ( $keys as $key ) {
+			if ( empty( $meta[ $key ]['character_image'] ) ) {
+				continue;
+			}
+
+			$out[] = array(
+				'key'   => $key,
+				'name'  => $meta[ $key ]['name'],
+				'image' => $meta[ $key ]['character_image'],
+			);
+		}
+
+		if ( ! empty( $out ) ) {
+			return $out;
+		}
+
+		return et_get_license_hero_characters();
+	}
 }
 
 if ( ! function_exists( 'et_get_license_cta_products' ) ) {
