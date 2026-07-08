@@ -93,7 +93,7 @@
 }
 
 /* Hide duplicate banner if old HTML still in WP editor cache */
-.main--license .et-license-home-hero ~ .et-license__hero,
+.main--license .et-license__hero ~ .et-license__hero,
 .main--license .entry-content > .et-license__hero {
     display: none !important;
 }
@@ -104,54 +104,85 @@
     box-sizing: border-box;
 }
 
-/* ----- Hero banner (home-v2 split video design) ----- */
-.et-license-home-hero {
+/* ----- Hero banner ----- */
+.et-license__hero {
+    position: relative;
+    min-height: clamp(520px, 68vh, 760px);
+    display: flex;
+    align-items: center;
     width: 100%;
+    overflow: hidden;
+    background-color: #dff3ff;
+    background-image: var(--et-license-hero-bg);
+    background-size: cover;
+    background-position: center right;
+    background-repeat: no-repeat;
 }
 
-.et-license-home-hero .et-home__hero.et-license__hero {
-    /* Home playful + split-video styles own the look; keep this marker class only. */
-    background-image: none;
+.et-license__hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.94) 0%,
+        rgba(255, 255, 255, 0.86) 34%,
+        rgba(255, 255, 255, 0.28) 58%,
+        rgba(255, 255, 255, 0.04) 100%
+    );
+    pointer-events: none;
 }
 
-.et-license-home-hero__title {
+.et-license__hero-inner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: var(--et-lic-max);
+    margin: 0 auto;
+    padding: 88px 20px 96px;
+    text-align: left;
+}
+
+.et-license__hero-content {
+    max-width: 580px;
+}
+
+.et-license__hero-title {
     display: flex;
     flex-direction: column;
-    gap: 0;
+    gap: 4px;
     margin: 0 0 24px;
 }
 
-.et-license-home-hero__title-kicker {
+.et-license__hero-title-kicker {
     display: block;
     font-size: clamp(36px, 4.5vw, 52px);
-    font-weight: 800;
+    font-weight: var(--et-lic-fw-display);
     line-height: 1.05;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: var(--et-lic-navy, #1a3352) !important;
+    color: var(--et-lic-navy) !important;
 }
 
-.et-license-home-hero__title-brand {
+.et-license__hero-title-brand {
     display: block;
     font-size: clamp(40px, 5.2vw, 58px);
-    font-weight: 800;
+    font-weight: var(--et-lic-fw-display);
     line-height: 1.05;
     letter-spacing: 0.02em;
     text-transform: uppercase;
-    color: var(--et-lic-pink, #ff3da5) !important;
+    color: var(--et-lic-pink) !important;
 }
 
-.et-license-home-hero__text {
-    margin-bottom: 36px !important;
+.et-license__hero-text {
+    margin: 0 0 36px;
     max-width: 540px;
-    color: var(--et-lic-navy, #1a3352) !important;
+    font-size: clamp(17px, 1.8vw, 20px);
+    font-weight: var(--et-lic-fw-body);
+    line-height: 1.7;
+    color: var(--et-lic-navy) !important;
 }
 
-.et-license-home-hero__actions {
-    margin-bottom: 0;
-}
-
-.et-license-home-hero__btn {
+.et-license__hero-btn {
     display: inline-flex !important;
     align-items: center;
     justify-content: center;
@@ -162,41 +193,87 @@
     border-radius: 999px !important;
     background: linear-gradient(
         135deg,
-        var(--et-lic-pink, #ff3da5) 0%,
-        var(--et-lic-pink-dark, #e63593) 58%,
-        var(--et-lic-pink-deep, #c91d7a) 100%
+        var(--et-lic-pink) 0%,
+        var(--et-lic-pink-dark) 58%,
+        var(--et-lic-pink-deep) 100%
     ) !important;
     color: #ffffff !important;
-    font-family: 'Quicksand', 'Ubuntu', sans-serif !important;
+    font-family: 'Ubuntu', sans-serif !important;
     font-size: clamp(14px, 1.3vw, 16px) !important;
-    font-weight: 800 !important;
+    font-weight: var(--et-lic-fw-display) !important;
     line-height: 1.15 !important;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     text-decoration: none !important;
-    box-shadow: 0 14px 36px rgba(255, 61, 165, 0.42);
+    box-shadow: var(--et-lic-btn-shadow);
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor: pointer;
 }
 
-.et-license-home-hero__btn:hover,
-.et-license-home-hero__btn:focus {
+.et-license__hero-btn:hover,
+.et-license__hero-btn:focus {
     color: #ffffff !important;
     text-decoration: none !important;
     transform: translateY(-2px);
-    box-shadow: 0 18px 42px rgba(255, 61, 165, 0.5);
+    box-shadow: var(--et-lic-btn-shadow-hover);
 }
 
-.et-license-home-hero__btn svg {
+.et-license__hero-btn svg {
     flex-shrink: 0;
     width: 20px;
     height: 20px;
     fill: currentColor;
 }
 
+@media screen and (min-width: 768px) {
+    .et-license__hero-inner {
+        padding: 104px 28px 112px;
+    }
+
+    .et-license__hero {
+        background-position: 68% center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .et-license__hero-inner {
+        padding: 120px 32px 128px;
+    }
+
+    .et-license__hero {
+        background-position: center right;
+    }
+}
+
 @media screen and (max-width: 991px) {
-    .et-license-home-hero__btn {
+    .et-license__hero {
+        min-height: 460px;
+        background-position: 72% center;
+    }
+
+    .et-license__hero-overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0.94) 0%,
+            rgba(255, 255, 255, 0.88) 48%,
+            rgba(255, 255, 255, 0.5) 100%
+        );
+    }
+
+    .et-license__hero-btn {
         width: 100%;
         max-width: 420px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .et-license__hero-inner {
+        padding: 64px 16px 72px;
+    }
+
+    .et-license__hero {
+        min-height: 440px;
+        background-position: 78% center;
     }
 }
 
