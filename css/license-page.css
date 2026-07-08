@@ -1621,7 +1621,8 @@
     position: relative;
     width: 100%;
     overflow: hidden;
-    background:
+    background-color: var(--et-lic-pink) !important;
+    background-image:
         radial-gradient(circle at 18% 24%, rgba(255, 255, 255, 0.18) 0, transparent 34%),
         radial-gradient(circle at 82% 78%, rgba(var(--et-brand-yellow-rgb), 0.14) 0, transparent 30%),
         linear-gradient(
@@ -1630,6 +1631,11 @@
             var(--et-lic-pink-dark) 42%,
             var(--et-lic-pink-deep) 100%
         );
+}
+
+.main--license .et-license__cta-inner.center {
+    background: transparent !important;
+    background-color: transparent !important;
 }
 
 .et-license__cta-shine {
@@ -1682,6 +1688,11 @@
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.96) !important;
     max-width: 500px;
+}
+
+.main--license .et-license__cta .et-license__cta-text,
+.main--license .entry-content .et-license__cta-text {
+    color: rgba(255, 255, 255, 0.96) !important;
 }
 
 .et-license__cta-btn {
