@@ -55,8 +55,8 @@
 .et-header__logo {
     display: block;
     flex: 0 0 auto;
-    width: 140px;
-    height: 56px;
+    width: 168px;
+    height: 66px;
     background: url("../images/eggs_time_logo.png") no-repeat center / contain;
     text-indent: -9999px;
     overflow: hidden;
@@ -714,21 +714,21 @@
 
 @media screen and (min-width: 1200px) {
     :root {
-        --et-header-h: 100px;
+        --et-header-h: 118px;
     }
 
     .et-header__inner {
         display: grid;
-        grid-template-columns: minmax(160px, 220px) minmax(0, 1fr) auto;
+        grid-template-columns: minmax(200px, 260px) minmax(0, 1fr) auto;
         align-items: center;
         column-gap: 20px;
-        padding: 14px 32px;
+        padding: 16px 32px;
     }
 
-    .et-header__logo {
+    .et-header .et-header__logo {
         grid-column: 1;
-        width: 200px;
-        height: 72px;
+        width: 244px;
+        height: 92px;
     }
 
     .et-header__nav {
@@ -779,7 +779,7 @@
 /* ===== Larger screens (drawer sizing on mobile) ===== */
 @media screen and (min-width: 768px) {
     :root {
-        --et-header-h: 90px;
+        --et-header-h: 104px;
     }
 
     .et-header__inner {
@@ -787,8 +787,8 @@
     }
 
     .et-header__logo {
-        width: 180px;
-        height: 68px;
+        width: 210px;
+        height: 80px;
     }
 
     .et-header__drawer {
@@ -808,12 +808,12 @@
 @media screen and (max-width: 479px) {
     .et-header__inner {
         padding: 10px 16px;
-        min-height: 70px;
+        min-height: 78px;
     }
 
     .et-header__logo {
-        width: 120px;
-        height: 50px;
+        width: 148px;
+        height: 60px;
     }
 }
 
