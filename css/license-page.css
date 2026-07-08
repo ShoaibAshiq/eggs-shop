@@ -1748,9 +1748,9 @@
     flex-wrap: nowrap;
     align-items: flex-end;
     justify-content: center;
-    gap: clamp(6px, 1.2vw, 14px);
-    width: min(100%, 680px);
-    min-height: clamp(180px, 22vw, 260px);
+    gap: clamp(10px, 1.6vw, 20px);
+    width: min(100%, 780px);
+    min-height: clamp(260px, 30vw, 380px);
     margin: 0 auto;
 }
 
@@ -1767,9 +1767,9 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    flex: 0 1 clamp(64px, 11vw, 100px);
+    flex: 0 1 clamp(96px, 14vw, 150px);
     min-width: 0;
-    max-width: 100px;
+    max-width: 150px;
 }
 
 .et-license__cta-character-img,
@@ -1777,10 +1777,10 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: clamp(130px, 16vw, 200px);
+    max-height: clamp(200px, 26vw, 320px);
     object-fit: contain;
     object-position: center bottom;
-    filter: drop-shadow(0 14px 24px rgba(0, 0, 0, 0.18));
+    filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.2));
 }
 
 @media screen and (max-width: 1199px) {
@@ -1824,20 +1824,20 @@
     }
 
     .et-license__cta-visual-stage {
-        width: min(100%, 520px);
-        min-height: 200px;
-        gap: 8px;
+        width: min(100%, 620px);
+        min-height: 280px;
+        gap: 12px;
     }
 
     .et-license__cta-character,
     .et-license__cta-product {
-        flex: 0 1 clamp(56px, 14vw, 84px);
-        max-width: 84px;
+        flex: 0 1 clamp(80px, 16vw, 120px);
+        max-width: 120px;
     }
 
     .et-license__cta-character-img,
     .et-license__cta-product-img {
-        max-height: 170px;
+        max-height: 240px;
     }
 }
 
@@ -1864,19 +1864,19 @@
     }
 
     .et-license__cta-visual-stage {
-        min-height: 170px;
-        gap: 6px;
+        min-height: 220px;
+        gap: 8px;
     }
 
     .et-license__cta-character,
     .et-license__cta-product {
-        flex: 0 1 clamp(48px, 15vw, 72px);
-        max-width: 72px;
+        flex: 0 1 clamp(64px, 16vw, 96px);
+        max-width: 96px;
     }
 
     .et-license__cta-character-img,
     .et-license__cta-product-img {
-        max-height: 140px;
+        max-height: 190px;
     }
 }
 
