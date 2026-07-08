@@ -159,7 +159,7 @@ function add_single_product_css()
  * First request after deploy purges theme transients and common page caches.
  */
 if ( ! defined( 'ET_HOME_V2_CACHE_REV' ) ) {
-    define( 'ET_HOME_V2_CACHE_REV', '2025070647' );
+    define( 'ET_HOME_V2_CACHE_REV', '2025070820' );
 }
 
 /**
@@ -252,7 +252,13 @@ function et_home_v2_maybe_purge_caches() {
 
 add_action( 'template_redirect', 'et_home_v2_send_nocache_headers', 0 );
 function et_home_v2_send_nocache_headers() {
-    if ( ! is_page( 'home-v2' ) && ! is_page_template( 'page-home-v2.php' ) ) {
+    $is_license_page = function_exists( 'is_page' ) && is_page( 'license' );
+
+    if (
+        ! is_page( 'home-v2' )
+        && ! is_page_template( 'page-home-v2.php' )
+        && ! $is_license_page
+    ) {
         return;
     }
 
