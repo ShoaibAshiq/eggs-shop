@@ -81,8 +81,8 @@
     --et-lic-btn-font: clamp(17px, 1.5vw, 20px);
     --et-lic-btn-shadow: 0 14px 36px rgba(var(--et-brand-pink-rgb), 0.46);
     --et-lic-btn-shadow-hover: 0 18px 44px rgba(var(--et-brand-pink-rgb), 0.54);
-    --et-lic-brand-logo-height: 110px;
-    --et-lic-brand-card-min-height: 168px;
+    --et-lic-brand-logo-height: 140px;
+    --et-lic-brand-card-min-height: 200px;
     font-family: 'Ubuntu', sans-serif;
     color: var(--et-lic-text);
     line-height: 1.6;
@@ -348,9 +348,9 @@
     min-width: 0;
 }
 
-/* First content block after full-bleed hero */
+/* First content block after full-bleed hero — tighter top gap */
 .et-license__brands .et-license__section-inner {
-    padding-top: var(--et-lic-section-pad-y);
+    padding-top: calc(var(--et-lic-section-pad-y) * 0.45);
 }
 
 /* Extra breathing room before the pre-footer CTA */
@@ -389,7 +389,7 @@
 }
 
 .et-license__brands .et-license__section-title {
-    margin-bottom: 52px;
+    margin-bottom: 40px;
     font-size: clamp(32px, 3.8vw, 46px);
 }
 
@@ -440,14 +440,14 @@
     }
 
     .et-license__brand-card {
-        min-height: 140px;
+        min-height: 168px;
         padding: 28px 22px;
         border-radius: var(--et-lic-card-radius);
     }
 
     .et-license__brand-logo {
-        height: 88px;
-        max-height: 88px;
+        height: 112px;
+        max-height: 112px;
     }
 
     .et-license__section-title {
@@ -466,13 +466,13 @@
     }
 
     .et-license__brand-card {
-        min-height: 128px;
+        min-height: 148px;
         padding: 26px 20px;
     }
 
     .et-license__brand-logo {
-        height: 80px;
-        max-height: 80px;
+        height: 100px;
+        max-height: 100px;
     }
 }
 
@@ -482,7 +482,7 @@
     justify-content: center;
     height: 100%;
     min-height: var(--et-lic-brand-card-min-height);
-    padding: 34px 28px;
+    padding: 36px 28px;
     background: #ffffff;
     border: var(--et-lic-card-border);
     border-radius: var(--et-lic-card-radius);
