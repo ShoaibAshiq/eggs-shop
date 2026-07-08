@@ -1744,13 +1744,13 @@
 }
 
 .et-license__cta-visual-stage {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-end;
-    justify-content: center;
-    gap: clamp(10px, 1.6vw, 20px);
-    width: min(100%, 780px);
-    min-height: clamp(260px, 30vw, 380px);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    align-items: end;
+    gap: clamp(14px, 2.2vw, 28px) clamp(10px, 1.6vw, 20px);
+    width: min(100%, 520px);
+    min-height: clamp(320px, 38vw, 460px);
     margin: 0 auto;
 }
 
@@ -1767,9 +1767,9 @@
     display: flex;
     align-items: flex-end;
     justify-content: center;
-    flex: 0 1 clamp(96px, 14vw, 150px);
-    min-width: 0;
+    width: 100%;
     max-width: 150px;
+    min-width: 0;
 }
 
 .et-license__cta-character-img,
@@ -1777,7 +1777,7 @@
     display: block;
     width: 100%;
     height: auto;
-    max-height: clamp(200px, 26vw, 320px);
+    max-height: clamp(150px, 20vw, 220px);
     object-fit: contain;
     object-position: center bottom;
     filter: drop-shadow(0 16px 28px rgba(0, 0, 0, 0.2));
@@ -1824,20 +1824,19 @@
     }
 
     .et-license__cta-visual-stage {
-        width: min(100%, 620px);
-        min-height: 280px;
-        gap: 12px;
+        width: min(100%, 420px);
+        min-height: 300px;
+        gap: 16px 12px;
     }
 
     .et-license__cta-character,
     .et-license__cta-product {
-        flex: 0 1 clamp(80px, 16vw, 120px);
         max-width: 120px;
     }
 
     .et-license__cta-character-img,
     .et-license__cta-product-img {
-        max-height: 240px;
+        max-height: 180px;
     }
 }
 
@@ -1864,19 +1863,19 @@
     }
 
     .et-license__cta-visual-stage {
-        min-height: 220px;
-        gap: 8px;
+        width: min(100%, 340px);
+        min-height: 260px;
+        gap: 12px 8px;
     }
 
     .et-license__cta-character,
     .et-license__cta-product {
-        flex: 0 1 clamp(64px, 16vw, 96px);
         max-width: 96px;
     }
 
     .et-license__cta-character-img,
     .et-license__cta-product-img {
-        max-height: 190px;
+        max-height: 140px;
     }
 }
 
