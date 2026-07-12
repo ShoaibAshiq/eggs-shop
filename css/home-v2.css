@@ -42,6 +42,8 @@
     --et-home-section-gap: 64px;
     --et-home-section-top-spacing: calc(var(--et-home-section-gap) / 2);
     --et-home-section-spacing: var(--et-home-section-top-spacing);
+    /* Tight pad used above Best Sellers / Egg World / Stories headings */
+    --et-home-tight-pad: 12px;
     --et-home-panel-bg: #f0f7ff;
     --et-home-playful-bg-url: 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
     --et-home-sparkle-gold: rgba(255, 212, 0, 0.85);
@@ -1323,19 +1325,20 @@
 }
 
 .et-home__best-sellers .et-home__section-inner {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: var(--et-home-tight-pad);
+    padding-bottom: var(--et-home-tight-pad);
 }
 
 /* Match Choose Your Egg World top gap to Best Sellers (same playful band). */
 .et-home__bg-band--playful .et-home__characters .et-home__section-inner,
 .main--home-v2 .et-home__characters .et-home__section-inner {
-    padding-top: 12px !important;
-    padding-bottom: 12px;
+    padding-top: var(--et-home-tight-pad) !important;
+    padding-bottom: var(--et-home-tight-pad);
 }
 
 .et-home__bg-band--playful .et-home__best-sellers .et-home__section-inner {
-    padding-top: 12px;
+    padding-top: var(--et-home-tight-pad);
+    padding-bottom: var(--et-home-tight-pad);
     margin-top: 0;
 }
 
@@ -1920,7 +1923,7 @@
 .et-home__stories .et-home__section-inner {
     position: relative;
     z-index: 1;
-    padding-top: 12px;
+    padding-top: var(--et-home-tight-pad);
     padding-bottom: var(--et-home-section-top-spacing);
 }
 
@@ -6565,4 +6568,34 @@
     .et-home__games-extra-slider-wrap {
         padding: 0 36px;
     }
+}
+
+/* ----- Tight heading junctions (final cascade wins) ----- */
+.main--home-v2 .et-home__bg-band--playful {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.main--home-v2 .et-home__bg-band--playful .et-home__best-sellers .et-home__section-inner,
+.main--home-v2 .et-home__best-sellers .et-home__section-inner.center {
+    padding-bottom: var(--et-home-tight-pad) !important;
+}
+
+.main--home-v2 .et-home__stories {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.main--home-v2 .et-home__stories .et-home__section-inner,
+.main--home-v2 .et-home__stories .et-home__section-inner.center {
+    padding-top: var(--et-home-tight-pad) !important;
+    margin-top: 0 !important;
+}
+
+.main--home-v2 .et-home__stories .et-home__stories-head {
+    margin-top: 0;
+}
+
+.main--home-v2 .et-home__stories .et-home__section-kicker {
+    margin-top: 0;
 }
