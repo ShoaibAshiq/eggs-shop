@@ -34,10 +34,13 @@
     --et-home-max: 1650px;
     --et-home-narrow: 1140px;
     --et-home-section-x: 20px;
-    /* Section top spacing — matches Stories "Educational Adventures" header */
-    --et-home-section-top-spacing: 36px;
-    /* Inter-section gap between stacked sections */
-    --et-home-section-gap: var(--et-home-section-top-spacing);
+    /*
+     * Uniform homepage section rhythm (matches Best Sellers reference gap ~76–80px).
+     * Each .et-home__section-inner uses half-gap top + bottom so adjacent sections
+     * always sum to --et-home-section-gap.
+     */
+    --et-home-section-gap: 64px;
+    --et-home-section-top-spacing: calc(var(--et-home-section-gap) / 2);
     --et-home-section-spacing: var(--et-home-section-top-spacing);
     --et-home-panel-bg: #f0f7ff;
     --et-home-playful-bg-url: 'https://eggstime.com/wp-content/uploads/2026/06/ChatGPT-Image-Jun-28-2026-02_38_47-PM.png';
@@ -623,7 +626,7 @@
     align-items: center;
     width: 100%;
     padding-top: var(--et-home-section-top-spacing);
-    padding-bottom: 40px;
+    padding-bottom: var(--et-home-section-top-spacing);
     margin-bottom: 0;
 }
 
@@ -1008,7 +1011,7 @@
 
 @media screen and (min-width: 768px) {
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-bottom: 40px;
+        padding-bottom: var(--et-home-section-top-spacing);
     }
 }
 
@@ -1033,7 +1036,7 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-bottom: 48px;
+        padding-bottom: var(--et-home-section-top-spacing);
     }
 
     .et-home__hero-grid {
@@ -1084,7 +1087,7 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-bottom: 56px;
+        padding-bottom: var(--et-home-section-top-spacing);
     }
 
     .et-home__hero-grid {
@@ -1142,7 +1145,7 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-bottom: 56px;
+        padding-bottom: var(--et-home-section-top-spacing);
     }
 }
 
@@ -1164,7 +1167,7 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding: var(--et-home-section-top-spacing) 16px 56px;
+        padding: var(--et-home-section-top-spacing) 16px var(--et-home-section-top-spacing);
     }
 
     .et-home__hero--split-video .et-home__hero-title {
@@ -1188,19 +1191,26 @@
 }
 
 /* ----- Shared section layout ----- */
-.et-home__section-inner {
+.et-home__section-inner,
+.et-home__section-spacing {
     width: 100%;
     max-width: var(--et-home-max);
     margin: 0 auto;
     padding-top: var(--et-home-section-top-spacing);
-    padding-bottom: 0;
+    padding-bottom: var(--et-home-section-top-spacing);
     padding-left: var(--et-home-section-x);
     padding-right: var(--et-home-section-x);
 }
 
+@media screen and (min-width: 768px) {
+    .et-home {
+        --et-home-section-gap: 72px;
+    }
+}
+
 @media screen and (min-width: 1200px) {
     .et-home {
-        --et-home-section-top-spacing: 40px;
+        --et-home-section-gap: 80px;
     }
 }
 
@@ -1571,7 +1581,7 @@
 .et-home__games-extra {
     width: 100%;
     padding-top: var(--et-home-section-top-spacing);
-    padding-bottom: var(--et-home-section-gap);
+    padding-bottom: var(--et-home-section-top-spacing);
 }
 
 .et-home__games-extra-inside {
@@ -2246,6 +2256,7 @@
 .et-home__youtube .et-home__section-inner {
     position: relative;
     z-index: 1;
+    padding-bottom: var(--et-home-section-top-spacing);
 }
 
 .et-home__youtube-panel {
@@ -2806,6 +2817,7 @@
     max-width: none;
     padding-left: var(--et-home-section-x);
     padding-right: var(--et-home-section-x);
+    padding-bottom: var(--et-home-section-top-spacing);
 }
 
 .et-home__products-panel {
@@ -3513,6 +3525,7 @@
 .et-home__fun-egg .et-home__section-inner {
     position: relative;
     z-index: 1;
+    padding-bottom: var(--et-home-section-top-spacing);
 }
 
 .et-home__fun-egg-head {

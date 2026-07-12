@@ -8,7 +8,7 @@
         radial-gradient(circle at 14% 8%, rgba(255, 255, 255, 0.95) 0, transparent 28%),
         radial-gradient(circle at 88% 10%, rgba(255, 255, 255, 0.85) 0, transparent 24%),
         linear-gradient(180deg, #ffffff 0%, #f7fcff 52%, #eef9ff 100%);
-    padding-bottom: 52px;
+    padding-bottom: 0;
 }
 
 .et-home__products--showcase.et-home__products {
@@ -26,8 +26,8 @@
 .et-home__products--showcase .et-home__section-inner {
     width: 100%;
     max-width: var(--et-home-max);
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: var(--et-home-section-top-spacing);
+    padding-bottom: var(--et-home-section-top-spacing);
     padding-left: var(--et-home-section-x);
     padding-right: var(--et-home-section-x);
 }

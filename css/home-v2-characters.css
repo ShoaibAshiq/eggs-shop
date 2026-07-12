@@ -12,9 +12,9 @@
     padding-bottom: var(--et-home-section-top-spacing);
 }
 
-/* Guarantee visible bottom spacing below the character cards. */
+/* Keep character-card bottom spacing aligned with the shared section rhythm. */
 .main--home-v2 .et-home__characters .et-home__section-inner.center {
-    padding-bottom: 40px;
+    padding-bottom: var(--et-home-section-top-spacing);
 }
 
 .et-home__characters-intro {
