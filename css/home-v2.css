@@ -1324,7 +1324,7 @@
 
 .et-home__best-sellers .et-home__section-inner {
     padding-top: 12px;
-    padding-bottom: var(--et-home-section-top-spacing);
+    padding-bottom: 12px;
 }
 
 /* Match Choose Your Egg World top gap to Best Sellers (same playful band). */
@@ -1920,6 +1920,7 @@
 .et-home__stories .et-home__section-inner {
     position: relative;
     z-index: 1;
+    padding-top: 12px;
     padding-bottom: var(--et-home-section-top-spacing);
 }
 
