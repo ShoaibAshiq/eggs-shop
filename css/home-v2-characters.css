@@ -8,14 +8,13 @@
 }
 
 .et-home__characters .et-home__section-inner {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-/* Characters + Best Sellers share one playful band — keep the junction tight. */
 .main--home-v2 .et-home__characters .et-home__section-inner.center {
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .et-home__characters-intro {

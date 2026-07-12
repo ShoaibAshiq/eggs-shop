@@ -180,7 +180,7 @@ function add_single_product_css()
  * First request after deploy purges theme transients and common page caches.
  */
 if ( ! defined( 'ET_HOME_V2_CACHE_REV' ) ) {
-    define( 'ET_HOME_V2_CACHE_REV', '2025071209' );
+    define( 'ET_HOME_V2_CACHE_REV', '2025071219' );
 }
 
 /**
