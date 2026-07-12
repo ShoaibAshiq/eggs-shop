@@ -625,10 +625,10 @@
 
 .et-home__hero--split-video .et-home__hero-inner {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     width: 100%;
-    padding-top: var(--et-home-section-top-spacing);
-    padding-bottom: 12px;
+    padding-top: var(--et-home-tight-pad);
+    padding-bottom: var(--et-home-tight-pad);
     margin-bottom: 0;
 }
 
@@ -636,7 +636,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 12px;
-    align-items: center;
+    align-items: start;
     width: 100%;
 }
 
@@ -1013,7 +1013,7 @@
 
 @media screen and (min-width: 768px) {
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-bottom: 12px;
+        padding-bottom: var(--et-home-tight-pad);
     }
 }
 
@@ -1037,12 +1037,13 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-bottom: 12px;
+        padding-top: var(--et-home-tight-pad);
+        padding-bottom: var(--et-home-tight-pad);
     }
 
     .et-home__hero-grid {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
         gap: 12px;
     }
@@ -1058,7 +1059,7 @@
     .et-home__hero-media {
         flex: 0 1 50%;
         max-width: 50%;
-        align-self: center;
+        align-self: flex-start;
         padding-left: 0;
     }
 
@@ -1087,11 +1088,13 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-bottom: 12px;
+        padding-top: var(--et-home-tight-pad);
+        padding-bottom: var(--et-home-tight-pad);
     }
 
     .et-home__hero-grid {
         gap: 12px;
+        align-items: flex-start;
     }
 
     .et-home__hero--split-video .et-home__hero-content {
@@ -1101,7 +1104,7 @@
     .et-home__hero-media {
         flex: 0 1 52%;
         max-width: 52%;
-        align-self: center;
+        align-self: flex-start;
     }
 
     .et-home__hero-media--dual-test {
@@ -1145,7 +1148,8 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding-bottom: 12px;
+        padding-top: var(--et-home-tight-pad);
+        padding-bottom: var(--et-home-tight-pad);
     }
 }
 
@@ -1167,7 +1171,7 @@
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
-        padding: var(--et-home-section-top-spacing) 16px 12px;
+        padding: var(--et-home-tight-pad) 16px var(--et-home-tight-pad);
     }
 
     .et-home__hero--split-video .et-home__hero-title {
@@ -6577,6 +6581,19 @@
 }
 
 /* ----- Tight heading junctions (final cascade wins) ----- */
+.main--home-v2 .et-home__hero--split-video .et-home__hero-inner {
+    padding-top: var(--et-home-tight-pad) !important;
+    padding-bottom: var(--et-home-tight-pad) !important;
+}
+
+.main--home-v2 .et-home__hero--split-video .et-home__hero-grid {
+    align-items: flex-start !important;
+}
+
+.main--home-v2 .et-home__hero--split-video .et-home__hero-media {
+    align-self: flex-start !important;
+}
+
 .main--home-v2 .et-home__bg-band--playful {
     padding-bottom: 0 !important;
     margin-bottom: 0 !important;
