@@ -615,9 +615,9 @@
 /* ----- Hero — split video banner (test) ----- */
 .et-home__hero--split-video {
     display: flex;
-    align-items: center;
-    min-height: calc(100vh - var(--et-home-header-h, 110px));
-    min-height: calc(100svh - var(--et-home-header-h, 110px));
+    align-items: stretch;
+    /* Hug content — full-viewport min-height left a large empty gap above Choose Your Egg World */
+    min-height: 0;
     background-color: #eef7fc;
 }
 
@@ -1031,8 +1031,7 @@
 
 @media screen and (min-width: 992px) {
     .et-home__hero--split-video {
-        min-height: calc(100vh - var(--et-home-header-h, 110px));
-        min-height: calc(100svh - var(--et-home-header-h, 110px));
+        min-height: 0;
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
@@ -1082,8 +1081,7 @@
 
 @media screen and (min-width: 1200px) {
     .et-home__hero--split-video {
-        min-height: calc(100vh - var(--et-home-header-h, 110px));
-        min-height: calc(100svh - var(--et-home-header-h, 110px));
+        min-height: 0;
     }
 
     .et-home__hero--split-video .et-home__hero-inner {
@@ -1327,6 +1325,13 @@
 .et-home__best-sellers .et-home__section-inner {
     padding-top: 12px;
     padding-bottom: var(--et-home-section-top-spacing);
+}
+
+/* Match Choose Your Egg World top gap to Best Sellers (same playful band). */
+.et-home__bg-band--playful .et-home__characters .et-home__section-inner,
+.main--home-v2 .et-home__characters .et-home__section-inner {
+    padding-top: 12px !important;
+    padding-bottom: 12px;
 }
 
 .et-home__bg-band--playful .et-home__best-sellers .et-home__section-inner {
