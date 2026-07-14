@@ -40,7 +40,7 @@
     letter-spacing: 0.08em;
     text-transform: uppercase;
     text-align: center;
-    color: var(--et-home-heading) !important;
+    color: #e3232c !important;
     -webkit-text-stroke: 0;
     paint-order: initial;
 }
