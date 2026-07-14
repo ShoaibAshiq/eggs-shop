@@ -5,30 +5,32 @@
 
 if ( ! function_exists( 'et_get_egg_brand_logos' ) ) {
     function et_get_egg_brand_logos() {
+        $uploads = 'https://eggstime.com/wp-content/uploads/2026/07/';
+
         return array(
             'happy'     => array(
                 'name'  => 'Happy Egg',
-                'image' => 'https://eggstime.com/wp-content/uploads/2017/12/Happy-Eggs-4.png',
+                'image' => $uploads . 'Happy_egg.png',
             ),
             'lucky'     => array(
                 'name'  => 'Lucky Egg',
-                'image' => 'https://eggstime.com/wp-content/uploads/2017/12/Lucky-Eggs-2.png',
+                'image' => $uploads . 'Lucky_egg.png',
             ),
             'king'      => array(
                 'name'  => 'King Egg',
-                'image' => 'https://eggstime.com/wp-content/uploads/2017/12/King-Eggs.png',
+                'image' => $uploads . 'King_egg.png',
             ),
             'magik'     => array(
-                'name'  => 'Magik Egg',
-                'image' => 'https://eggstime.com/wp-content/uploads/2017/12/Magik-Eggs-3.png',
+                'name'  => 'Emoji Toy',
+                'image' => $uploads . 'Emoji_toy.png',
             ),
             'skazka'    => array(
                 'name'  => 'Skazka Egg',
-                'image' => 'https://eggstime.com/wp-content/uploads/2017/12/Skazka-Eggs.png',
+                'image' => $uploads . 'Skazka_egg.png',
             ),
             'emoji'     => array(
                 'name'  => 'Emoji Egg',
-                'image' => 'https://eggstime.com/wp-content/uploads/2017/12/Emojy-Eggs.png',
+                'image' => $uploads . 'Emoji_egg.png',
             ),
             'eggs-time' => array(
                 'name'  => 'Eggs Time',
