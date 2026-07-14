@@ -1329,8 +1329,8 @@
 }
 
 .et-home__best-sellers .et-home__section-inner {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 /* Choose Your Egg World — 50px top, 0 bottom. */
@@ -1341,8 +1341,8 @@
 }
 
 .et-home__bg-band--playful .et-home__best-sellers .et-home__section-inner {
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     margin-top: 0;
 }
 
@@ -1927,8 +1927,8 @@
 .et-home__stories .et-home__section-inner {
     position: relative;
     z-index: 1;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .et-home__stories .et-home__section-kicker,
@@ -2275,8 +2275,8 @@
 .et-home__youtube .et-home__section-inner {
     position: relative;
     z-index: 1;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .et-home__youtube-panel {
@@ -2838,7 +2838,7 @@
     padding-left: var(--et-home-section-x);
     padding-right: var(--et-home-section-x);
     padding-top: 0;
-    padding-bottom: 50px;
+    padding-bottom: 100px;
 }
 
 .et-home__products-panel {
@@ -3546,8 +3546,8 @@
 .et-home__fun-egg .et-home__section-inner {
     position: relative;
     z-index: 1;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .et-home__fun-egg-head {
@@ -4517,8 +4517,8 @@
 .et-home__social .et-home__section-inner {
     position: relative;
     z-index: 1;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .et-home__social .et-home__section-kicker {
@@ -5060,8 +5060,8 @@
     max-width: var(--et-home-max);
     margin-left: auto;
     margin-right: auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .et-home__parent-benefits-intro {
@@ -5517,8 +5517,8 @@
 .et-home__distributor .et-home__section-inner {
     position: relative;
     z-index: 1;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .et-home__distributor-kicker {
@@ -5955,8 +5955,8 @@
     width: 100%;
     max-width: var(--et-home-max);
     margin: 0 auto;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     padding-left: var(--et-home-section-x);
     padding-right: var(--et-home-section-x);
 }
@@ -6601,8 +6601,8 @@
 
 .main--home-v2 .et-home__bg-band--playful .et-home__best-sellers .et-home__section-inner,
 .main--home-v2 .et-home__best-sellers .et-home__section-inner.center {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
 }
 
 .main--home-v2 .et-home__stories,
@@ -6619,56 +6619,56 @@
 
 .main--home-v2 .et-home__stories .et-home__section-inner,
 .main--home-v2 .et-home__stories .et-home__section-inner.center {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
     margin-top: 0 !important;
 }
 
 .main--home-v2 .et-home__youtube .et-home__section-inner,
 .main--home-v2 .et-home__youtube .et-home__section-inner.center {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
     margin-top: 0 !important;
 }
 
 .main--home-v2 .et-home__products .et-home__section-inner,
 .main--home-v2 .et-home__products .et-home__section-inner.center {
     padding-top: 0 !important;
-    padding-bottom: 50px !important;
+    padding-bottom: 100px !important;
     margin-top: 0 !important;
 }
 
 .main--home-v2 .et-home__fun-egg .et-home__section-inner,
 .main--home-v2 .et-home__fun-egg .et-home__section-inner.center {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
     margin-top: 0 !important;
 }
 
 .main--home-v2 .et-home__parent-benefits .et-home__section-inner,
 .main--home-v2 .et-home__parent-benefits .et-home__section-inner.center {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
     margin-top: 0 !important;
 }
 
 .main--home-v2 .et-home__social .et-home__section-inner,
 .main--home-v2 .et-home__social .et-home__section-inner.center {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
     margin-top: 0 !important;
 }
 
 .main--home-v2 .et-home__distributor .et-home__section-inner,
 .main--home-v2 .et-home__distributor .et-home__section-inner.center {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
     margin-top: 0 !important;
 }
 
 .main--home-v2 .et-home__cta-inner {
-    padding-top: 50px !important;
-    padding-bottom: 50px !important;
+    padding-top: 100px !important;
+    padding-bottom: 100px !important;
 }
 
 .main--home-v2 .et-home__stories .et-home__stories-head,
