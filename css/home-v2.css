@@ -6599,6 +6599,13 @@
     margin-bottom: 0 !important;
 }
 
+.main--home-v2 .et-home__bg-band--playful .et-home__characters .et-home__section-inner,
+.main--home-v2 .et-home__characters .et-home__section-inner,
+.main--home-v2 .et-home__characters .et-home__section-inner.center {
+    padding-top: 100px !important;
+    padding-bottom: 0 !important;
+}
+
 .main--home-v2 .et-home__bg-band--playful .et-home__best-sellers .et-home__section-inner,
 .main--home-v2 .et-home__best-sellers .et-home__section-inner.center {
     padding-top: 100px !important;
