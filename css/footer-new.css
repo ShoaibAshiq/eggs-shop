@@ -12,8 +12,8 @@
     --et-footer-max: 1650px;
     --et-footer-divider: rgba(255, 255, 255, 0.14);
     --et-footer-pad-x: 20px;
-    --et-footer-pad-y: 56px;
-    --et-footer-pad-bottom: 28px;
+    --et-footer-pad-y: 80px;
+    --et-footer-pad-bottom: 40px;
     --et-footer-gap-block: 44px;
     --et-footer-brand-gap: 20px;
     --et-footer-social-gap: 12px;
@@ -320,15 +320,17 @@
 @media screen and (min-width: 768px) {
     :root {
         --et-footer-pad-x: 28px;
+        --et-footer-pad-y: 88px;
+        --et-footer-pad-bottom: 44px;
     }
 }
 
 @media screen and (min-width: 1200px) {
     :root {
         --et-footer-pad-x: 32px;
-        --et-footer-pad-y: 72px;
-        --et-footer-pad-bottom: 32px;
-        --et-footer-gap-block: 48px;
+        --et-footer-pad-y: 100px;
+        --et-footer-pad-bottom: 48px;
+        --et-footer-gap-block: 52px;
         --et-footer-col-gap: 28px;
         --et-footer-title-gap: 18px;
     }
@@ -395,8 +397,8 @@
 /* ----- Mobile: stacked accordion ----- */
 @media screen and (max-width: 767px) {
     :root {
-        --et-footer-pad-y: 36px;
-        --et-footer-pad-bottom: 24px;
+        --et-footer-pad-y: 56px;
+        --et-footer-pad-bottom: 32px;
         --et-footer-gap-block: 28px;
         --et-footer-brand-gap: 16px;
     }

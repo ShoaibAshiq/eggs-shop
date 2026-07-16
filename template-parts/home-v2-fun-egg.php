@@ -178,22 +178,24 @@ $magik_character = $brand_meta['magik']['character_image'];
                         />
                     </div>
 
-                    <ul class="et-home__fun-egg-app-games">
-                        <?php foreach ( $et_home_fun_egg_app_games as $game ) : ?>
-                            <li class="et-home__fun-egg-app-game-item">
-                                <a href="<?php echo esc_url( $game['url'] ); ?>" class="et-home__fun-egg-app-game et-home__fun-egg-app-game--<?php echo esc_attr( $game['tone'] ); ?>" target="_blank" rel="noopener noreferrer">
-                                    <span class="et-home__fun-egg-app-game-media">
-                                        <img
-                                            src="<?php echo esc_url( $game['image'] ); ?>"
-                                            alt="<?php echo esc_attr( $game['label'] ); ?>"
-                                            loading="lazy"
-                                            decoding="async"
-                                        />
-                                    </span>
-                                </a>
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <div class="et-home__fun-egg-app-games-slider-wrap">
+                        <ul class="et-home__fun-egg-app-games et-home__fun-egg-app-games-slider">
+                            <?php foreach ( $et_home_fun_egg_app_games as $game ) : ?>
+                                <li class="et-home__fun-egg-app-game-item">
+                                    <a href="<?php echo esc_url( $game['url'] ); ?>" class="et-home__fun-egg-app-game et-home__fun-egg-app-game--<?php echo esc_attr( $game['tone'] ); ?>" target="_blank" rel="noopener noreferrer">
+                                        <span class="et-home__fun-egg-app-game-media">
+                                            <img
+                                                src="<?php echo esc_url( $game['image'] ); ?>"
+                                                alt="<?php echo esc_attr( $game['label'] ); ?>"
+                                                loading="lazy"
+                                                decoding="async"
+                                            />
+                                        </span>
+                                    </a>
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
                 </div>
 
                 <div class="et-home__fun-egg-app-stores">

@@ -56,47 +56,49 @@ $et_home_cta_cards = array(
             <h2 class="et-home__cta-title" id="et-home-cta-title">Interested in Our Products?</h2>
             <p class="et-home__cta-text">Partner with Eggs Time through retail, distribution, or creative collaboration.</p>
 
-            <ul class="et-home__cta-cards">
-                <?php foreach ( $et_home_cta_cards as $card ) : ?>
-                    <li class="et-home__cta-card-item">
-                        <article class="et-home__cta-card et-home__cta-card--<?php echo esc_attr( $card['tone'] ); ?>">
-                            <div class="et-home__cta-card-head">
-                                <div class="et-home__cta-card-icon" aria-hidden="true">
-                                    <?php
-                                    $card_icon = 'blue' === $card['tone'] ? 'store' : ( 'yellow' === $card['tone'] ? 'globe' : 'clapperboard' );
-                                    echo et_home_icon( $card_icon, array( 'size' => '2x' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-                                    ?>
+            <div class="et-home__cta-cards-slider-wrap">
+                <ul class="et-home__cta-cards et-home__cta-cards-slider">
+                    <?php foreach ( $et_home_cta_cards as $card ) : ?>
+                        <li class="et-home__cta-card-item">
+                            <article class="et-home__cta-card et-home__cta-card--<?php echo esc_attr( $card['tone'] ); ?>">
+                                <div class="et-home__cta-card-head">
+                                    <div class="et-home__cta-card-icon" aria-hidden="true">
+                                        <?php
+                                        $card_icon = 'blue' === $card['tone'] ? 'store' : ( 'yellow' === $card['tone'] ? 'globe' : 'clapperboard' );
+                                        echo et_home_icon( $card_icon, array( 'size' => '2x' ) ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+                                        ?>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="et-home__cta-card-body">
-                                <h3 class="et-home__cta-card-title"><?php echo esc_html( $card['title'] ); ?></h3>
-                                <p class="et-home__cta-card-desc"><?php echo esc_html( $card['text'] ); ?></p>
+                                <div class="et-home__cta-card-body">
+                                    <h3 class="et-home__cta-card-title"><?php echo esc_html( $card['title'] ); ?></h3>
+                                    <p class="et-home__cta-card-desc"><?php echo esc_html( $card['text'] ); ?></p>
 
-                                <?php if ( ! empty( $card['benefits'] ) ) : ?>
-                                    <ul class="et-home__cta-card-benefits">
-                                        <?php foreach ( $card['benefits'] as $benefit ) : ?>
-                                            <li class="et-home__cta-card-benefit">
-                                                <span class="et-home__cta-card-benefit-icon et-home__cta-card-benefit-icon--<?php echo esc_attr( $card['tone'] ); ?>" aria-hidden="true">
-                                                    <?php echo et_home_icon( $benefit['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
-                                                </span>
-                                                <span class="et-home__cta-card-benefit-text"><?php echo esc_html( $benefit['text'] ); ?></span>
-                                            </li>
-                                        <?php endforeach; ?>
-                                    </ul>
-                                <?php endif; ?>
-                            </div>
+                                    <?php if ( ! empty( $card['benefits'] ) ) : ?>
+                                        <ul class="et-home__cta-card-benefits">
+                                            <?php foreach ( $card['benefits'] as $benefit ) : ?>
+                                                <li class="et-home__cta-card-benefit">
+                                                    <span class="et-home__cta-card-benefit-icon et-home__cta-card-benefit-icon--<?php echo esc_attr( $card['tone'] ); ?>" aria-hidden="true">
+                                                        <?php echo et_home_icon( $benefit['icon'] ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                                                    </span>
+                                                    <span class="et-home__cta-card-benefit-text"><?php echo esc_html( $benefit['text'] ); ?></span>
+                                                </li>
+                                            <?php endforeach; ?>
+                                        </ul>
+                                    <?php endif; ?>
+                                </div>
 
-                            <a href="<?php echo esc_url( $card['url'] ); ?>" class="et-home__cta-card-action">
-                                Get Started
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                                    <path d="M5 12h12M13 7l5 5-5 5"/>
-                                </svg>
-                            </a>
-                        </article>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
+                                <a href="<?php echo esc_url( $card['url'] ); ?>" class="et-home__cta-card-action">
+                                    Get Started
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                        <path d="M5 12h12M13 7l5 5-5 5"/>
+                                    </svg>
+                                </a>
+                            </article>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </div>
         </div>
     </div>
 </section>

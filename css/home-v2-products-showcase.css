@@ -254,7 +254,11 @@
 
 .et-home__products--showcase .et-home__products-slider-wrap .et-home__egg-carousel-arrow {
     display: inline-flex !important;
-    top: 42%;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    transform: none;
 }
 
 .et-home__products--showcase .et-home__products-slider-wrap .slick-prev.et-home__egg-carousel-arrow {

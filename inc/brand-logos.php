@@ -111,13 +111,57 @@ if ( ! function_exists( 'et_get_home_best_seller_brands' ) ) {
 }
 
 if ( ! function_exists( 'et_get_license_page_brands' ) ) {
+    /**
+     * License page "Our Brands" logos (media library).
+     *
+     * @return array<int, array{name: string, image: string}>
+     */
     function et_get_license_page_brands() {
-        if ( ! function_exists( 'et_get_home_core_egg_brand_keys' ) ) {
-            return et_get_brands_by_keys( array( 'happy', 'lucky', 'king', 'magik', 'skazka', 'emoji', 'eggs-time' ) );
-        }
+        $uploads = function_exists( 'et_get_license_media_base' )
+            ? et_get_license_media_base( '2026/07' )
+            : 'https://eggstime.com/wp-content/uploads/2026/07/';
 
-        $keys = array_merge( et_get_home_core_egg_brand_keys(), array( 'eggs-time' ) );
-
-        return et_get_brands_by_keys( $keys );
+        return array(
+            array(
+                'name'  => 'Happy Toy',
+                'image' => $uploads . 'Happy_toy.png',
+            ),
+            array(
+                'name'  => 'Lucky Toy',
+                'image' => $uploads . 'Lucky_toy.png',
+            ),
+            array(
+                'name'  => 'King Egg',
+                'image' => $uploads . 'King_egg-1.png',
+            ),
+            array(
+                'name'  => 'King Toy',
+                'image' => $uploads . 'King_toy.png',
+            ),
+            array(
+                'name'  => 'Magik Egg',
+                'image' => $uploads . 'Magik_egg.png',
+            ),
+            array(
+                'name'  => 'Lucky Egg',
+                'image' => $uploads . 'Lucky_egg-1.png',
+            ),
+            array(
+                'name'  => 'Happy Egg',
+                'image' => $uploads . 'Happy_egg-1.png',
+            ),
+            array(
+                'name'  => 'Emoji Toy',
+                'image' => $uploads . 'Emoji_toy-1.png',
+            ),
+            array(
+                'name'  => 'Skazka Toy',
+                'image' => $uploads . 'Skazka_toy.png',
+            ),
+            array(
+                'name'  => 'Emoji Egg',
+                'image' => $uploads . 'Emoji_egg-1.png',
+            ),
+        );
     }
 }

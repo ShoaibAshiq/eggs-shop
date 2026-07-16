@@ -478,6 +478,258 @@
             'resize.etHomeGamesExtraSlider'
         );
 
+        /* Fun Egg app game cards: static grid on desktop/tablet; slider on mobile. */
+        (function initFunEggAppGamesMobileSlider() {
+            var MOBILE_MAX = 767;
+            var $sliders = $('.et-home__fun-egg-app-games-slider');
+            var resizeTimer;
+
+            if (!$sliders.length || typeof $.fn.slick !== 'function') {
+                return;
+            }
+
+            function toggle($slider) {
+                var $wrap = $slider.closest('.et-home__fun-egg-app-games-slider-wrap');
+
+                if (window.innerWidth > MOBILE_MAX) {
+                    $wrap.removeClass('is-slider-active');
+                    if ($slider.hasClass('slick-initialized')) {
+                        $slider.slick('unslick');
+                    }
+                    return;
+                }
+
+                $wrap.addClass('is-slider-active');
+
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.slick('setPosition');
+                    return;
+                }
+
+                $slider.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    appendArrows: $wrap,
+                    autoplay: true,
+                    autoplaySpeed: 4500,
+                    pauseOnHover: true,
+                    pauseOnFocus: true,
+                    infinite: true,
+                    swipe: true,
+                    swipeToSlide: true,
+                    draggable: true,
+                    touchMove: true,
+                    prevArrow: '<button class="slick-prev et-home__fun-egg-app-arrow" aria-label="Previous app games" type="button"></button>',
+                    nextArrow: '<button class="slick-next et-home__fun-egg-app-arrow" aria-label="Next app games" type="button"></button>'
+                });
+            }
+
+            function refresh() {
+                $sliders.each(function () {
+                    toggle($(this));
+                });
+            }
+
+            refresh();
+
+            $(window).on('resize.etHomeFunEggAppGamesSlider', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(refresh, 150);
+            });
+        })();
+
+        /* Community social cards: static grid on desktop/tablet; slider on mobile. */
+        (function initSocialCardsMobileSlider() {
+            var MOBILE_MAX = 767;
+            var $sliders = $('.et-home__social-slider');
+            var resizeTimer;
+
+            if (!$sliders.length || typeof $.fn.slick !== 'function') {
+                return;
+            }
+
+            function toggle($slider) {
+                var $wrap = $slider.closest('.et-home__social-slider-wrap');
+
+                if (window.innerWidth > MOBILE_MAX) {
+                    $wrap.removeClass('is-slider-active');
+                    if ($slider.hasClass('slick-initialized')) {
+                        $slider.slick('unslick');
+                    }
+                    return;
+                }
+
+                $wrap.addClass('is-slider-active');
+
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.slick('setPosition');
+                    return;
+                }
+
+                $slider.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    appendArrows: $wrap,
+                    autoplay: true,
+                    autoplaySpeed: 4500,
+                    pauseOnHover: true,
+                    pauseOnFocus: true,
+                    infinite: true,
+                    swipe: true,
+                    swipeToSlide: true,
+                    draggable: true,
+                    touchMove: true,
+                    prevArrow: '<button class="slick-prev et-home__social-arrow" aria-label="Previous social cards" type="button"></button>',
+                    nextArrow: '<button class="slick-next et-home__social-arrow" aria-label="Next social cards" type="button"></button>'
+                });
+            }
+
+            function refresh() {
+                $sliders.each(function () {
+                    toggle($(this));
+                });
+            }
+
+            refresh();
+
+            $(window).on('resize.etHomeSocialCardsSlider', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(refresh, 150);
+            });
+        })();
+
+        /* Distributor brand logos: CSS scroll carousel on mobile (no slick — avoids overflow). */
+        (function initDistributorBrandsScrollCarousel() {
+            var MOBILE_MAX = 767;
+            var $wraps = $('.et-home__distributor-showcase-slider-wrap');
+
+            if (!$wraps.length) {
+                return;
+            }
+
+            function ensureArrows($wrap) {
+                if ($wrap.find('.et-home__distributor-arrow').length) {
+                    return;
+                }
+
+                $wrap.prepend(
+                    '<button type="button" class="et-home__distributor-arrow et-home__distributor-arrow--prev" aria-label="Previous brands"></button>' +
+                    '<button type="button" class="et-home__distributor-arrow et-home__distributor-arrow--next" aria-label="Next brands"></button>'
+                );
+            }
+
+            function bindWrap($wrap) {
+                var $track = $wrap.find('.et-home__distributor-showcase-grid');
+                if (!$track.length || $wrap.data('et-distributor-bound')) {
+                    return;
+                }
+
+                ensureArrows($wrap);
+                $wrap.data('et-distributor-bound', true);
+
+                function scrollByCard(direction) {
+                    var card = $track.find('.et-home__distributor-showcase-item').get(0);
+                    var amount = card ? card.getBoundingClientRect().width + 12 : $track.innerWidth() * 0.8;
+                    $track.get(0).scrollBy({ left: direction * amount, behavior: 'smooth' });
+                }
+
+                $wrap.on('click.etDistributorScroll', '.et-home__distributor-arrow--prev', function () {
+                    scrollByCard(-1);
+                });
+
+                $wrap.on('click.etDistributorScroll', '.et-home__distributor-arrow--next', function () {
+                    scrollByCard(1);
+                });
+            }
+
+            function syncMode() {
+                var isMobile = window.innerWidth <= MOBILE_MAX;
+
+                $wraps.each(function () {
+                    var $wrap = $(this);
+                    var $track = $wrap.find('.et-home__distributor-showcase-grid');
+
+                    if ($track.hasClass('slick-initialized') && typeof $.fn.slick === 'function') {
+                        $track.slick('unslick');
+                    }
+
+                    $wrap.toggleClass('is-scroll-carousel', isMobile);
+                    if (isMobile) {
+                        bindWrap($wrap);
+                    }
+                });
+            }
+
+            syncMode();
+            $(window).on('resize.etHomeDistributorBrandsScroll', function () {
+                window.clearTimeout(window.__etDistributorScrollTimer);
+                window.__etDistributorScrollTimer = window.setTimeout(syncMode, 150);
+            });
+        })();
+
+        /* Partnership CTA cards: grid on desktop; slider on mobile. */
+        (function initCtaCardsMobileSlider() {
+            var MOBILE_MAX = 767;
+            var $sliders = $('.et-home__cta-cards-slider');
+            var resizeTimer;
+
+            if (!$sliders.length || typeof $.fn.slick !== 'function') {
+                return;
+            }
+
+            function toggle($slider) {
+                var $wrap = $slider.closest('.et-home__cta-cards-slider-wrap');
+
+                if (window.innerWidth > MOBILE_MAX) {
+                    $wrap.removeClass('is-slider-active');
+                    if ($slider.hasClass('slick-initialized')) {
+                        $slider.slick('unslick');
+                    }
+                    return;
+                }
+
+                $wrap.addClass('is-slider-active');
+
+                if ($slider.hasClass('slick-initialized')) {
+                    $slider.slick('setPosition');
+                    return;
+                }
+
+                $slider.slick({
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    arrows: true,
+                    appendArrows: $wrap,
+                    autoplay: true,
+                    autoplaySpeed: 4500,
+                    pauseOnHover: true,
+                    pauseOnFocus: true,
+                    infinite: true,
+                    swipe: true,
+                    swipeToSlide: true,
+                    draggable: true,
+                    touchMove: true,
+                    prevArrow: '<button class="slick-prev et-home__cta-arrow" aria-label="Previous partnership cards" type="button"></button>',
+                    nextArrow: '<button class="slick-next et-home__cta-arrow" aria-label="Next partnership cards" type="button"></button>'
+                });
+            }
+
+            function refresh() {
+                $sliders.each(function () {
+                    toggle($(this));
+                });
+            }
+
+            refresh();
+
+            $(window).on('resize.etHomeCtaCardsSlider', function () {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(refresh, 150);
+            });
+        })();
+
         initHeroVideo();
     });
 

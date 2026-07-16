@@ -11,9 +11,18 @@ if ( ! function_exists( 'et_get_home_core_egg_brand_meta' ) ) {
     }
 }
 
+if ( ! function_exists( 'et_get_egg_brand_logos' ) ) {
+    $et_brand_logos_file = get_template_directory() . '/inc/brand-logos.php';
+
+    if ( file_exists( $et_brand_logos_file ) ) {
+        require_once $et_brand_logos_file;
+    }
+}
+
 $et_home_distributor_url  = home_url( '/contact-us/' );
 $et_home_distributor_logo = get_template_directory_uri() . '/images/eggs_time_logo.png';
 $et_home_distributor_brands = array();
+$et_brand_logos = function_exists( 'et_get_egg_brand_logos' ) ? et_get_egg_brand_logos() : array();
 
 if ( function_exists( 'et_get_home_core_egg_brand_keys' ) && function_exists( 'et_get_home_core_egg_brand_meta' ) ) {
     $brand_meta = et_get_home_core_egg_brand_meta();
@@ -23,9 +32,13 @@ if ( function_exists( 'et_get_home_core_egg_brand_keys' ) && function_exists( 'e
             continue;
         }
 
-        $brand_image = ! empty( $brand_meta[ $brand_key ]['showcase_image'] )
-            ? $brand_meta[ $brand_key ]['showcase_image']
-            : $brand_meta[ $brand_key ]['product_image'];
+        if ( ! empty( $brand_meta[ $brand_key ]['showcase_image'] ) ) {
+            $brand_image = $brand_meta[ $brand_key ]['showcase_image'];
+        } elseif ( ! empty( $et_brand_logos[ $brand_key ]['image'] ) ) {
+            $brand_image = $et_brand_logos[ $brand_key ]['image'];
+        } else {
+            $brand_image = $brand_meta[ $brand_key ]['product_image'];
+        }
 
         if ( empty( $brand_image ) ) {
             continue;
@@ -39,15 +52,15 @@ if ( function_exists( 'et_get_home_core_egg_brand_keys' ) && function_exists( 'e
 }
 
 if ( empty( $et_home_distributor_brands ) ) {
-    $uploads_base = trailingslashit( home_url( '/wp-content/uploads' ) );
+    $uploads = 'https://eggstime.com/wp-content/uploads/2026/07/';
 
     $et_home_distributor_brands = array(
-        array( 'name' => 'Happy Egg', 'image' => $uploads_base . '2022/05/04-2.png' ),
-        array( 'name' => 'Lucky Egg', 'image' => $uploads_base . '2022/05/05.png' ),
-        array( 'name' => 'King Egg', 'image' => $uploads_base . '2022/05/01.png' ),
-        array( 'name' => 'Magik Egg', 'image' => $uploads_base . '2022/05/02.png' ),
-        array( 'name' => 'Skazka Egg', 'image' => $uploads_base . '2022/05/03.png' ),
-        array( 'name' => 'Emoji Egg', 'image' => $uploads_base . '2022/05/06-2.png' ),
+        array( 'name' => 'Happy Egg', 'image' => $uploads . 'Happy_egg-1.png' ),
+        array( 'name' => 'Lucky Egg', 'image' => $uploads . 'Lucky_egg-1.png' ),
+        array( 'name' => 'King Egg', 'image' => $uploads . 'King_egg-1.png' ),
+        array( 'name' => 'Magik Egg', 'image' => $uploads . 'Magik_egg.png' ),
+        array( 'name' => 'Skazka Egg', 'image' => $uploads . 'Skazka_egg.png' ),
+        array( 'name' => 'Emoji Egg', 'image' => $uploads . 'Emoji_egg-1.png' ),
     );
 }
 ?>
@@ -97,7 +110,7 @@ if ( empty( $et_home_distributor_brands ) ) {
                             src="<?php echo esc_url( $et_home_distributor_logo ); ?>"
                             alt="<?php esc_attr_e( 'Eggs Time', 'eggs-shop' ); ?>"
                             class="et-home__distributor-showcase-logo"
-                            loading="lazy"
+                            loading="eager"
                             decoding="async"
                         />
                     </div>
@@ -110,19 +123,21 @@ if ( empty( $et_home_distributor_brands ) ) {
                         <span class="et-home__distributor-showcase-line" aria-hidden="true"></span>
                     </p>
 
-                    <ul class="et-home__distributor-showcase-grid">
-                        <?php foreach ( $et_home_distributor_brands as $brand ) : ?>
-                            <li class="et-home__distributor-showcase-item">
-                                <img
-                                    src="<?php echo esc_url( $brand['image'] ); ?>"
-                                    alt="<?php echo esc_attr( $brand['name'] ); ?>"
-                                    class="et-home__distributor-showcase-product"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                            </li>
-                        <?php endforeach; ?>
-                    </ul>
+                    <div class="et-home__distributor-showcase-slider-wrap">
+                        <ul class="et-home__distributor-showcase-grid et-home__distributor-showcase-slider">
+                            <?php foreach ( $et_home_distributor_brands as $brand ) : ?>
+                                <li class="et-home__distributor-showcase-item">
+                                    <img
+                                        src="<?php echo esc_url( $brand['image'] ); ?>"
+                                        alt="<?php echo esc_attr( $brand['name'] ); ?>"
+                                        class="et-home__distributor-showcase-product"
+                                        loading="eager"
+                                        decoding="async"
+                                    />
+                                </li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

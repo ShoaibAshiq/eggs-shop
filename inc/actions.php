@@ -123,6 +123,13 @@ function add_license_page_css()
 {
     if ( is_page( 'license' ) ) {
         wp_enqueue_style(
+            'fontawesome',
+            'https://use.fontawesome.com/releases/v5.6.3/css/all.css',
+            array(),
+            '5.6.3'
+        );
+
+        wp_enqueue_style(
             'home-v2-google-font',
             'https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700;800&display=swap',
             array(),
@@ -132,29 +139,22 @@ function add_license_page_css()
         wp_enqueue_style(
             'home-v2',
             TEMPLATEURI . '/css/home-v2.css',
-            array( 'style-all', 'header-new', 'home-v2-google-font', 'et-brand-colors' ),
+            array( 'style-all', 'header-new', 'home-v2-google-font', 'fontawesome', 'et-brand-colors' ),
             et_home_v2_asset_version( 'css/home-v2.css' )
-        );
-
-        wp_enqueue_style(
-            'home-v2-characters',
-            TEMPLATEURI . '/css/home-v2-characters.css',
-            array( 'home-v2' ),
-            et_home_v2_asset_version( 'css/home-v2-characters.css' )
         );
 
         wp_enqueue_style(
             'license-page',
             TEMPLATEURI . '/css/license-page.css',
-            array( 'style-all', 'header-new', 'home-v2', 'home-v2-characters', 'et-brand-colors' ),
-            '1.0.' . filemtime( get_template_directory() . '/css/license-page.css' )
+            array( 'style-all', 'header-new', 'home-v2', 'fontawesome', 'et-brand-colors' ),
+            '2.2.' . filemtime( get_template_directory() . '/css/license-page.css' )
         );
 
         wp_enqueue_script(
             'license-page',
             TEMPLATEURI . '/js/license-page.js',
             array( 'jquery', 'slick' ),
-            '1.0.' . filemtime( get_template_directory() . '/js/license-page.js' ),
+            '2.2.' . filemtime( get_template_directory() . '/js/license-page.js' ),
             true
         );
     }
@@ -180,7 +180,7 @@ function add_single_product_css()
  * First request after deploy purges theme transients and common page caches.
  */
 if ( ! defined( 'ET_HOME_V2_CACHE_REV' ) ) {
-    define( 'ET_HOME_V2_CACHE_REV', '2026071420' );
+    define( 'ET_HOME_V2_CACHE_REV', '2026071424' );
 }
 
 /**

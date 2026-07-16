@@ -149,28 +149,28 @@ if ( ! function_exists( 'et_home_get_game_theme_asset_map' ) ) {
             'maze' => array(
                 'showcase' => $base . 'fun-egg-maze-preview.png',
                 'preview'  => $base . 'fun-egg-maze-preview.png',
-                'app_card' => $base . 'fun-app-maze.png',
+                'app_card' => 'http://eggstime.com/wp-content/uploads/2017/12/fourth-game-icon-e1514575632442.png',
                 'icon'     => $base . 'fun-app-maze-thumb.png',
                 'slider'   => $base . 'fun-egg-maze-preview.png',
             ),
             'coloring' => array(
                 'showcase' => $base . 'game_2.jpg',
                 'preview'  => $base . 'fun-egg-dot-preview.png',
-                'app_card' => $base . 'fun-app-coloring.png',
+                'app_card' => 'http://eggstime.com/wp-content/uploads/2017/12/IMG_05012019_114533_0.png',
                 'icon'     => $base . 'fun-app-coloring-thumb.png',
                 'slider'   => $base . 'game_2.jpg',
             ),
             'puzzle' => array(
                 'showcase' => $base . 'game_1.jpg',
                 'preview'  => $base . 'game_1.jpg',
-                'app_card' => $base . 'fun-app-puzzle.png',
+                'app_card' => 'http://eggstime.com/wp-content/uploads/2017/12/IMG_05012019_114538_0.png',
                 'icon'     => $base . 'fun-app-puzzle-thumb.png',
                 'slider'   => $base . 'game_1.jpg',
             ),
             'difference' => array(
                 'showcase' => $base . 'fun-app-memory.png',
                 'preview'  => $base . 'fun-app-memory.png',
-                'app_card' => $base . 'fun-app-memory.png',
+                'app_card' => 'http://eggstime.com/wp-content/uploads/2017/12/thrid-game-icon-e1514575825219.png',
                 'icon'     => $base . 'fun-app-memory-thumb.png',
                 'slider'   => $base . 'fun-app-memory.png',
             ),
@@ -248,14 +248,14 @@ if ( ! function_exists( 'et_home_get_fun_egg_previews' ) ) {
     function et_home_get_fun_egg_previews( $theme_uri ) {
         return array(
             array(
-                'label' => 'Puzzle Time',
-                'image' => 'https://eggstime.com/wp-content/uploads/2017/12/IMG_05012019_114538_0.png',
-                'url'   => 'http://eggstime.com/upload/puzzles/index.html',
+                'label' => 'Coloring Time',
+                'image' => 'http://eggstime.com/wp-content/uploads/2017/12/IMG_05012019_114533_0.png',
+                'url'   => 'http://eggstime.com/upload/index.html',
             ),
             array(
-                'label' => 'Coloring Time',
-                'image' => 'https://eggstime.com/wp-content/uploads/2017/12/IMG_05012019_114533_0.png',
-                'url'   => 'http://eggstime.com/upload/index.html',
+                'label' => 'Puzzle Time',
+                'image' => 'http://eggstime.com/wp-content/uploads/2017/12/IMG_05012019_114538_0.png',
+                'url'   => 'http://eggstime.com/upload/puzzles/index.html',
             ),
         );
     }
